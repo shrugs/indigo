@@ -46,10 +46,11 @@ function getTask(task, src, dest, pkg) {
 
 
 var PATHS = {
-    css:      './src/css/',
-    html:     './src/html/',
-    react:    './src/react/',
-    site:     './src/site/',
+    css:      './indigo/css/',
+    html:     './indigo/html/',
+    react:    './indigo/react/',
+    site:     './indigo/site/',
+    sandbox:  './sandbox/'
 };
 
 
@@ -289,6 +290,52 @@ gulp.task('indigo-react-mini', gulp.series(
   'indigo-react-minify'
 ));
 
+
+/*******************************************************************************
+Build everything
+*/
+
+
+gulp.task('indigo-build-all', gulp.parallel(
+  'indigo-react',
+  'indigo-css',
+));
+
+
+/*******************************************************************************
+Run the sandbox
+*/
+// TODO: finish this
+
+gulp.task(
+    'sandbox-react-transpile',
+    getTask(
+      'js_sucrase',
+      `${PATHS.sandbox}/sandbox-react.js`,
+      `${PATHS.sandbox}/build/`
+    )
+);
+gulp.task(
+    'sandbox-react-bundle',
+    getTask(
+      'js_quick_bundle',
+      `${PATHS.sandbox}/dist/index.js`,
+      `${PATHS.sandbox}/dist/`
+    )
+);
+
+gulp.task('sandbox-react', gulp.series(
+  'sandbox-react-transpile',
+  'sandbox-react-bundle'
+));
+
+// TODO: finish this
+gulp.task('build-sandbox-react', gulp.series(
+  'indigo-react',
+  'indigo-css',
+  'sandbox-react',
+  'sandbox-css'
+));
 
 
 // gulp.task('default', gulp.series())

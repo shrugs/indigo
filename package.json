@@ -8,7 +8,8 @@
     "build:indigo.css":"gulp indigo-css",
     "build:indigo-system.css":"gulp indigo-system-css",
     "build:indigo-utilities.css":"gulp indigo-utilities-css",
-    "build:indigo-all-css":"gulp indigo-all-css"
+    "build:indigo-all-css":"gulp indigo-all-css",
+    "build:all": "indigo-build-all",
   },
   "repository": {
     "type": "git",

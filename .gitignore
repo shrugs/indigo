@@ -6,6 +6,9 @@
 # testing
 /coverage
 
+# symlinks
+/sandbox/indigo
+
 # production
 **/dist
 

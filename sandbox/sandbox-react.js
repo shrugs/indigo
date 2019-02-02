@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import * as B from './base/BaseComponents'
+import * as B from './react/dist/index';
+// import './css/dist/indigo.css'
 
 const BCC = props => {
   return (
