@@ -46,15 +46,20 @@ function getTask(task, src, dest, pkg) {
 
 
 var PATHS = {
-    css: './src/css/',
-    html: './src/html/',
-    react: './src/react/',
-    site: './src/site/',
+    css:      './src/css/',
+    html:     './src/html/',
+    react:    './src/react/',
+    site:     './src/site/',
 };
 
-// Indigo.css ******************************************************************
-//
-//
+
+/*******************************************************************************
+Indigo CSS Library
+*/
+
+// Generate indigo.css *********************************************************
+
+
 // SCSS => CSS with minification
 gulp.task(
     'sass-compressed',
@@ -110,8 +115,8 @@ gulp.task('indigo-css', gulp.series(
 
 
 // System CSS ******************************************************************
-//
-//
+
+
 gulp.task(
     'sass-compressed-system',
     getTask(
@@ -165,8 +170,8 @@ gulp.task('indigo-system-css', gulp.series(
 
 
 // Utilities CSS ***************************************************************
-//
-//
+
+
 gulp.task(
     'sass-compressed-utils',
     getTask(
@@ -210,7 +215,8 @@ gulp.task(
 );
 
 
-// Runs above tasks. Also in package.json as `npm run build:indigo-utilities-css`
+// Runs above tasks. Also in package.json as
+// `npm run build:indigo-utilities-css`
 gulp.task('indigo-utilities-css', gulp.series(
   'sass-compressed-utils',
   'sass-header-utils',
@@ -219,14 +225,68 @@ gulp.task('indigo-utilities-css', gulp.series(
 
 
 // Generate all CSS Packages ***************************************************
-//
-//
+
+
 // Builds indigio.css, system.css and utilities.css. Also in package.json as
 // `npm run build:indigo-all-css`
 gulp.task('indigo-all', gulp.series(
   'indigo-css',
-  'indigo-utils-css',
+  'indigo-utilities-css',
   'indigo-system-css'
+));
+
+
+
+
+/*******************************************************************************
+Indigo React Library
+*/
+
+
+gulp.task(
+    'indigo-react-transpile',
+    getTask(
+      'js_sucrase',
+      `${PATHS.react}/src/**/*.js`,
+      `${PATHS.react}/dist/`
+    )
+);
+
+
+
+gulp.task(
+    'indigo-react-minify',
+    getTask(
+      'js_minify',
+      `${PATHS.react}/dist/index.js`,
+      `${PATHS.react}/dist/`
+    )
+);
+
+
+
+gulp.task(
+    'indigo-react-bundle',
+    getTask(
+      'js_quick_bundle',
+      `${PATHS.react}/dist/index.js`,
+      `${PATHS.react}/dist/`
+    )
+);
+
+
+
+gulp.task('indigo-react', gulp.series(
+  'indigo-react-transpile',
+  'indigo-react-bundle'
+));
+
+
+
+gulp.task('indigo-react-mini', gulp.series(
+  'indigo-react-transpile',
+  'indigo-react-bundle',
+  'indigo-react-minify'
 ));
 
 
