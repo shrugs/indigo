@@ -1,0 +1,29 @@
+/*******************************************************************************
+  Padding
+*******************************************************************************/
+
+@each $dim in $scale {
+  // remove . from '0.5' etc
+  $name: str-replace(#{$dim}, '.');
+
+  .p#{$name}                       {padding: #{$dim}rem;}
+  .pt#{$name}                      {padding-top: #{$dim}rem;}
+  .pb#{$name}                      {padding-bottom: #{$dim}rem;}
+  .pl#{$name}                      {padding-left: #{$dim}rem;}
+  .pr#{$name}                      {padding-right: #{$dim}rem;}
+  .pv#{$name}                      {padding-top: #{$dim}rem; padding-bottom: #{$dim}rem;}
+  .ph#{$name}                      {padding-left: #{$dim}rem; padding-right: #{$dim}rem;}
+
+  // Responsive Padding
+  @each $breakpoint, $bp-value in $breakpoints {
+    @media only screen and (min-width:$bp-value) {
+      .p#{$name}-#{$breakpoint}    {padding: #{$dim}rem;}
+      .pt#{$name}-#{$breakpoint}   {padding-top: #{$dim}rem;}
+      .pb#{$name}-#{$breakpoint}   {padding-bottom: #{$dim}rem;}
+      .pl#{$name}-#{$breakpoint}   {padding-left: #{$dim}rem;}
+      .pr#{$name}-#{$breakpoint}   {padding-right: #{$dim}rem;}
+      .pv#{$name}-#{$breakpoint}   {padding-top: #{$dim}rem; padding-bottom: #{$dim}rem;}
+      .ph#{$name}-#{$breakpoint}   {padding-left: #{$dim}rem; padding-right: #{$dim}rem;}
+    }
+  }
+};

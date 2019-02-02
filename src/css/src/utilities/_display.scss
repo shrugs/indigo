@@ -1,0 +1,24 @@
+/*******************************************************************************
+  Display
+*******************************************************************************/
+
+// Display
+.block        { display: block }
+.inline       { display: inline }
+.inline-block { display: inline-block }
+.flex         { display: flex }
+.none         { display: none }
+.grid         { display: grid }
+.table        { display: table }
+
+@each $breakpoint, $bp-value in $breakpoints {
+  @media only screen and (min-width:$bp-value) {
+    .block-#{$breakpoint}        { display: block }
+    .inline-#{$breakpoint}       { display: inline }
+    .inline-block-#{$breakpoint} { display: inline-block }
+    .flex-#{$breakpoint}         { display: flex }
+    .none-#{$breakpoint}         { display: none }
+    .grid-#{$breakpoint}         { display: grid }
+    .table-#{$breakpoint}        { display: table }
+  }
+}

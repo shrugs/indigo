@@ -1,0 +1,15 @@
+
+
+$breakpoints: (
+  // 'xs': 320px,
+  sm: 550px,
+  md: 750px,
+  lg: 960px,
+  xl: 1440px,
+);
+
+// $vp-xs: "only screen and (min-width: 320px)";
+$vp-sm: "only screen and (min-width: 550px)";
+$vp-md: "only screen and (min-width: 750px)";
+$vp-lg: "only screen and (min-width: 960px)";
+$vp-xl: "only screen and (min-width: 1440px)";

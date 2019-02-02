@@ -1,0 +1,16 @@
+
+// Font Family Shorthand
+.head           { font-family: 'Work Sans', sans-serif }
+.sans           { font-family: 'Inter UI' , sans-serif }
+.sys            { font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji"; }
+.mono           { font-family: "Source Code Pro", "Roboto mono", "Courier New", monospace }
+
+
+// Measure
+// “Anything from 45 to 75 characters is widely regarded as a satisfactory length
+// of line for a single-column page… the 66-character line (counting both letters
+// and spaces) is widely regarded as ideal. For multiple-column work, a better
+// average is 40-50 characters.”
+.measure-narrow { max-width: 80rem;  }
+.measure        { max-width: 120rem; }
+.measure-wide   { max-width: 136rem; }

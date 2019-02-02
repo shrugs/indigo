@@ -1,0 +1,43 @@
+/**********************
+Spacing Variables
+**********************/
+
+// Scale Ranges
+$rng-sm: (
+  start: 0,
+  end: 15,
+  mod: 1
+);
+
+$rng-md: (
+  start: 16,
+  end: 31,
+  mod: 2
+);
+
+$rng-lg: (
+  start: 32,
+  end: 63,
+  mod: 4
+);
+
+$rng-xl: (
+  start: 64,
+  end: 129,
+  mod: 8
+);
+
+// Make a list with each dimension in the scale
+$scale: (0.5);
+
+@each $s in ($rng-sm, $rng-md, $rng-lg, $rng-xl) {
+  $start: map-get($s, start);
+  $end: map-get($s, end);
+  $mod: map-get($s, mod);
+
+  $i: $start;
+  @while $i < $end {
+    $scale: append($scale, $i);
+    $i: $i + $mod;
+  }
+};

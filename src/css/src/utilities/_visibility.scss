@@ -1,0 +1,40 @@
+/*******************************************************************************
+  Visibility
+*******************************************************************************/
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.super-hidden {
+  visibility: hidden;
+  position: fixed;
+  opacity: 0;
+  top: -9999px;
+  left: -99999px;
+}
+
+
+@each $breakpoint, $bp-value in $breakpoints {
+  @media only screen and (min-width:$bp-value) {
+    .visible-#{$breakpoint} {
+      visibility: visible;
+    }
+
+    .hidden-#{$breakpoint} {
+      visibility: hidden;
+    }
+
+    .super-hidden-#{$breakpoint} {
+      visibility: hidden;
+      position: fixed;
+      opacity: 0;
+      top: -9999px;
+      left: -99999px;
+    }
+  }
+};

@@ -1,0 +1,52 @@
+/*******************************************************************************
+  Margin
+*******************************************************************************/
+// TODO add 0.5rem classes
+
+
+
+@each $dim in $scale {
+
+  // remove . from '0.5' etc
+  $name: str-replace(#{$dim}, '.');
+
+  .m#{$name}                       {margin: #{$dim}rem;}
+  .mt#{$name}                      {margin-top: #{$dim}rem;}
+  .mb#{$name}                      {margin-bottom: #{$dim}rem;}
+  .ml#{$name}                      {margin-left: #{$dim}rem;}
+  .mr#{$name}                      {margin-right: #{$dim}rem;}
+  .mv#{$name}                      {margin-top: #{$dim}rem; margin-bottom: #{$dim}rem;}
+  .mh#{$name}                      {margin-left: #{$dim}rem; margin-right: #{$dim}rem;}
+
+  // Responsive Margin
+  @each $breakpoint, $bp-value in $breakpoints {
+    @media only screen and (min-width:$bp-value) {
+      .m#{$name}-#{$breakpoint}    {margin: #{$dim}rem;}
+      .mt#{$name}-#{$breakpoint}   {margin-top: #{$dim}rem;}
+      .mb#{$name}-#{$breakpoint}   {margin-bottom: #{$dim}rem;}
+      .ml#{$name}-#{$breakpoint}   {margin-left: #{$dim}rem;}
+      .mr#{$name}-#{$breakpoint}   {margin-right: #{$dim}rem;}
+      .mv#{$name}-#{$breakpoint}   {margin-top: #{$dim}rem; margin-bottom: #{$dim}rem;}
+      .mh#{$name}-#{$breakpoint}   {margin-left: #{$dim}rem; margin-right: #{$dim}rem;}
+    }
+  }
+};
+
+// margin auto
+.m-auto { margin: auto }
+.mt-auto { margin-top: auto }
+.mb-auto { margin-bottom: auto }
+.mr-auto { margin-right: auto }
+.ml-auto { margin-left: auto }
+.mh-auto { margin-left: auto; margin-right: auto }
+.mv-auto { margin-top: auto; margin-bottom: auto }
+
+@each $breakpoint, $bp-value in $breakpoints {
+  .m-auto-#{$breakpoint} { margin: auto }
+  .mt-auto-#{$breakpoint} { margin-top: auto }
+  .mb-auto-#{$breakpoint} { margin-bottom: auto }
+  .mr-auto-#{$breakpoint} { margin-right: auto }
+  .ml-auto-#{$breakpoint} { margin-left: auto }
+  .mh-auto-#{$breakpoint} { margin-left: auto; margin-right: auto }
+  .mv-auto-#{$breakpoint} { margin-top: auto; margin-bottom: auto }
+}

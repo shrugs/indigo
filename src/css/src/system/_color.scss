@@ -1,0 +1,15 @@
+
+// Make border-color classes
+@each $k, $v in $allColors {
+  .b-#{$k} { border-color: #{$v} }
+}
+
+
+@each $k, $v in $allColors {
+  .bg-#{$k} { background-color: #{$v} }
+}
+
+
+@each $k, $v in $allColors {
+  .#{$k} { color: #{$v} }
+}
