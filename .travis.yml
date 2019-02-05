@@ -5,8 +5,9 @@ install:
   - npm install
 
 script:
-  - npm run build
-  - npm run test
+  - npm run build:indigo-react
+  - npm run build:indigo-css
+  # - npm run test
 
 # Send coverage data to Coveralls
 # after_script: "cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"

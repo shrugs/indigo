@@ -6,11 +6,8 @@
 # testing
 /coverage
 
-# symlinks
-/sandbox/indigo
-
 # production
-**/dist
+**/bin
 
 # misc
 .DS_Store

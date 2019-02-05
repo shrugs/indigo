@@ -7,6 +7,7 @@ var sass = require('gulp-sass');
 var header = require('gulp-header');
 var gzip = require('gulp-gzip');
 var rename = require("gulp-rename");
+var copy = require("gulp-copy");
 
 // Rollup plugins
 var resolve = require('rollup-plugin-node-resolve');
@@ -29,6 +30,8 @@ const plugins = {
   header:     header,
   gzip:       gzip,
   rename:     rename,
+  copy:       copy,
+
   resolve:    resolve,
   commonjs:   commonjs,
   replace:    replace,
@@ -249,7 +252,7 @@ gulp.task(
     getTask(
       'js_sucrase',
       `${PATHS.react}/src/**/*.js`,
-      `${PATHS.react}/dist/`
+      `${PATHS.react}/bin/`
     )
 );
 
@@ -270,7 +273,7 @@ gulp.task(
     'indigo-react-bundle',
     getTask(
       'js_quick_bundle',
-      `${PATHS.react}/dist/index.js`,
+      `${PATHS.react}/bin/index.js`,
       `${PATHS.react}/dist/`
     )
 );
@@ -315,6 +318,8 @@ gulp.task(
       `${PATHS.sandbox}/build/`
     )
 );
+
+
 gulp.task(
     'sandbox-react-bundle',
     getTask(
@@ -324,17 +329,31 @@ gulp.task(
     )
 );
 
+
 gulp.task('sandbox-react', gulp.series(
   'sandbox-react-transpile',
   'sandbox-react-bundle'
 ));
 
+
+gulp.task(
+    'copy-indigo-to-sandbox',
+    getTask(
+      'copy',
+      [
+        `${PATHS.css}/dist/indigo.css`,
+        `${PATHS.react}/dist/index.js`,
+      ],
+      `${PATHS.sandbox}`
+    )
+);
+
+
 // TODO: finish this
 gulp.task('build-sandbox-react', gulp.series(
   'indigo-react',
   'indigo-css',
-  // 'sandbox-react',
-  // 'sandbox-css'
+  'copy-indigo-to-sandbox'
 ));
 
 

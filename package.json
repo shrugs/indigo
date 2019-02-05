@@ -30,6 +30,7 @@
   "homepage": "https://github.com/urbit/Indigo#readme",
   "dependencies": {
     "classnames": "^2.2.6",
+    "gulp-copy": "^4.0.1",
     "gulp-load-plugins": "^1.5.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
