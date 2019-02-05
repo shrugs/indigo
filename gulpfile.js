@@ -296,7 +296,7 @@ Build everything
 */
 
 
-gulp.task('indigo-build-all', gulp.parallel(
+gulp.task('indigo-build', gulp.parallel(
   'indigo-react',
   'indigo-css',
 ));
@@ -333,8 +333,8 @@ gulp.task('sandbox-react', gulp.series(
 gulp.task('build-sandbox-react', gulp.series(
   'indigo-react',
   'indigo-css',
-  'sandbox-react',
-  'sandbox-css'
+  // 'sandbox-react',
+  // 'sandbox-css'
 ));
 
 

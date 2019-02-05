@@ -9,7 +9,8 @@
     "build:indigo-system.css": "gulp indigo-system-css",
     "build:indigo-utilities.css": "gulp indigo-utilities-css",
     "build:indigo-all-css": "gulp indigo-all-css",
-    "build:all": "indigo-build-all"
+    "build:indigo-react": "gulp indigo-react",
+    "build": "gulp indigo-build"
   },
   "repository": {
     "type": "git",
