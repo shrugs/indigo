@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:indigo.css": "gulp indigo-css",
-    "build:indigo-system.css": "gulp indigo-system-css",
-    "build:indigo-utilities.css": "gulp indigo-utilities-css",
+    "build:indigo-css": "gulp indigo-css",
+    "build:indigo-system-css": "gulp indigo-system-css",
+    "build:indigo-utilities-css": "gulp indigo-utilities-css",
     "build:indigo-all-css": "gulp indigo-all-css",
     "build:indigo-react": "gulp indigo-react",
     "build:sandbox-react": "gulp build-sandbox-react",
