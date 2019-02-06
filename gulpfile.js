@@ -4,6 +4,8 @@ var rollup = require('gulp-better-rollup');
 var minify = require('gulp-minify');
 var sucrase = require('@sucrase/gulp-plugin');
 var sass = require('gulp-sass');
+var cssimport = require('gulp-cssimport');
+var cssnano = require('gulp-cssnano');
 var header = require('gulp-header');
 var gzip = require('gulp-gzip');
 var rename = require("gulp-rename");
@@ -69,8 +71,8 @@ gulp.task(
     'sass-compressed',
     getTask(
       'sass_compressed',
-      `${PATHS.css}/src/indigo.scss`,
-      `${PATHS.css}/dist`
+      `${PATHS.css}src/indigo.scss`,
+      `${PATHS.css}dist`
     )
 );
 
@@ -80,8 +82,8 @@ gulp.task(
     'sass-plain',
     getTask(
       'sass_plain',
-      `${PATHS.css}/src/indigo.scss`,
-      `${PATHS.css}/dist`
+      `${PATHS.css}src/indigo.scss`,
+      `${PATHS.css}dist`
     )
 );
 
@@ -92,8 +94,8 @@ gulp.task(
     'sass-gzip',
     getTask(
       'gzip',
-      `${PATHS.css}/dist/indigo.css`,
-      `${PATHS.css}/dist`
+      `${PATHS.css}dist/indigo.css`,
+      `${PATHS.css}dist`
     )
 );
 
@@ -103,8 +105,8 @@ gulp.task(
     'sass-header',
     getTask(
       'sass_header',
-      `${PATHS.css}/dist/indigo.css`,
-      `${PATHS.css}/dist`
+      `${PATHS.css}dist/indigo.css`,
+      `${PATHS.css}dist`
     )
 );
 
@@ -125,8 +127,8 @@ gulp.task(
     'sass-compressed-system',
     getTask(
       'sass_compressed',
-      `${PATHS.css}/src/system.scss`,
-      `${PATHS.css}/dist/system`
+      `${PATHS.css}src/system.scss`,
+      `${PATHS.css}dist/system`
     )
 );
 
@@ -136,8 +138,8 @@ gulp.task(
     'sass-plain-system',
     getTask(
       'sass_plain',
-      `${PATHS.css}/src/system.scss`,
-      `${PATHS.css}/dist/system`
+      `${PATHS.css}src/system.scss`,
+      `${PATHS.css}dist/system`
     )
 );
 
@@ -147,8 +149,8 @@ gulp.task(
     'sass-gzip-system',
     getTask(
       'gzip',
-      `${PATHS.css}/dist/system/system.css`,
-      `${PATHS.css}/dist/system`
+      `${PATHS.css}dist/system/system.css`,
+      `${PATHS.css}dist/system`
     )
 );
 
@@ -158,8 +160,8 @@ gulp.task(
     'sass-header-system',
     getTask(
       'sass_header',
-      `${PATHS.css}/dist/system/system.css`,
-      `${PATHS.css}/dist/system`
+      `${PATHS.css}dist/system/system.css`,
+      `${PATHS.css}dist/system`
     )
 );
 
@@ -180,8 +182,8 @@ gulp.task(
     'sass-compressed-utils',
     getTask(
       'sass_compressed',
-      `${PATHS.css}/src/utilities.scss`,
-      `${PATHS.css}/dist/utilities`
+      `${PATHS.css}src/utilities.scss`,
+      `${PATHS.css}dist/utilities`
     )
 );
 
@@ -191,8 +193,8 @@ gulp.task(
     'sass-plain-utils',
     getTask(
       'sass_plain',
-      `${PATHS.css}/src/utilities.scss`,
-      `${PATHS.css}/dist/utilities`
+      `${PATHS.css}src/utilities.scss`,
+      `${PATHS.css}dist/utilities`
     )
 );
 
@@ -202,8 +204,8 @@ gulp.task(
     'sass-gzip-utils',
     getTask(
       'gzip',
-      `${PATHS.css}/dist/utilities/utilities.css`,
-      `${PATHS.css}/dist/utilities`
+      `${PATHS.css}dist/utilities/utilities.css`,
+      `${PATHS.css}dist/utilities`
     )
 );
 
@@ -213,8 +215,8 @@ gulp.task(
     'sass-header-utils',
     getTask(
       'sass_header',
-      `${PATHS.css}/dist/utilities/utilities.css`,
-      `${PATHS.css}/dist/utilities`
+      `${PATHS.css}dist/utilities/utilities.css`,
+      `${PATHS.css}dist/utilities`
     )
 );
 
@@ -251,8 +253,8 @@ gulp.task(
     'indigo-react-transpile',
     getTask(
       'js_sucrase',
-      `${PATHS.react}/src/**/*.js`,
-      `${PATHS.react}/bin/`
+      `${PATHS.react}src/**/*.js`,
+      `${PATHS.react}bin/`
     )
 );
 
@@ -262,8 +264,8 @@ gulp.task(
     'indigo-react-minify',
     getTask(
       'js_minify',
-      `${PATHS.react}/dist/index.js`,
-      `${PATHS.react}/dist/`
+      `${PATHS.react}dist/index.js`,
+      `${PATHS.react}dist/`
     )
 );
 
@@ -273,8 +275,8 @@ gulp.task(
     'indigo-react-bundle',
     getTask(
       'js_quick_bundle',
-      `${PATHS.react}/bin/index.js`,
-      `${PATHS.react}/dist/`
+      `${PATHS.react}bin/index.js`,
+      `${PATHS.react}dist/`
     )
 );
 
@@ -308,14 +310,13 @@ gulp.task('indigo-build', gulp.parallel(
 /*******************************************************************************
 Run the sandbox
 */
-// TODO: finish this
 
 gulp.task(
     'sandbox-react-transpile',
     getTask(
       'js_sucrase',
-      `${PATHS.sandbox}/sandbox-react.js`,
-      `${PATHS.sandbox}/build/`
+      `${PATHS.sandbox}src/**/*.js`,
+      `${PATHS.sandbox}dist`
     )
 );
 
@@ -324,10 +325,19 @@ gulp.task(
     'sandbox-react-bundle',
     getTask(
       'js_quick_bundle',
-      `${PATHS.sandbox}/dist/index.js`,
-      `${PATHS.sandbox}/dist/`
+      `${PATHS.sandbox}dist/js/index.js`,
+      `${PATHS.sandbox}dist/js`
     )
 );
+
+
+
+gulp.task('sandbox-html-copy', function() {
+  return gulp
+    .src(`${PATHS.sandbox}src/index.html`)
+    .pipe(gulp.dest(`${PATHS.sandbox}dist`));
+})
+
 
 
 gulp.task('sandbox-react', gulp.series(
@@ -336,24 +346,43 @@ gulp.task('sandbox-react', gulp.series(
 ));
 
 
-gulp.task(
-    'copy-indigo-to-sandbox',
-    getTask(
-      'copy',
-      [
-        `${PATHS.css}/dist/indigo.css`,
-        `${PATHS.react}/dist/index.js`,
-      ],
-      `${PATHS.sandbox}`
-    )
-);
+
+gulp.task('copy-indigo-css-to-sandbox', function() {
+  return gulp
+    .src(`${PATHS.css}dist/indigo.css`)
+    .pipe(gulp.dest(`${PATHS.sandbox}src/css`));
+})
 
 
-// TODO: finish this
+
+gulp.task('copy-indigo-react-to-sandbox', function() {
+  return gulp
+    .src(`${PATHS.react}dist/index.js`)
+    .pipe(gulp.dest(`${PATHS.sandbox}src/js/indigo`));
+})
+
+
+
+gulp.task('sandbox-css', function() {
+  return gulp
+    .src(`${PATHS.sandbox}src/css/index.css`)
+    .pipe(cssimport())
+    .pipe(cssnano())
+    .pipe(gulp.dest(`${PATHS.sandbox}dist/css`));
+});
+
+
+
 gulp.task('build-sandbox-react', gulp.series(
+  // rebuild and copy indigo
   'indigo-react',
   'indigo-css',
-  'copy-indigo-to-sandbox'
+  'copy-indigo-react-to-sandbox',
+  'copy-indigo-css-to-sandbox',
+  // build sandbox
+  'sandbox-html-copy',
+  'sandbox-react',
+  'sandbox-css',
 ));
 
 

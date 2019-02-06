@@ -1,6 +1,6 @@
 
 // Font Family Shorthand
-.head           { font-family: 'Work Sans', sans-serif }
+// .head           { font-family: 'Work Sans', sans-serif }
 .sans           { font-family: 'Inter UI' , sans-serif }
 .sys            { font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji"; }
 .mono           { font-family: "Source Code Pro", "Roboto mono", "Courier New", monospace }
@@ -14,3 +14,19 @@
 .measure-narrow { max-width: 80rem;  }
 .measure        { max-width: 120rem; }
 .measure-wide   { max-width: 136rem; }
+
+body {
+  font-family: "Inter UI";
+}
+
+h1, .h1 {
+  font-size: 6rem;
+  line-height: 8rem;
+  
+}
+
+
+h2, .h2 {
+  font-size: 5rem;
+  line-height: 6rem;
+}
