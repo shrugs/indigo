@@ -42,7 +42,7 @@
 .mv-auto { margin-top: auto; margin-bottom: auto }
 
 @each $breakpoint, $bp-value in $breakpoints {
-  .m-auto-#{$breakpoint} { margin: auto }
+  .m-auto-#{$breakpoint}  { margin: auto }
   .mt-auto-#{$breakpoint} { margin-top: auto }
   .mb-auto-#{$breakpoint} { margin-bottom: auto }
   .mr-auto-#{$breakpoint} { margin-right: auto }

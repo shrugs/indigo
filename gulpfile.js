@@ -119,6 +119,11 @@ gulp.task('indigo-css', gulp.series(
 ));
 
 
+gulp.task('watch-indigo-css', function () {
+  gulp.watch(`${PATHS.css}/**/*.scss`, gulp.parallel('indigo-css'));
+});
+
+
 
 // System CSS ******************************************************************
 
@@ -296,15 +301,36 @@ gulp.task('indigo-react-mini', gulp.series(
 ));
 
 
+
+gulp.task('watch-indigo-react', function () {
+  gulp.watch(`${PATHS.react}/**/*.js`, gulp.parallel('indigo-react'))
+});
+
+
+
+gulp.task('watch-indigo-react-mini', function () {
+  gulp.watch(`${PATHS.react}/**/*.js`, gulp.parallel('indigo-react-mini'))
+});
+
+
 /*******************************************************************************
 Build everything
 */
 
 
-gulp.task('indigo-build', gulp.parallel(
+gulp.task('indigo-build-all', gulp.parallel(
   'indigo-react',
   'indigo-css',
 ));
+
+
+gulp.task('watch-indigo-all', function () {
+  gulp.parallel(
+    'watch-indigo-react',
+    'watch-indigo-css'
+  );
+});
+
 
 
 /*******************************************************************************
@@ -386,10 +412,33 @@ gulp.task('build-sandbox-react', gulp.series(
 ));
 
 
-// gulp.task('default', gulp.series())
+
+gulp.task('watch-sandbox-react', function () {
+  gulp.watch(`${PATHS.sandbox}src/js/**/*.js`, gulp.parallel('sandbox-react'))
+});
 
 
-//
-// gulp.task('watch', function () {
-//   gulp.watch('./sass/**/*.scss', gulp.parallel('default'));
-// });
+
+gulp.task('watch-sandbox-css', function () {
+  gulp.watch(`${PATHS.sandbox}src/css/**/*.scss`, gulp.parallel('sandbox-css'))
+});
+
+
+
+gulp.task('watch-sandbox',
+  gulp.parallel(
+    'watch-sandbox-react',
+    'watch-sandbox-css'
+  )
+);
+
+
+
+gulp.task('watch-sandbox-all',
+  gulp.parallel(
+    'watch-indigo-react',
+    'watch-indigo-css',
+    'watch-sandbox-react',
+    'watch-sandbox-css'
+  )
+);
