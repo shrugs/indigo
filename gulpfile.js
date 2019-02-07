@@ -170,7 +170,7 @@ gulp.task(
 
 
 // Runs above tasks. Also in package.json as `npm run build:indigo-system-css`
-gulp.task('indigo-system-css', gulp.series(
+gulp.task('indigo-system-sass', gulp.series(
   'sass-compressed-system',
   'sass-header-system',
   'sass-gzip-system'
@@ -225,8 +225,8 @@ gulp.task(
 
 
 // Runs above tasks. Also in package.json as
-// `npm run build:indigo-utilities-css`
-gulp.task('indigo-utilities-css', gulp.series(
+// `npm run build:indigo-utilities-sass`
+gulp.task('indigo-utilities-sass', gulp.series(
   'sass-compressed-utils',
   'sass-header-utils',
   'sass-gzip-utils'
@@ -237,11 +237,11 @@ gulp.task('indigo-utilities-css', gulp.series(
 
 
 // Builds indigio.css, system.css and utilities.css. Also in package.json as
-// `npm run build:indigo-all-css`
+// `npm run build:indigo-all-sass`
 gulp.task('indigo-all', gulp.series(
   'indigo-sass',
-  'indigo-utilities-css',
-  'indigo-system-css'
+  'indigo-utilities-sass',
+  'indigo-system-sass'
 ));
 
 
