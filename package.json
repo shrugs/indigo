@@ -1,6 +1,6 @@
 {
   "name": "indigo",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "tlon's design language",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "watch:sandbox": "gulp watch-sandbox",
     "watch:sandbox-dev": "gulp watch-sandbox-dev",
     "build:indigo": "gulp indigo-build-all",
-    "start": "echo \"Use start:sass, start:react, start:sandbox instead\" && exit 1",
+    "start": "npm run watch:sandbox-dev",
     "start:sass": "npm run watch:indigo-sass",
     "start:react": "npm run watch:indigo-react",
     "start:sandbox": "npm run watch:sandbox",
