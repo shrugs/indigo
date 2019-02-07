@@ -9,7 +9,6 @@ var cssnano = require('gulp-cssnano');
 var header = require('gulp-header');
 var gzip = require('gulp-gzip');
 var rename = require("gulp-rename");
-var copy = require("gulp-copy");
 
 // Rollup plugins
 var resolve = require('rollup-plugin-node-resolve');
@@ -32,7 +31,6 @@ const plugins = {
   header:     header,
   gzip:       gzip,
   rename:     rename,
-  copy:       copy,
 
   resolve:    resolve,
   commonjs:   commonjs,
@@ -112,15 +110,15 @@ gulp.task(
 
 
 // Runs above tasks. Also in package.json as `npm run build:indigo.css`
-gulp.task('indigo-css', gulp.series(
+gulp.task('indigo-sass', gulp.series(
   'sass-compressed',
   'sass-header',
   'sass-gzip'
 ));
 
 
-gulp.task('watch-indigo-css', function () {
-  gulp.watch(`${PATHS.css}/**/*.scss`, gulp.parallel('indigo-css'));
+gulp.task('watch-indigo-sass', function () {
+  gulp.watch(`${PATHS.css}/**/*.scss`, gulp.parallel('indigo-sass'));
 });
 
 
@@ -241,7 +239,7 @@ gulp.task('indigo-utilities-css', gulp.series(
 // Builds indigio.css, system.css and utilities.css. Also in package.json as
 // `npm run build:indigo-all-css`
 gulp.task('indigo-all', gulp.series(
-  'indigo-css',
+  'indigo-sass',
   'indigo-utilities-css',
   'indigo-system-css'
 ));
@@ -320,14 +318,14 @@ Build everything
 
 gulp.task('indigo-build-all', gulp.parallel(
   'indigo-react',
-  'indigo-css',
+  'indigo-sass',
 ));
 
 
 gulp.task('watch-indigo-all', function () {
   gulp.parallel(
     'watch-indigo-react',
-    'watch-indigo-css'
+    'watch-indigo-sass'
   );
 });
 
@@ -373,7 +371,7 @@ gulp.task('sandbox-react', gulp.series(
 
 
 
-gulp.task('copy-indigo-css-to-sandbox', function() {
+gulp.task('copy-indigo-sass-to-sandbox', function() {
   return gulp
     .src(`${PATHS.css}dist/indigo.css`)
     .pipe(gulp.dest(`${PATHS.sandbox}src/css`));
@@ -389,7 +387,7 @@ gulp.task('copy-indigo-react-to-sandbox', function() {
 
 
 
-gulp.task('sandbox-css', function() {
+gulp.task('sandbox-sass', function() {
   return gulp
     .src(`${PATHS.sandbox}src/css/index.css`)
     .pipe(cssimport())
@@ -402,13 +400,13 @@ gulp.task('sandbox-css', function() {
 gulp.task('build-sandbox-react', gulp.series(
   // rebuild and copy indigo
   'indigo-react',
-  'indigo-css',
+  'indigo-sass',
   'copy-indigo-react-to-sandbox',
-  'copy-indigo-css-to-sandbox',
+  'copy-indigo-sass-to-sandbox',
   // build sandbox
   'sandbox-html-copy',
   'sandbox-react',
-  'sandbox-css',
+  'sandbox-sass',
 ));
 
 
@@ -419,8 +417,8 @@ gulp.task('watch-sandbox-react', function () {
 
 
 
-gulp.task('watch-sandbox-css', function () {
-  gulp.watch(`${PATHS.sandbox}src/css/**/*.scss`, gulp.parallel('sandbox-css'))
+gulp.task('watch-sandbox-sass', function () {
+  gulp.watch(`${PATHS.sandbox}src/css/**/*.scss`, gulp.parallel('sandbox-sass'))
 });
 
 
@@ -428,17 +426,17 @@ gulp.task('watch-sandbox-css', function () {
 gulp.task('watch-sandbox',
   gulp.parallel(
     'watch-sandbox-react',
-    'watch-sandbox-css'
+    'watch-sandbox-sass'
   )
 );
 
 
 
-gulp.task('watch-sandbox-all',
+gulp.task('watch-sandbox-dev',
   gulp.parallel(
     'watch-indigo-react',
-    'watch-indigo-css',
+    'watch-indigo-sass',
     'watch-sandbox-react',
-    'watch-sandbox-css'
+    'watch-sandbox-sass'
   )
 );
