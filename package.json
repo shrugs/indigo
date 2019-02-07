@@ -16,7 +16,7 @@
     "build:sandbox-react": "gulp build-sandbox-react",
     "watch:sandbox": "gulp watch-sandbox",
     "watch:sandbox-all": "gulp watch-sandbox-all",
-    "build:indigo": "gulp indigo-build-all",
+    "build:indigo": "gulp indigo-build-all"
   },
   "repository": {
     "type": "git",
