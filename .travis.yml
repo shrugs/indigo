@@ -6,7 +6,7 @@ install:
 
 script:
   - npm run build:indigo-react
-  - npm run build:indigo-css
+  - npm run build:indigo-sass
   # - npm run test
 
 # Send coverage data to Coveralls
