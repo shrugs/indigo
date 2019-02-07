@@ -7,7 +7,7 @@ class WelcomePage extends Component {
     console.log(indigo)
     return (
       <div>
-        <h1>Indigo Sandbox test h1</h1>
+        <h1>Indigo Sandbox test h1.</h1>
       </div>
     )
   }

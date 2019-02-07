@@ -6,12 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:indigo-css": "gulp indigo-css",
+    "watch:indigo-css": "gulp watch-indigo-css",
     "build:indigo-system-css": "gulp indigo-system-css",
     "build:indigo-utilities-css": "gulp indigo-utilities-css",
     "build:indigo-all-css": "gulp indigo-all-css",
+    "watch:indigo-all": "gulp watch-indigo-all",
     "build:indigo-react": "gulp indigo-react",
+    "watch:indigo-react": "gulp watch-indigo-react",
     "build:sandbox-react": "gulp build-sandbox-react",
-    "build": "gulp indigo-build"
+    "watch:sandbox": "gulp watch-sandbox",
+    "watch:sandbox-all": "gulp watch-sandbox-all",
+    "build:indigo": "gulp indigo-build-all"
   },
   "repository": {
     "type": "git",
