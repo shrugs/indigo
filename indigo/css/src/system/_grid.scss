@@ -64,7 +64,7 @@
 
 
 // Gutter and Slug spacing
-@each $d in (0, 1, 2, 4) {
+@each $d in (0, 1, 2, 4, 8, 16) {
   .slug#{$d} > *:not(:last-child)  { margin-bottom:  #{$d}rem; }
   .gut#{$d} > *:not(:last-child)   { margin-right:   #{$d}rem; }
 

@@ -17,11 +17,11 @@
     "watch:sandbox": "gulp watch-sandbox",
     "watch:sandbox-dev": "gulp watch-sandbox-dev",
     "build:indigo": "gulp indigo-build-all",
-    "start": "npm run watch:sandbox-dev",
+    "start": "npm-run-all watch:sandbox-dev",
     "start:sass": "npm run watch:indigo-sass",
     "start:react": "npm run watch:indigo-react",
     "start:sandbox": "npm run watch:sandbox",
-    "start:sandbox-dev": "npm run watch:sandbox-dev"
+    "start:sandbox-dev": "npm run sandbox-dev"
   },
   "repository": {
     "type": "git",
@@ -41,6 +41,7 @@
   "homepage": "https://github.com/urbit/Indigo#readme",
   "dependencies": {
     "classnames": "^2.2.6",
+    "gulp-cssfont64": "0.0.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-router-dom": "^4.3.1"
@@ -56,6 +57,8 @@
     "gulp-minify": "^3.1.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
+    "gulp-server-livereload": "^1.9.2",
+    "gulp-shell": "^0.6.5",
     "node-sass": "^4.11.0",
     "node-sass-chokidar": "^1.3.4",
     "npm-run-all": "^4.1.5",
