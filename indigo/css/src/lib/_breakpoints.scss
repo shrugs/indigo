@@ -1,22 +1,14 @@
-// $breakpoints: (
-//   // 'xs': 320px,
-//   sm: 550px,
-//   md: 750px,
-//   lg: 960px,
-//   xl: 1440px,
-// );
-
 $breakpoints: (
   (
     bp: 550px,
     rule: "only screen and (max-width: 550px)",
     suffix: "ns"
   ),
-  (
-    bp: 550px,
-    rule: "only screen and (min-width: 550px)",
-    suffix: "sm"
-  ),
+  // (
+  //   bp: 550px,
+  //   rule: "only screen and (min-width: 550px)",
+  //   suffix: "sm"
+  // ),
   (
     bp: 750px,
     rule: "only screen and (min-width: 750px)",
@@ -27,18 +19,9 @@ $breakpoints: (
     rule: "only screen and (min-width: 960px)",
     suffix: "lg"
   ),
-  (
-    bp: 1440px,
-    rule: "only screen and (min-width: 1440px)",
-    suffix: "xl"
-  )
+  // (
+  //   bp: 1440px,
+  //   rule: "only screen and (min-width: 1440px)",
+  //   suffix: "xl"
+  // )
 );
-
-// $vp-xs: "only screen and (min-width: 320px)";
-// $vp-sm: "only screen and (min-width: 550px)";
-// $vp-md: "only screen and (min-width: 750px)";
-// $vp-lg: "only screen and (min-width: 960px)";
-// $vp-xl: "only screen and (min-width: 1440px)";
-//
-// $vp-ns: "only screen and (max-width: 550px)";
-// $vp-nm: "only screen and (max-width: 750px)";

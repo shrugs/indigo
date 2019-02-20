@@ -1,0 +1,42 @@
+/*******************************************************************************
+  Size classes
+*******************************************************************************/
+
+// MAYBE: view widths added in the future
+// MAYBE: max widths added in the future
+
+.w-full {
+  width: 100%;
+}
+
+// Responsive Spacing
+@each $bp in $breakpoints {
+  $suffix: get($bp, "suffix");
+  $rule: get($bp, "rule");
+
+  @media #{$rule} {
+    .w-full-#{$suffix} {
+      width: 100%;
+    }
+  }
+}
+
+@each $dim in $scale {
+  $name: str-replace(#{$dim}, ".");
+
+  .w#{$name} {
+    width: #{$dim}rem;
+  }
+
+  // Responsive Spacing
+  @each $bp in $breakpoints {
+    $suffix: get($bp, "suffix");
+    $rule: get($bp, "rule");
+
+    @media #{$rule} {
+      .w#{$name}-#{$suffix} {
+        width: #{$dim}rem;
+      }
+    }
+  }
+}

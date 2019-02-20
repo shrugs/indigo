@@ -1,216 +1,142 @@
-/*******************************************************************************
-  Typography
-*******************************************************************************/
-
-// Vertical Align
-.t-top {
-  vertical-align: top;
-}
-.t-middle {
-  vertical-align: middle;
-}
-.t-bottom {
-  vertical-align: bottom;
-}
-.t-baseline {
-  vertical-align: baseline;
-}
-.t-sub {
-  vertical-align: sub;
-}
-.t-super {
-  vertical-align: super;
-}
-.t-text-bottom {
-  vertical-align: text-bottom;
-}
-.t-text-top {
-  vertical-align: text-top;
+.h1-large,
+.t1 {
+  font-size: 16rem;
+  line-height: 20rem;
 }
 
-@each $bp in $breakpoints {
-  $suffix: get($bp, "suffix");
-  $rule: get($bp, "rule");
-
-  @media #{$rule} {
-    .t-top-#{$suffix} {
-      vertical-align: top;
-    }
-    .t-middle-#{$suffix} {
-      vertical-align: middle;
-    }
-    .t-bottom-#{$suffix} {
-      vertical-align: bottom;
-    }
-    .t-baseline-#{$suffix} {
-      vertical-align: baseline;
-    }
-    .t-sub-#{$suffix} {
-      vertical-align: sub;
-    }
-    .t-super-#{$suffix} {
-      vertical-align: super;
-    }
-    .t-text-bottom-#{$suffix} {
-      vertical-align: text-bottom;
-    }
-    .t-text-top-#{$suffix} {
-      vertical-align: text-top;
-    }
-  }
+.h1,
+.t2 {
+  font-size: 12rem;
+  line-height: 16rem;
 }
 
-// Text Align (Horizontal Alignment)
-.t-left {
-  text-align: left;
-}
-.t-center {
-  text-align: center;
-}
-.t-justified {
-  text-align: justify;
-}
-.t-right {
-  text-align: right;
-}
-
-@each $bp in $breakpoints {
-  $suffix: get($bp, "suffix");
-  $rule: get($bp, "rule");
-
-  @media #{$rule} {
-    .t-left-#{$suffix} {
-      text-align: left;
-    }
-    .t-center-#{$suffix} {
-      text-align: center;
-    }
-    .t-justified-#{$suffix} {
-      text-align: justify;
-    }
-    .t-right-#{$suffix} {
-      text-align: right;
-    }
-  }
-}
-
-// font-weight
-.t100 .ultralight {
-  font-weight: 100;
-}
-.t200,
-.thin {
-  font-weight: 200;
-}
-.t300,
-.light {
-  font-weight: 300;
-}
-.t400,
-.regular {
-  font-weight: 400;
-}
-.t500,
-.medium {
-  font-weight: 500;
-}
-.t600,
-.semibold {
-  font-weight: 600;
-}
-.t700,
-.bold {
-  font-weight: 700;
-}
-.t800,
-.extrabold {
-  font-weight: 800;
-}
-.t900,
-.black {
-  font-weight: 900;
-}
-
-// Font size
-.t8 {
+.h2,
+.t3 {
   font-size: 8rem;
+  line-height: 12rem;
 }
-.t7 {
-  font-size: 7rem;
-}
-.t6 {
+
+.h3,
+.t4 {
   font-size: 6rem;
+  line-height: 12rem;
 }
+
+.h4,
 .t5 {
   font-size: 5rem;
+  line-height: 6rem;
 }
-.t4 {
+
+.p,
+.t6 {
   font-size: 4rem;
+  line-height: 6rem;
 }
-.t35 {
-  font-size: 3.5rem;
-}
-.t3 {
+
+.label,
+.t7,
+.caption {
   font-size: 3rem;
-}
-.t2 {
-  font-size: 2rem;
-}
-.t1 {
-  font-size: 1rem;
+  line-height: 6rem;
 }
 
-// text-decoration, text-transform, and text-style
-.underline {
-  text-decoration: underline;
-}
-.strikethrough {
-  text-decoration: line-through;
-}
-.italic {
-  font-style: italic;
-}
-.bold .capitalize {
-  text-transform: capitalize;
-}
-.uppercase {
-  text-transform: uppercase;
-}
-
-// white-space
-.ws-normal {
-  white-space: normal;
-}
-.nowrap {
-  white-space: nowrap;
-}
-.pre {
-  white-space: pre;
-}
 .truncate {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
+.indent {
+  text-indent: 1em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// Measure
+// “Anything from 45 to 75 characters is widely regarded as a satisfactory length
+// of line for a single-column page… the 66-character line (counting both letters
+// and spaces) is widely regarded as ideal. For multiple-column work, a better
+// average is 40-50 characters.”
+
+.measure-narrow {
+  max-width: 80rem;
+}
+.measure {
+  max-width: 120rem;
+}
+.measure-wide {
+  max-width: 136rem;
+}
+
 @each $bp in $breakpoints {
   $suffix: get($bp, "suffix");
   $rule: get($bp, "rule");
 
   @media #{$rule} {
-    .ws-normal-#{$suffix} {
-      white-space: normal;
+    .h1-large-#{$suffix},
+    .t1-#{$suffix} {
+      font-size: 16rem;
+      line-height: 20rem;
     }
-    .nowrap-#{$suffix} {
-      white-space: nowrap;
+
+    .h1-#{$suffix},
+    .t2-#{$suffix} {
+      font-size: 12rem;
+      line-height: 16rem;
     }
-    .pre-#{$suffix} {
-      white-space: pre;
+
+    .h2-#{$suffix},
+    .t3-#{$suffix} {
+      font-size: 8rem;
+      line-height: 12rem;
     }
+
+    .h3-#{$suffix},
+    .t4-#{$suffix} {
+      font-size: 6rem;
+      line-height: 12rem;
+    }
+
+    .h4-#{$suffix},
+    .t5-#{$suffix} {
+      font-size: 5rem;
+      line-height: 6rem;
+    }
+
+    .p-#{$suffix},
+    .t6-#{$suffix} {
+      font-size: 4rem;
+      line-height: 6rem;
+    }
+
+    .label-#{$suffix},
+    .t7-#{$suffix},
+    .caption-#{$suffix} {
+      font-size: 3rem;
+      line-height: 6rem;
+    }
+
     .truncate-#{$suffix} {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+
+    .indent-#{$suffix} {
+      text-indent: 1em;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .measure-narrow-#{$suffix} {
+      max-width: 80rem;
+    }
+    .measure-#{$suffix} {
+      max-width: 120rem;
+    }
+    .measure-wide-#{$suffix} {
+      max-width: 136rem;
     }
   }
 }

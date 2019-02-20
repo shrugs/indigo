@@ -1,0 +1,61 @@
+/*******************************************************************************
+  Typography
+*******************************************************************************/
+
+// Vertical Align
+.t-top {
+  vertical-align: top;
+}
+.t-middle {
+  vertical-align: middle;
+}
+.t-bottom {
+  vertical-align: bottom;
+}
+.t-baseline {
+  vertical-align: baseline;
+}
+.t-sub {
+  vertical-align: sub;
+}
+.t-super {
+  vertical-align: super;
+}
+.t-text-bottom {
+  vertical-align: text-bottom;
+}
+.t-text-top {
+  vertical-align: text-top;
+}
+
+@each $bp in $breakpoints {
+  $suffix: get($bp, "suffix");
+  $rule: get($bp, "rule");
+
+  @media #{$rule} {
+    .t-top-#{$suffix} {
+      vertical-align: top;
+    }
+    .t-middle-#{$suffix} {
+      vertical-align: middle;
+    }
+    .t-bottom-#{$suffix} {
+      vertical-align: bottom;
+    }
+    .t-baseline-#{$suffix} {
+      vertical-align: baseline;
+    }
+    .t-sub-#{$suffix} {
+      vertical-align: sub;
+    }
+    .t-super-#{$suffix} {
+      vertical-align: super;
+    }
+    .t-text-bottom-#{$suffix} {
+      vertical-align: text-bottom;
+    }
+    .t-text-top-#{$suffix} {
+      vertical-align: text-top;
+    }
+  }
+}
