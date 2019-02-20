@@ -3,63 +3,102 @@
 *******************************************************************************/
 
 // Position
-.absolute, .abs { position: absolute }
-.relative, .rel { position: relative }
-.fixed, .fix    { position: fixed }
-.sticky         { position: sticky }
-.static         { position: static }
-
-@each $bp in $breakpoints {
-
-  $suffix: get($bp, 'suffix');
-  $rule: get($bp, 'rule');
-
-  @media #{$rule} {
-    .absolute-#{$suffix}, .abs-#{$suffix} { position: absolute }
-    .relative-#{$suffix}, .rel-#{$suffix} { position: relative }
-    .fixed-#{$suffix}, .fix-#{$suffix}    { position: fixed }
-    .sticky-#{$suffix}         { position: sticky }
-    .static-#{$suffix}         { position: static }
-  }
+.absolute,
+.abs {
+  position: absolute;
+}
+.relative,
+.rel {
+  position: relative;
+}
+.fixed,
+.fix {
+  position: fixed;
+}
+.sticky {
+  position: sticky;
+}
+.static {
+  position: static;
 }
 
+@each $bp in $breakpoints {
+  $suffix: get($bp, "suffix");
+  $rule: get($bp, "rule");
 
-
+  @media #{$rule} {
+    .absolute-#{$suffix},
+    .abs-#{$suffix} {
+      position: absolute;
+    }
+    .relative-#{$suffix},
+    .rel-#{$suffix} {
+      position: relative;
+    }
+    .fixed-#{$suffix},
+    .fix-#{$suffix} {
+      position: fixed;
+    }
+    .sticky-#{$suffix} {
+      position: sticky;
+    }
+    .static-#{$suffix} {
+      position: static;
+    }
+  }
+}
 
 // Top, Right, Bottom, Left
 @each $dim in $scale {
-
   // remove the . in 0.5
-  $name: str-replace(#{$dim}, '.');
+  $name: str-replace(#{$dim}, ".");
 
-  .top#{$name}                       { margin: #{$dim}rem;}
-  .right#{$name}                     { margin-top: #{$dim}rem;}
-  .bottom#{$name}                    { margin-bottom: #{$dim}rem;}
-  .left#{$name}                      { margin-left: #{$dim}rem;}
+  .top#{$name} {
+    margin: #{$dim}rem;
+  }
+  .right#{$name} {
+    margin-top: #{$dim}rem;
+  }
+  .bottom#{$name} {
+    margin-bottom: #{$dim}rem;
+  }
+  .left#{$name} {
+    margin-left: #{$dim}rem;
+  }
 
   // Responsive Margin
   @each $bp in $breakpoints {
-
-    $suffix: get($bp, 'suffix');
-    $rule: get($bp, 'rule');
+    $suffix: get($bp, "suffix");
+    $rule: get($bp, "rule");
 
     @media #{$rule} {
-      .top#{$name}-#{$suffix}    { margin: #{$dim}rem;}
-      .right#{$name}-#{$suffix}  { margin-top: #{$dim}rem;}
-      .bottom#{$name}-#{$suffix} { margin-bottom: #{$dim}rem;}
-      .left#{$name}-#{$suffix}   { margin-left: #{$dim}rem;}
+      .top#{$name}-#{$suffix} {
+        margin: #{$dim}rem;
+      }
+      .right#{$name}-#{$suffix} {
+        margin-top: #{$dim}rem;
+      }
+      .bottom#{$name}-#{$suffix} {
+        margin-bottom: #{$dim}rem;
+      }
+      .left#{$name}-#{$suffix} {
+        margin-left: #{$dim}rem;
+      }
     }
   }
-};
-
-
-
+}
 
 // Z-index
 @for $i from 0 through 10 {
-  .z#{$i} { z-index: #{$i}; }
+  .z#{$i} {
+    z-index: #{$i};
+  }
 }
 
-.z-index { z-index: auto }
+.z-index {
+  z-index: auto;
+}
 
-.zn1 { z-index: -1; }
+.zn1 {
+  z-index: -1;
+}

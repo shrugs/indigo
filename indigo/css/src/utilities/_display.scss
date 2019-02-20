@@ -3,27 +3,53 @@
 *******************************************************************************/
 
 // Display
-.block        { display: block }
-.inline       { display: inline }
-.inline-block { display: inline-block }
-.flex         { display: flex }
-.none         { display: none }
-.grid         { display: grid }
-.table        { display: table }
-
+.block {
+  display: block;
+}
+.inline {
+  display: inline;
+}
+.inline-block {
+  display: inline-block;
+}
+.flex {
+  display: flex;
+}
+.none {
+  display: none;
+}
+.grid {
+  display: grid;
+}
+.table {
+  display: table;
+}
 
 @each $bp in $breakpoints {
-
-  $suffix: get($bp, 'suffix');
-  $rule: get($bp, 'rule');
+  $suffix: get($bp, "suffix");
+  $rule: get($bp, "rule");
 
   @media #{$rule} {
-    .block-#{$suffix}        { display: block }
-    .inline-#{$suffix}       { display: inline }
-    .inline-block-#{$suffix} { display: inline-block }
-    .flex-#{$suffix}         { display: flex }
-    .none-#{$suffix}         { display: none }
-    .grid-#{$suffix}         { display: grid }
-    .table-#{$suffix}        { display: table }
+    .block-#{$suffix} {
+      display: block;
+    }
+    .inline-#{$suffix} {
+      display: inline;
+    }
+    .inline-block-#{$suffix} {
+      display: inline-block;
+    }
+    .flex-#{$suffix} {
+      display: flex;
+    }
+    .none-#{$suffix} {
+      display: none;
+    }
+    .grid-#{$suffix} {
+      display: grid;
+    }
+    .table-#{$suffix} {
+      display: table;
+    }
   }
 }

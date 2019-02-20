@@ -22,8 +22,6 @@
   width: 100%;
 }
 
-
-
 // Percentage-of-grid-based col widths
 // @each $name, $w in $semantic-cols {
 //
@@ -50,18 +48,22 @@
 //   };
 // };
 
-
-
 // Order
-@for $i from 0 through 12 { .order#{$i}   { order: #{$i}; } };
-.order-last       { order: 99999; }
-
-
+@for $i from 0 through 12 {
+  .order#{$i} {
+    order: #{$i};
+  }
+}
+.order-last {
+  order: 99999;
+}
 
 // Flex
-@for $i from 0 through 12 { .flex#{$i}   { flex: #{$i}; } };
-
-
+@for $i from 0 through 12 {
+  .flex#{$i} {
+    flex: #{$i};
+  }
+}
 
 // Gutter and Slug spacing
 // @each $d in (0, 1, 2, 4, 8, 16) {
