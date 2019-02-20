@@ -18,11 +18,9 @@
   left: -99999px;
 }
 
-
 @each $bp in $breakpoints {
-
-  $suffix: get($bp, 'suffix');
-  $rule: get($bp, 'rule');
+  $suffix: get($bp, "suffix");
+  $rule: get($bp, "rule");
 
   @media #{$rule} {
     .visible-#{$suffix} {
@@ -41,4 +39,4 @@
       left: -99999px;
     }
   }
-};
+}

@@ -1,5 +1,3 @@
-
-
 // $breakpoints: (
 //   // 'xs': 320px,
 //   sm: 550px,
@@ -12,29 +10,29 @@ $breakpoints: (
   (
     bp: 550px,
     rule: "only screen and (max-width: 550px)",
-    suffix: 'ns'
+    suffix: "ns"
   ),
   (
     bp: 550px,
     rule: "only screen and (min-width: 550px)",
-    suffix: 'sm'
+    suffix: "sm"
   ),
   (
     bp: 750px,
     rule: "only screen and (min-width: 750px)",
-    suffix: 'md'
+    suffix: "md"
   ),
   (
     bp: 960px,
     rule: "only screen and (min-width: 960px)",
-    suffix: 'lg'
+    suffix: "lg"
   ),
   (
     bp: 1440px,
     rule: "only screen and (min-width: 1440px)",
-    suffix: 'xl'
+    suffix: "xl"
   )
-)
+);
 
 // $vp-xs: "only screen and (min-width: 320px)";
 // $vp-sm: "only screen and (min-width: 550px)";

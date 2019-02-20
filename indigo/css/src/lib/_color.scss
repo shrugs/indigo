@@ -1,82 +1,73 @@
-
 /**********************
 Color variables
 **********************/
 
 // Color
-$red-dark:    #C80F34;
-$red:         #EE5432;
-$red-light:   #F9D6CE;
+$red-dark: #c80f34;
+$red: #ee5432;
+$red-light: #f9d6ce;
 
-$yellow-dark: #F3A12E;
-$yellow:      #F8C134;
-$yellow-light:#FFEFC5;
+$yellow-dark: #f3a12e;
+$yellow: #f8c134;
+$yellow-light: #ffefc5;
 
-$green-dark:  #286E55;
-$green:       #2AA779;
-$green-medium:#2ED196;
-$green-light: #C5FBE7;
+$green-dark: #286e55;
+$green: #2aa779;
+$green-medium: #2ed196;
+$green-light: #c5fbe7;
 
-$blue-dark:   #190D8D;
-$blue:        #4330FC;
-$blue-medium: #6184FF;
-$blue-light:  #CDD8FF;
+$blue-dark: #190d8d;
+$blue: #4330fc;
+$blue-medium: #6184ff;
+$blue-light: #cdd8ff;
 
-$purple:      #903AE6;
-$purple-light:#EC6FF7;
-
+$purple: #903ae6;
+$purple-light: #ec6ff7;
 
 // Neutral Colors
-$white:       #FFFFFF;
-$gray-10:     #F2F2F2;
-$gray-20:     #CCCCCC;
-$gray-30:     #B3B3B3;
-$gray-40:     #999999;
-$gray-50:     #7F7F7F;
-$gray-60:     #676767;
-$gray-70:     #4D4D4D;
-$gray-80:     #333333;
-$gray-90:     #1A1A1A;
-$black:       #000000;
-
+$white: #ffffff;
+$gray-10: #f2f2f2;
+$gray-20: #cccccc;
+$gray-30: #b3b3b3;
+$gray-40: #999999;
+$gray-50: #7f7f7f;
+$gray-60: #676767;
+$gray-70: #4d4d4d;
+$gray-80: #333333;
+$gray-90: #1a1a1a;
+$black: #000000;
 
 $colors: (
-  red-dark:      $red-dark,
-  red:           $red,
-  red-light:     $red-light,
-
-  yellow-dark:   $yellow-dark,
-  yellow:        $yellow,
-  yellow-light:  $yellow-light,
-
-  green-dark:    $green-dark,
-  green:         $green,
-  green-medium:  $green-medium,
-  green-light:   $green-light,
-
-  blue-dark:     $blue-dark,
-  blue:          $blue,
-  blue-medium:   $blue-medium,
-  blue-light:    $blue-light,
-
-  purple:        $purple,
-  purple-light:  $purple-light
+  red-dark: $red-dark,
+  red: $red,
+  red-light: $red-light,
+  yellow-dark: $yellow-dark,
+  yellow: $yellow,
+  yellow-light: $yellow-light,
+  green-dark: $green-dark,
+  green: $green,
+  green-medium: $green-medium,
+  green-light: $green-light,
+  blue-dark: $blue-dark,
+  blue: $blue,
+  blue-medium: $blue-medium,
+  blue-light: $blue-light,
+  purple: $purple,
+  purple-light: $purple-light
 );
 
-
-$grayscale:(
-  white:         $white,
-  gray-10:       $gray-10,
-  gray-20:       $gray-20,
-  gray-30:       $gray-30,
-  gray-40:       $gray-40,
-  gray-50:       $gray-50,
-  gray-60:       $gray-60,
-  gray-70:       $gray-70,
-  gray-80:       $gray-80,
-  gray-90:       $gray-90,
-  black:         $black
+$grayscale: (
+  white: $white,
+  gray-10: $gray-10,
+  gray-20: $gray-20,
+  gray-30: $gray-30,
+  gray-40: $gray-40,
+  gray-50: $gray-50,
+  gray-60: $gray-60,
+  gray-70: $gray-70,
+  gray-80: $gray-80,
+  gray-90: $gray-90,
+  black: $black
 );
-
 
 $allColors: map-merge($colors, $grayscale);

@@ -3,8 +3,12 @@
 *******************************************************************************/
 
 // We almost never use border-radius
-@each $i in (0, 1, 2, 4 ) {
-  .r#{$i}   { border-radius: #{$i}px; }
+@each $i in (0, 1, 2, 4) {
+  .r#{$i} {
+    border-radius: #{$i}px;
+  }
 }
 
-.r-full { border-radius: 9999px }
+.r-full {
+  border-radius: 9999px;
+}

@@ -35,7 +35,7 @@ $row-scale: (
   5: 64,
   6: 128,
   7: 192,
-  8: 256,
+  8: 256
 );
 
 // Make a list with each dimension in the scale
@@ -51,4 +51,4 @@ $scale: (0.5);
     $scale: append($scale, $i);
     $i: $i + $mod;
   }
-};
+}

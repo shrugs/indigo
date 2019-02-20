@@ -12,66 +12,79 @@
 
 // Responsive Spacing
 @each $bp in $breakpoints {
-
-  $suffix: get($bp, 'suffix');
-  $rule: get($bp, 'rule');
+  $suffix: get($bp, "suffix");
+  $rule: get($bp, "rule");
 
   @media #{$rule} {
-    .w-full-#{$suffix} { width: 100%; }
+    .w-full-#{$suffix} {
+      width: 100%;
+    }
   }
-};
-
-
-
+}
 
 @each $dim in $scale {
+  $name: str-replace(#{$dim}, ".");
 
-  $name: str-replace(#{$dim}, '.');
-
-  .w#{$name}                       { width: #{$dim}rem; }
-  .h#{$name}                       { height: #{$dim}rem; }
-  .s#{$name}                       { width: #{$dim}rem; height: #{$dim}rem; }
+  .w#{$name} {
+    width: #{$dim}rem;
+  }
+  .h#{$name} {
+    height: #{$dim}rem;
+  }
+  .s#{$name} {
+    width: #{$dim}rem;
+    height: #{$dim}rem;
+  }
 
   // Responsive Spacing
   @each $bp in $breakpoints {
-
-    $suffix: get($bp, 'suffix');
-    $rule: get($bp, 'rule');
+    $suffix: get($bp, "suffix");
+    $rule: get($bp, "rule");
 
     @media #{$rule} {
-      .w#{$name}-#{$suffix}    { width: #{$dim}rem; }
-      .h#{$name}-#{$suffix}    { height: #{$dim}rem; }
-      .s#{$name}-#{$suffix}    { width: #{$dim}rem; height: #{$dim}rem; }
+      .w#{$name}-#{$suffix} {
+        width: #{$dim}rem;
+      }
+      .h#{$name}-#{$suffix} {
+        height: #{$dim}rem;
+      }
+      .s#{$name}-#{$suffix} {
+        width: #{$dim}rem;
+        height: #{$dim}rem;
+      }
     }
-  };
-};
-
+  }
+}
 
 // Row Heights
 @each $k, $v in $row-scale {
-  .rh-auto                       { height: auto }
-  .rh#{$k}                       { height: #{$v}rem; }
+  .rh-auto {
+    height: auto;
+  }
+  .rh#{$k} {
+    height: #{$v}rem;
+  }
 
   // Responsive row heights
   @each $bp in $breakpoints {
-
-    $suffix: get($bp, 'suffix');
-    $rule: get($bp, 'rule');
+    $suffix: get($bp, "suffix");
+    $rule: get($bp, "rule");
 
     @media #{$rule} {
-      .rh#{$k}-#{$suffix}    { height: #{$v}rem; }
+      .rh#{$k}-#{$suffix} {
+        height: #{$v}rem;
+      }
     }
-  };
-};
-
-
+  }
+}
 
 @each $bp in $breakpoints {
-
-  $suffix: get($bp, 'suffix');
-  $rule: get($bp, 'rule');
+  $suffix: get($bp, "suffix");
+  $rule: get($bp, "rule");
 
   @media #{$rule} {
-    .rh-auto-#{$suffix}    { height: auto }
+    .rh-auto-#{$suffix} {
+      height: auto;
+    }
   }
-};
+}

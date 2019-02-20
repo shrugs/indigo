@@ -2,61 +2,119 @@
   Margin
 *******************************************************************************/
 
-
-
 @each $dim in $scale {
-
   // remove . from '0.5' etc
-  $name: str-replace(#{$dim}, '.');
+  $name: str-replace(#{$dim}, ".");
 
-  .m#{$name}                       {margin: #{$dim}rem;}
-  .mt#{$name}                      {margin-top: #{$dim}rem;}
-  .mb#{$name}                      {margin-bottom: #{$dim}rem;}
-  .ml#{$name}                      {margin-left: #{$dim}rem;}
-  .mr#{$name}                      {margin-right: #{$dim}rem;}
-  .mv#{$name}                      {margin-top: #{$dim}rem; margin-bottom: #{$dim}rem;}
-  .mh#{$name}                      {margin-left: #{$dim}rem; margin-right: #{$dim}rem;}
+  .m#{$name} {
+    margin: #{$dim}rem;
+  }
+  .mt#{$name} {
+    margin-top: #{$dim}rem;
+  }
+  .mb#{$name} {
+    margin-bottom: #{$dim}rem;
+  }
+  .ml#{$name} {
+    margin-left: #{$dim}rem;
+  }
+  .mr#{$name} {
+    margin-right: #{$dim}rem;
+  }
+  .mv#{$name} {
+    margin-top: #{$dim}rem;
+    margin-bottom: #{$dim}rem;
+  }
+  .mh#{$name} {
+    margin-left: #{$dim}rem;
+    margin-right: #{$dim}rem;
+  }
 
   // Responsive Margin
   @each $bp in $breakpoints {
-
-    $suffix: get($bp, 'suffix');
-    $rule: get($bp, 'rule');
+    $suffix: get($bp, "suffix");
+    $rule: get($bp, "rule");
 
     @media #{$rule} {
-      .m#{$name}-#{$suffix}       {margin: #{$dim}rem;}
-      .mt#{$name}-#{$suffix}      {margin-top: #{$dim}rem;}
-      .mb#{$name}-#{$suffix}      {margin-bottom: #{$dim}rem;}
-      .ml#{$name}-#{$suffix}      {margin-left: #{$dim}rem;}
-      .mr#{$name}-#{$suffix}      {margin-right: #{$dim}rem;}
-      .mv#{$name}-#{$suffix}      {margin-top: #{$dim}rem; margin-bottom: #{$dim}rem;}
-      .mh#{$name}-#{$suffix}      {margin-left: #{$dim}rem; margin-right: #{$dim}rem;}
+      .m#{$name}-#{$suffix} {
+        margin: #{$dim}rem;
+      }
+      .mt#{$name}-#{$suffix} {
+        margin-top: #{$dim}rem;
+      }
+      .mb#{$name}-#{$suffix} {
+        margin-bottom: #{$dim}rem;
+      }
+      .ml#{$name}-#{$suffix} {
+        margin-left: #{$dim}rem;
+      }
+      .mr#{$name}-#{$suffix} {
+        margin-right: #{$dim}rem;
+      }
+      .mv#{$name}-#{$suffix} {
+        margin-top: #{$dim}rem;
+        margin-bottom: #{$dim}rem;
+      }
+      .mh#{$name}-#{$suffix} {
+        margin-left: #{$dim}rem;
+        margin-right: #{$dim}rem;
+      }
     }
   }
-};
-
+}
 
 // margin auto
-.m-auto                           { margin: auto }
-.mt-auto                          { margin-top: auto }
-.mb-auto                          { margin-bottom: auto }
-.mr-auto                          { margin-right: auto }
-.ml-auto                          { margin-left: auto }
-.mh-auto                          { margin-left: auto; margin-right: auto }
-.mv-auto                          { margin-top: auto; margin-bottom: auto }
+.m-auto {
+  margin: auto;
+}
+.mt-auto {
+  margin-top: auto;
+}
+.mb-auto {
+  margin-bottom: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.mh-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mv-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
 
 @each $bp in $breakpoints {
-
-  $suffix: get($bp, 'suffix');
-  $rule: get($bp, 'rule');
+  $suffix: get($bp, "suffix");
+  $rule: get($bp, "rule");
 
   @media #{$rule} {
-    .m-auto-#{$suffix}        { margin: auto }
-    .mt-auto-#{$suffix}       { margin-top: auto }
-    .mb-auto-#{$suffix}       { margin-bottom: auto }
-    .mr-auto-#{$suffix}       { margin-right: auto }
-    .ml-auto-#{$suffix}       { margin-left: auto }
-    .mh-auto-#{$suffix}       { margin-left: auto; margin-right: auto }
-    .mv-auto-#{$suffix}       { margin-top: auto; margin-bottom: auto }
+    .m-auto-#{$suffix} {
+      margin: auto;
+    }
+    .mt-auto-#{$suffix} {
+      margin-top: auto;
+    }
+    .mb-auto-#{$suffix} {
+      margin-bottom: auto;
+    }
+    .mr-auto-#{$suffix} {
+      margin-right: auto;
+    }
+    .ml-auto-#{$suffix} {
+      margin-left: auto;
+    }
+    .mh-auto-#{$suffix} {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .mv-auto-#{$suffix} {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
   }
 }

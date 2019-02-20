@@ -1,34 +1,37 @@
 // Vars
-@import './lib/breakpoints';
-@import './lib/color';
-@import './lib/spacing';
-@import './lib/grid';
-@import './lib/typography';
-@import './lib/func';
-
+@import "./lib/breakpoints";
+@import "./lib/color";
+@import "./lib/spacing";
+@import "./lib/grid";
+@import "./lib/typography";
+@import "./lib/func";
 
 // Reset
-@import './normalize';
-:root { font-size: 4px }
-* { -webkit-font-smoothing: antialiased; }
+@import "./normalize";
+:root {
+  font-size: 4px;
+}
+* {
+  -webkit-font-smoothing: antialiased;
+}
 
 // indigo.css
-@import './system/anchor';
-@import './system/button';
-@import './system/color';
-@import './system/grid';
-@import './system/iconography';
-@import './system/misc';
-@import './system/typography';
+@import "./system/anchor";
+@import "./system/button";
+@import "./system/color";
+@import "./system/grid";
+@import "./system/iconography";
+@import "./system/misc";
+@import "./system/typography";
 
-@import './utilities/border-radius';
-@import './utilities/border';
-@import './utilities/display';
-@import './utilities/flexbox';
-@import './utilities/margin';
-@import './utilities/opacity';
-@import './utilities/padding';
-@import './utilities/position';
-@import './utilities/size';
-@import './utilities/typography';
-@import './utilities/visibility';
+@import "./utilities/border-radius";
+@import "./utilities/border";
+@import "./utilities/display";
+@import "./utilities/flexbox";
+@import "./utilities/margin";
+@import "./utilities/opacity";
+@import "./utilities/padding";
+@import "./utilities/position";
+@import "./utilities/size";
+@import "./utilities/typography";
+@import "./utilities/visibility";
