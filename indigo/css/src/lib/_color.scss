@@ -1,59 +1,124 @@
 /**********************
 Color variables
 **********************/
+$blue-90: #070040;
+$blue-80: #190d7b;
+$blue-70: #2814d1;
+$blue-60: #4330fc;
+$blue-50: #5b5fff;
+$blue-40: #8699ff;
+$blue-30: #b0c7ff;
+$blue-20: #d8e9ff;
+$blue-10: #ecf6ff;
+
+$green-90: #003522;
+$green-80: #005234;
+$green-70: #006e46;
+$green-60: #0d8b5c;
+$green-50: #2aa779;
+$green-40: #53be89;
+$green-30: #84d4a3;
+$green-20: #bdebcc;
+$green-10: #ddf5e3;
+
+$yellow-90: #a33900;
+$yellow-80: #c75a0a;
+$yellow-70: #d47316;
+$yellow-60: #e28e22;
+$yellow-50: #efa931;
+$yellow-40: #fcc440;
+$yellow-30: #ffd972;
+$yellow-20: #ffe295;
+$yellow-10: #ffebb8;
+
+$red-90: #520f00;
+$red-80: #862009;
+$red-70: #ba371a;
+$red-60: #ee5432;
+$red-50: #f67b51;
+$red-40: #ffa073;
+$red-30: #ffc396;
+$red-20: #ffd0a6;
+$red-10: #ffdab5;
 
 // Color
-$red-dark: #c80f34;
-$red: #ee5432;
-$red-light: #f9d6ce;
-
-$yellow-dark: #f3a12e;
-$yellow: #f8c134;
-$yellow-light: #ffefc5;
-
-$green-dark: #286e55;
-$green: #2aa779;
-$green-medium: #2ed196;
-$green-light: #c5fbe7;
-
-$blue-dark: #190d8d;
-$blue: #4330fc;
-$blue-medium: #6184ff;
-$blue-light: #cdd8ff;
-
+$dark-red: $red-80;
+$red: $red-70;
+$light-red: $red-10;
+$dark-yellow: $yellow-80;
+$yellow: $yellow-40;
+$light-yellow: $yellow-10;
+$dark-green: $green-80;
+$green: $green-60;
+$light-green: $green-10;
+$dark-blue: $blue-80;
+$blue: $blue-60;
+$light-blue: $blue-10;
 $purple: #903ae6;
-$purple-light: #ec6ff7;
 
 // Neutral Colors
-$white: #ffffff;
-$gray-10: #f2f2f2;
-$gray-20: #cccccc;
-$gray-30: #b3b3b3;
-$gray-40: #999999;
-$gray-50: #7f7f7f;
-$gray-60: #676767;
-$gray-70: #4d4d4d;
-$gray-80: #333333;
-$gray-90: #1a1a1a;
 $black: #000000;
+$gray-90: #1a1a1a;
+$gray-80: #333333;
+$gray-70: #4d4d4d;
+$gray-60: #676767;
+$gray-50: #7f7f7f;
+$gray-40: #999999;
+$gray-30: #b3b3b3;
+$gray-20: #cccccc;
+$gray-10: #f2f2f2;
+$white: #ffffff;
 
 $colors: (
-  red-dark: $red-dark,
-  red: $red,
-  red-light: $red-light,
-  yellow-dark: $yellow-dark,
-  yellow: $yellow,
-  yellow-light: $yellow-light,
-  green-dark: $green-dark,
-  green: $green,
-  green-medium: $green-medium,
-  green-light: $green-light,
-  blue-dark: $blue-dark,
-  blue: $blue,
-  blue-medium: $blue-medium,
-  blue-light: $blue-light,
-  purple: $purple,
-  purple-light: $purple-light
+  blue-90: $blue-90,
+  blue-80: $blue-80,
+  blue-70: $blue-70,
+  blue-60: $blue-60,
+  blue-50: $blue-50,
+  blue-40: $blue-40,
+  blue-30: $blue-30,
+  blue-20: $blue-20,
+  blue-10: $blue-10,
+  green-90: $green-90,
+  green-80: $green-80,
+  green-70: $green-70,
+  green-60: $green-60,
+  green-50: $green-50,
+  green-40: $green-40,
+  green-30: $green-30,
+  green-20: $green-20,
+  green-10: $green-10,
+  yellow-90: $yellow-90,
+  yellow-80: $yellow-80,
+  yellow-70: $yellow-70,
+  yellow-60: $yellow-60,
+  yellow-50: $yellow-50,
+  yellow-40: $yellow-40,
+  yellow-30: $yellow-30,
+  yellow-20: $yellow-20,
+  yellow-10: $yellow-10,
+  red-90: $red-90,
+  red-80: $red-80,
+  red-70: $red-70,
+  red-60: $red-60,
+  red-50: $red-50,
+  red-40: $red-40,
+  red-30: $red-30,
+  red-20: $red-20,
+  red-10: $red-10,
+  dark-red: $red-80,
+  red: $red-70,
+  light-red: $red-10,
+  dark-yellow: $yellow-80,
+  yellow: $yellow-40,
+  light-yellow: $yellow-10,
+  dark-green: $green-80,
+  green: $green-60,
+  light-green: $green-10,
+  dark-blue: $blue-80,
+  blue: $blue-60,
+  light-blue: $blue-10,
+  purple: $purple
 );
 
 $grayscale: (

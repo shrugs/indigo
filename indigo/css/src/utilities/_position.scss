@@ -54,16 +54,16 @@
   $name: str-replace(#{$dim}, ".");
 
   .top#{$name} {
-    margin: #{$dim}rem;
+    top: #{$dim}rem;
   }
   .right#{$name} {
-    margin-top: #{$dim}rem;
+    right: #{$dim}rem;
   }
   .bottom#{$name} {
-    margin-bottom: #{$dim}rem;
+    bottom: #{$dim}rem;
   }
   .left#{$name} {
-    margin-left: #{$dim}rem;
+    left: #{$dim}rem;
   }
 
   // Responsive Margin
@@ -73,32 +73,17 @@
 
     @media #{$rule} {
       .top#{$name}-#{$suffix} {
-        margin: #{$dim}rem;
+        top: #{$dim}rem;
       }
       .right#{$name}-#{$suffix} {
-        margin-top: #{$dim}rem;
+        right: #{$dim}rem;
       }
       .bottom#{$name}-#{$suffix} {
-        margin-bottom: #{$dim}rem;
+        bottom: #{$dim}rem;
       }
       .left#{$name}-#{$suffix} {
-        margin-left: #{$dim}rem;
+        left: #{$dim}rem;
       }
     }
   }
-}
-
-// Z-index
-@for $i from 0 through 10 {
-  .z#{$i} {
-    z-index: #{$i};
-  }
-}
-
-.z-index {
-  z-index: auto;
-}
-
-.zn1 {
-  z-index: -1;
 }

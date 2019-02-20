@@ -1,0 +1,52 @@
+@each $dim in $scale {
+  $name: str-replace(#{$dim}, ".");
+
+  .h#{$name} {
+    height: #{$dim}rem;
+  }
+
+  // Responsive Spacing
+  @each $bp in $breakpoints {
+    $suffix: get($bp, "suffix");
+    $rule: get($bp, "rule");
+
+    @media #{$rule} {
+      .h#{$name}-#{$suffix} {
+        height: #{$dim}rem;
+      }
+    }
+  }
+}
+
+@each $k, $v in $row-scale {
+  .h-#{$k} {
+    height: #{$v}rem;
+  }
+
+  // Responsive row heights
+  @each $bp in $breakpoints {
+    $suffix: get($bp, "suffix");
+    $rule: get($bp, "rule");
+
+    @media #{$rule} {
+      .h-#{$k}-#{$suffix} {
+        height: #{$v}rem;
+      }
+    }
+  }
+}
+
+.h-auto {
+  height: auto;
+}
+
+@each $bp in $breakpoints {
+  $suffix: get($bp, "suffix");
+  $rule: get($bp, "rule");
+
+  @media #{$rule} {
+    .h-auto-#{$suffix} {
+      height: auto;
+    }
+  }
+}
