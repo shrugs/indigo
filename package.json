@@ -83,7 +83,7 @@
   "prettier": {
     "overrides": [
       {
-        "files": "./indigo/css/src/**/*.scss"
+        "files": "*.scss"
       }
     ]
   }
