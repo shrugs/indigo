@@ -9,13 +9,17 @@
 .sticky         { position: sticky }
 .static         { position: static }
 
-@each $breakpoint, $bp-value in $breakpoints {
-  @media only screen and (min-width:$bp-value) {
-    .absolute-#{$breakpoint}, .abs-#{$breakpoint} { position: absolute }
-    .relative-#{$breakpoint}, .rel-#{$breakpoint} { position: relative }
-    .fixed-#{$breakpoint}, .fix-#{$breakpoint}    { position: fixed }
-    .sticky-#{$breakpoint}         { position: sticky }
-    .static-#{$breakpoint}         { position: static }
+@each $bp in $breakpoints {
+
+  $suffix: get($bp, 'suffix');
+  $rule: get($bp, 'rule');
+
+  @media #{$rule} {
+    .absolute-#{$suffix}, .abs-#{$suffix} { position: absolute }
+    .relative-#{$suffix}, .rel-#{$suffix} { position: relative }
+    .fixed-#{$suffix}, .fix-#{$suffix}    { position: fixed }
+    .sticky-#{$suffix}         { position: sticky }
+    .static-#{$suffix}         { position: static }
   }
 }
 
@@ -34,12 +38,16 @@
   .left#{$name}                      { margin-left: #{$dim}rem;}
 
   // Responsive Margin
-  @each $breakpoint, $bp-value in $breakpoints {
-    @media only screen and (min-width:$bp-value) {
-      .top#{$name}-#{$breakpoint}    { margin: #{$dim}rem;}
-      .right#{$name}-#{$breakpoint}  { margin-top: #{$dim}rem;}
-      .bottom#{$name}-#{$breakpoint} { margin-bottom: #{$dim}rem;}
-      .left#{$name}-#{$breakpoint}   { margin-left: #{$dim}rem;}
+  @each $bp in $breakpoints {
+
+    $suffix: get($bp, 'suffix');
+    $rule: get($bp, 'rule');
+
+    @media #{$rule} {
+      .top#{$name}-#{$suffix}    { margin: #{$dim}rem;}
+      .right#{$name}-#{$suffix}  { margin-top: #{$dim}rem;}
+      .bottom#{$name}-#{$suffix} { margin-bottom: #{$dim}rem;}
+      .left#{$name}-#{$suffix}   { margin-left: #{$dim}rem;}
     }
   }
 };

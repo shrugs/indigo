@@ -19,17 +19,21 @@
 }
 
 
-@each $breakpoint, $bp-value in $breakpoints {
-  @media only screen and (min-width:$bp-value) {
-    .visible-#{$breakpoint} {
+@each $bp in $breakpoints {
+
+  $suffix: get($bp, 'suffix');
+  $rule: get($bp, 'rule');
+
+  @media #{$rule} {
+    .visible-#{$suffix} {
       visibility: visible;
     }
 
-    .hidden-#{$breakpoint} {
+    .hidden-#{$suffix} {
       visibility: hidden;
     }
 
-    .super-hidden-#{$breakpoint} {
+    .super-hidden-#{$suffix} {
       visibility: hidden;
       position: fixed;
       opacity: 0;

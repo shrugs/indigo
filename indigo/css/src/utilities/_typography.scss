@@ -12,16 +12,20 @@
 .t-text-bottom          { vertical-align: text-bottom; }
 .t-text-top             { vertical-align: text-top; }
 
-@each $breakpoint, $bp-value in $breakpoints {
-  @media only screen and (min-width:$bp-value) {
-    .t-top-#{$breakpoint}          { vertical-align: top }
-    .t-middle-#{$breakpoint}       { vertical-align: middle }
-    .t-bottom-#{$breakpoint}       { vertical-align: bottom }
-    .t-baseline-#{$breakpoint}     { vertical-align: baseline; }
-    .t-sub-#{$breakpoint}          { vertical-align: sub; }
-    .t-super-#{$breakpoint}        { vertical-align: super; }
-    .t-text-bottom-#{$breakpoint}  { vertical-align: text-bottom; }
-    .t-text-top-#{$breakpoint}     { vertical-align: text-top; }
+@each $bp in $breakpoints {
+
+  $suffix: get($bp, 'suffix');
+  $rule: get($bp, 'rule');
+
+  @media #{$rule} {
+    .t-top-#{$suffix}          { vertical-align: top }
+    .t-middle-#{$suffix}       { vertical-align: middle }
+    .t-bottom-#{$suffix}       { vertical-align: bottom }
+    .t-baseline-#{$suffix}     { vertical-align: baseline; }
+    .t-sub-#{$suffix}          { vertical-align: sub; }
+    .t-super-#{$suffix}        { vertical-align: super; }
+    .t-text-bottom-#{$suffix}  { vertical-align: text-bottom; }
+    .t-text-top-#{$suffix}     { vertical-align: text-top; }
   }
 }
 
@@ -31,12 +35,16 @@
 .t-justified            { text-align: justify }
 .t-right                { text-align: right }
 
-@each $breakpoint, $bp-value in $breakpoints {
-  @media only screen and (min-width:$bp-value) {
-    .t-left-#{$breakpoint}          { text-align: left }
-    .t-center-#{$breakpoint}        { text-align: center }
-    .t-justified-#{$breakpoint}     { text-align: justify }
-    .t-right-#{$breakpoint}         { text-align: right }
+@each $bp in $breakpoints {
+
+  $suffix: get($bp, 'suffix');
+  $rule: get($bp, 'rule');
+
+  @media #{$rule} {
+    .t-left-#{$suffix}          { text-align: left }
+    .t-center-#{$suffix}        { text-align: center }
+    .t-justified-#{$suffix}     { text-align: justify }
+    .t-right-#{$suffix}         { text-align: right }
   }
 }
 
@@ -79,12 +87,18 @@
                           text-overflow: ellipsis;
                         }
 
-@each $breakpoint, $bp-value in $breakpoints {
-  @media only screen and (min-width:$bp-value) {
-    .ws-normal-#{$breakpoint}      { white-space: normal; }
-    .nowrap-#{$breakpoint}         { white-space: nowrap; }
-    .pre-#{$breakpoint}            { white-space: pre; }
-    .truncate-#{$breakpoint}       { white-space: nowrap;
+
+
+@each $bp in $breakpoints {
+
+  $suffix: get($bp, 'suffix');
+  $rule: get($bp, 'rule');
+
+  @media #{$rule} {
+    .ws-normal-#{$suffix}      { white-space: normal; }
+    .nowrap-#{$suffix}         { white-space: nowrap; }
+    .pre-#{$suffix}            { white-space: pre; }
+    .truncate-#{$suffix}       { white-space: nowrap;
                                     overflow: hidden;
                                     text-overflow: ellipsis;
                                   }

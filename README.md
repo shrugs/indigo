@@ -15,6 +15,8 @@ When working on Indigo, it is often necessary to see your changes in the context
 
 ### Standard Commands
 
+WIP
+
 | Command                    | Description                                                                      |
 |----------------------------|----------------------------------------------------------------------------------|
 | `start`                    | Watches `*.js` and `*.scss` in `./sandbox` and all of `./indigo` for changes and builds everything|
