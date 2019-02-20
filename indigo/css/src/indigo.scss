@@ -17,6 +17,7 @@
 }
 
 // indigo.css
+@import "./utilities/typography";
 @import "./utilities/border-radius";
 @import "./utilities/border-style";
 @import "./utilities/border-width";
@@ -29,6 +30,7 @@
 @import "./utilities/font-weight";
 @import "./utilities/grid";
 @import "./utilities/heights";
+@import "./utilities/hover";
 @import "./utilities/iconography";
 @import "./utilities/margin";
 @import "./utilities/opacity";
@@ -38,7 +40,6 @@
 @import "./utilities/text-align";
 @import "./utilities/text-decoration";
 @import "./utilities/text-transform";
-@import "./utilities/typography";
 @import "./utilities/vertical-align";
 @import "./utilities/visibility";
 @import "./utilities/white-space";

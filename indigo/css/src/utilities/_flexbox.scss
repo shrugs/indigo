@@ -208,3 +208,20 @@
     }
   }
 }
+
+// Order
+@for $i from 0 through 12 {
+  .order#{$i} {
+    order: #{$i};
+  }
+}
+.order-last {
+  order: 99999;
+}
+
+// Flex
+@for $i from 0 through 12 {
+  .flex#{$i} {
+    flex: #{$i};
+  }
+}

@@ -1,26 +1,15 @@
-@import 'indigo.css';
+@import "indigo.css";
 
-.frame-center-wide {
-  /* max-width: 1184px; */
-  margin: 0 auto;
-  padding: 0 auto;
-}
-
-.row {
-  max-width: 1184px;
-}
-
-.grid {
+.grid-splash {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 168px));
+  grid-template-rows: minmax(140px, 288px);
   grid-gap: 32px;
 }
 
-.sh10 {
-
+.grid-two {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  /* grid-template-rows: minmax(140px, 288px); */
+  grid-gap: 32px;
 }
-
-/* .rh-auto { height: auto };
-.rh6 { height: 128rem }
-.rh7 { height: 192rem }
-.rh8 { height: 256rem } */

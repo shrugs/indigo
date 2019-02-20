@@ -1,137 +1,137 @@
 /**********************
 Color variables
 **********************/
-$blue-90: #070040;
-$blue-80: #190d7b;
-$blue-70: #2814d1;
-$blue-60: #4330fc;
-$blue-50: #5b5fff;
-$blue-40: #8699ff;
-$blue-30: #b0c7ff;
-$blue-20: #d8e9ff;
-$blue-10: #ecf6ff;
+$blue90: #070040;
+$blue80: #190d7b;
+$blue70: #2814d1;
+$blue60: #4330fc;
+$blue50: #5b5fff;
+$blue40: #8699ff;
+$blue30: #b0c7ff;
+$blue20: #d8e9ff;
+$blue10: #ecf6ff;
 
-$green-90: #003522;
-$green-80: #005234;
-$green-70: #006e46;
-$green-60: #0d8b5c;
-$green-50: #2aa779;
-$green-40: #53be89;
-$green-30: #84d4a3;
-$green-20: #bdebcc;
-$green-10: #ddf5e3;
+$green90: #003522;
+$green80: #005234;
+$green70: #006e46;
+$green60: #0d8b5c;
+$green50: #2aa779;
+$green40: #53be89;
+$green30: #84d4a3;
+$green20: #bdebcc;
+$green10: #ddf5e3;
 
-$yellow-90: #a33900;
-$yellow-80: #c75a0a;
-$yellow-70: #d47316;
-$yellow-60: #e28e22;
-$yellow-50: #efa931;
-$yellow-40: #fcc440;
-$yellow-30: #ffd972;
-$yellow-20: #ffe295;
-$yellow-10: #ffebb8;
+$yellow90: #a33900;
+$yellow80: #c75a0a;
+$yellow70: #d47316;
+$yellow60: #e28e22;
+$yellow50: #efa931;
+$yellow40: #fcc440;
+$yellow30: #ffd972;
+$yellow20: #ffe295;
+$yellow10: #ffebb8;
 
-$red-90: #520f00;
-$red-80: #862009;
-$red-70: #ba371a;
-$red-60: #ee5432;
-$red-50: #f67b51;
-$red-40: #ffa073;
-$red-30: #ffc396;
-$red-20: #ffd0a6;
-$red-10: #ffdab5;
+$red90: #520f00;
+$red80: #862009;
+$red70: #ba371a;
+$red60: #ee5432;
+$red50: #f67b51;
+$red40: #ffa073;
+$red30: #ffc396;
+$red20: #ffd0a6;
+$red10: #ffdab5;
 
 // Color
-$dark-red: $red-80;
-$red: $red-70;
-$light-red: $red-10;
-$dark-yellow: $yellow-80;
-$yellow: $yellow-40;
-$light-yellow: $yellow-10;
-$dark-green: $green-80;
-$green: $green-60;
-$light-green: $green-10;
-$dark-blue: $blue-80;
-$blue: $blue-60;
-$light-blue: $blue-10;
+$dark-red: $red80;
+$red: $red70;
+$light-red: $red10;
+$dark-yellow: $yellow80;
+$yellow: $yellow40;
+$light-yellow: $yellow10;
+$dark-green: $green80;
+$green: $green60;
+$light-green: $green10;
+$dark-blue: $blue80;
+$blue: $blue60;
+$light-blue: $blue10;
 $purple: #903ae6;
 
 // Neutral Colors
 $black: #000000;
-$gray-90: #1a1a1a;
-$gray-80: #333333;
-$gray-70: #4d4d4d;
-$gray-60: #676767;
-$gray-50: #7f7f7f;
-$gray-40: #999999;
-$gray-30: #b3b3b3;
-$gray-20: #cccccc;
-$gray-10: #f2f2f2;
+$gray90: #1a1a1a;
+$gray80: #333333;
+$gray70: #4d4d4d;
+$gray60: #676767;
+$gray50: #7f7f7f;
+$gray40: #999999;
+$gray30: #b3b3b3;
+$gray20: #cccccc;
+$gray10: #f2f2f2;
 $white: #ffffff;
 
 $colors: (
-  blue-90: $blue-90,
-  blue-80: $blue-80,
-  blue-70: $blue-70,
-  blue-60: $blue-60,
-  blue-50: $blue-50,
-  blue-40: $blue-40,
-  blue-30: $blue-30,
-  blue-20: $blue-20,
-  blue-10: $blue-10,
-  green-90: $green-90,
-  green-80: $green-80,
-  green-70: $green-70,
-  green-60: $green-60,
-  green-50: $green-50,
-  green-40: $green-40,
-  green-30: $green-30,
-  green-20: $green-20,
-  green-10: $green-10,
-  yellow-90: $yellow-90,
-  yellow-80: $yellow-80,
-  yellow-70: $yellow-70,
-  yellow-60: $yellow-60,
-  yellow-50: $yellow-50,
-  yellow-40: $yellow-40,
-  yellow-30: $yellow-30,
-  yellow-20: $yellow-20,
-  yellow-10: $yellow-10,
-  red-90: $red-90,
-  red-80: $red-80,
-  red-70: $red-70,
-  red-60: $red-60,
-  red-50: $red-50,
-  red-40: $red-40,
-  red-30: $red-30,
-  red-20: $red-20,
-  red-10: $red-10,
-  dark-red: $red-80,
-  red: $red-70,
-  light-red: $red-10,
-  dark-yellow: $yellow-80,
-  yellow: $yellow-40,
-  light-yellow: $yellow-10,
-  dark-green: $green-80,
-  green: $green-60,
-  light-green: $green-10,
-  dark-blue: $blue-80,
-  blue: $blue-60,
-  light-blue: $blue-10,
+  blue90: $blue90,
+  blue80: $blue80,
+  blue70: $blue70,
+  blue60: $blue60,
+  blue50: $blue50,
+  blue40: $blue40,
+  blue30: $blue30,
+  blue20: $blue20,
+  blue10: $blue10,
+  green90: $green90,
+  green80: $green80,
+  green70: $green70,
+  green60: $green60,
+  green50: $green50,
+  green40: $green40,
+  green30: $green30,
+  green20: $green20,
+  green10: $green10,
+  yellow90: $yellow90,
+  yellow80: $yellow80,
+  yellow70: $yellow70,
+  yellow60: $yellow60,
+  yellow50: $yellow50,
+  yellow40: $yellow40,
+  yellow30: $yellow30,
+  yellow20: $yellow20,
+  yellow10: $yellow10,
+  red90: $red90,
+  red80: $red80,
+  red70: $red70,
+  red60: $red60,
+  red50: $red50,
+  red40: $red40,
+  red30: $red30,
+  red20: $red20,
+  red10: $red10,
+  dark-red: $red80,
+  red: $red70,
+  light-red: $red10,
+  dark-yellow: $yellow80,
+  yellow: $yellow40,
+  light-yellow: $yellow10,
+  dark-green: $green80,
+  green: $green60,
+  light-green: $green10,
+  dark-blue: $blue80,
+  blue: $blue60,
+  light-blue: $blue10,
   purple: $purple
 );
 
 $grayscale: (
   white: $white,
-  gray-10: $gray-10,
-  gray-20: $gray-20,
-  gray-30: $gray-30,
-  gray-40: $gray-40,
-  gray-50: $gray-50,
-  gray-60: $gray-60,
-  gray-70: $gray-70,
-  gray-80: $gray-80,
-  gray-90: $gray-90,
+  gray10: $gray10,
+  gray20: $gray20,
+  gray30: $gray30,
+  gray40: $gray40,
+  gray50: $gray50,
+  gray60: $gray60,
+  gray70: $gray70,
+  gray80: $gray80,
+  gray90: $gray90,
   black: $black
 );
 
