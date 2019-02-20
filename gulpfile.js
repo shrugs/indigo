@@ -9,6 +9,9 @@ var cssnano = require('gulp-cssnano');
 var header = require('gulp-header');
 var gzip = require('gulp-gzip');
 var rename = require("gulp-rename");
+var cssfont64 = require('gulp-cssfont64');
+var shell = require('gulp-shell');
+var server = require('gulp-server-livereload');
 
 // Rollup plugins
 var resolve = require('rollup-plugin-node-resolve');
@@ -31,6 +34,9 @@ const plugins = {
   header:     header,
   gzip:       gzip,
   rename:     rename,
+  cssfont64:  cssfont64,
+  shell:      shell,
+  server:     server,
 
   resolve:    resolve,
   commonjs:   commonjs,
@@ -49,20 +55,17 @@ function getTask(task, src, dest, pkg) {
 
 
 var PATHS = {
-    css:      './indigo/css/',
-    html:     './indigo/html/',
-    react:    './indigo/react/',
-    site:     './indigo/site/',
-    sandbox:  './sandbox/'
+  css:          './indigo/css/',
+  html:         './indigo/html/',
+  react:        './indigo/react/',
+  site:         './indigo/site/',
+  sandbox:      './sandbox/'
 };
 
 
-/*******************************************************************************
-Indigo CSS Library
-*/
-
-// Generate indigo.css *********************************************************
-
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+// Build indigo-css
 
 // SCSS => CSS with minification
 gulp.task(
@@ -74,7 +77,6 @@ gulp.task(
     )
 );
 
-
 // SCSS => CSS without minification
 gulp.task(
     'sass-plain',
@@ -84,7 +86,6 @@ gulp.task(
       `${PATHS.css}dist`
     )
 );
-
 
 // Gzip .css file and add the .gz extension suffix to the compressed indigo.css
 // file
@@ -108,6 +109,14 @@ gulp.task(
     )
 );
 
+// gulp.task(
+//   'sass-base64-fonts',
+//   getTask(
+//     'cssfont64',
+//     `${PATHS.css}src/fonts/*.*`
+//   )
+// )
+
 
 // Runs above tasks. Also in package.json as `npm run build:indigo.css`
 gulp.task('indigo-sass', gulp.series(
@@ -118,138 +127,14 @@ gulp.task('indigo-sass', gulp.series(
 
 
 gulp.task('watch-indigo-sass', function () {
-  gulp.watch(`${PATHS.css}/**/*.scss`, gulp.parallel('indigo-sass'));
+  gulp.watch(`${PATHS.css}/**/*.scss`, gulp.series('indigo-sass'));
 });
 
 
 
-// System CSS ******************************************************************
-
-
-gulp.task(
-    'sass-compressed-system',
-    getTask(
-      'sass_compressed',
-      `${PATHS.css}src/system.scss`,
-      `${PATHS.css}dist/system`
-    )
-);
-
-
-
-gulp.task(
-    'sass-plain-system',
-    getTask(
-      'sass_plain',
-      `${PATHS.css}src/system.scss`,
-      `${PATHS.css}dist/system`
-    )
-);
-
-
-
-gulp.task(
-    'sass-gzip-system',
-    getTask(
-      'gzip',
-      `${PATHS.css}dist/system/system.css`,
-      `${PATHS.css}dist/system`
-    )
-);
-
-
-
-gulp.task(
-    'sass-header-system',
-    getTask(
-      'sass_header',
-      `${PATHS.css}dist/system/system.css`,
-      `${PATHS.css}dist/system`
-    )
-);
-
-
-// Runs above tasks. Also in package.json as `npm run build:indigo-system-css`
-gulp.task('indigo-system-sass', gulp.series(
-  'sass-compressed-system',
-  'sass-header-system',
-  'sass-gzip-system'
-));
-
-
-
-// Utilities CSS ***************************************************************
-
-
-gulp.task(
-    'sass-compressed-utils',
-    getTask(
-      'sass_compressed',
-      `${PATHS.css}src/utilities.scss`,
-      `${PATHS.css}dist/utilities`
-    )
-);
-
-
-
-gulp.task(
-    'sass-plain-utils',
-    getTask(
-      'sass_plain',
-      `${PATHS.css}src/utilities.scss`,
-      `${PATHS.css}dist/utilities`
-    )
-);
-
-
-
-gulp.task(
-    'sass-gzip-utils',
-    getTask(
-      'gzip',
-      `${PATHS.css}dist/utilities/utilities.css`,
-      `${PATHS.css}dist/utilities`
-    )
-);
-
-
-
-gulp.task(
-    'sass-header-utils',
-    getTask(
-      'sass_header',
-      `${PATHS.css}dist/utilities/utilities.css`,
-      `${PATHS.css}dist/utilities`
-    )
-);
-
-
-// Runs above tasks. Also in package.json as
-// `npm run build:indigo-utilities-sass`
-gulp.task('indigo-utilities-sass', gulp.series(
-  'sass-compressed-utils',
-  'sass-header-utils',
-  'sass-gzip-utils'
-));
-
-
-// Generate all CSS Packages ***************************************************
-
-
-// Builds indigio.css, system.css and utilities.css. Also in package.json as
-// `npm run build:indigo-all-sass`
-gulp.task('indigo-all', gulp.series(
-  'indigo-sass',
-  'indigo-utilities-sass',
-  'indigo-system-sass'
-));
-
-
-
-
-/*******************************************************************************
-Indigo React Library
-*/
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+// Build indigo-react
 
 
 gulp.task(
@@ -261,19 +146,6 @@ gulp.task(
     )
 );
 
-
-
-gulp.task(
-    'indigo-react-minify',
-    getTask(
-      'js_minify',
-      `${PATHS.react}dist/index.js`,
-      `${PATHS.react}dist/`
-    )
-);
-
-
-
 gulp.task(
     'indigo-react-bundle',
     getTask(
@@ -283,160 +155,241 @@ gulp.task(
     )
 );
 
-
-
 gulp.task('indigo-react', gulp.series(
   'indigo-react-transpile',
   'indigo-react-bundle'
 ));
 
-
-
-gulp.task('indigo-react-mini', gulp.series(
-  'indigo-react-transpile',
-  'indigo-react-bundle',
-  'indigo-react-minify'
-));
-
-
-
 gulp.task('watch-indigo-react', function () {
-  gulp.watch(`${PATHS.react}/**/*.js`, gulp.parallel('indigo-react'))
+  gulp.watch(`${PATHS.react}/**/*.js`, gulp.series('indigo-react'))
 });
 
 
-
-gulp.task('watch-indigo-react-mini', function () {
-  gulp.watch(`${PATHS.react}/**/*.js`, gulp.parallel('indigo-react-mini'))
-});
-
-
-/*******************************************************************************
-Build everything
-*/
-
-
-gulp.task('indigo-build-all', gulp.parallel(
-  'indigo-react',
-  'indigo-sass',
-));
-
-
-gulp.task('watch-indigo-all', function () {
-  gulp.parallel(
-    'watch-indigo-react',
-    'watch-indigo-sass'
-  );
-});
-
-
-
-/*******************************************************************************
-Run the sandbox
-*/
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+// Run/build indigo sandbox
 
 gulp.task(
-    'sandbox-react-transpile',
-    getTask(
-      'js_sucrase',
-      `${PATHS.sandbox}src/**/*.js`,
-      `${PATHS.sandbox}dist`
-    )
+  'sandbox-react-transpile',
+  getTask(
+    'js_sucrase',
+    `${PATHS.sandbox}src/**/*.js`,
+    `${PATHS.sandbox}dist`
+  )
 );
-
 
 gulp.task(
-    'sandbox-react-bundle',
-    getTask(
-      'js_quick_bundle',
-      `${PATHS.sandbox}dist/js/index.js`,
-      `${PATHS.sandbox}dist/js`
-    )
+  'sandbox-react-bundle',
+  getTask(
+    'js_quick_bundle',
+    `${PATHS.sandbox}dist/js/index.js`,
+    `${PATHS.sandbox}dist/js`
+  )
 );
 
+gulp.task(
+  'copy-sandbox-html',
+  getTask(
+    'js_quick_bundle',
+    `${PATHS.sandbox}src/index.html`,
+    `${PATHS.sandbox}dist`
+  )
+);
 
+gulp.task(
+  'copy-sandbox-assets',
+  getTask(
+    'js_quick_bundle',
+    `${PATHS.sandbox}src/assets/**/*`,
+    `${PATHS.sandbox}dist/assets`
+  )
+);
 
-gulp.task('sandbox-html-copy', function() {
-  return gulp
-    .src(`${PATHS.sandbox}src/index.html`)
-    .pipe(gulp.dest(`${PATHS.sandbox}dist`));
-})
+gulp.task(
+  'copy-indigo-css-to-sandbox',
+  getTask(
+    'js_quick_bundle',
+    `${PATHS.css}dist/indigo.css`,
+    `${PATHS.sandbox}src/css`
+  )
+);
 
-
+gulp.task(
+  'copy-indigo-react-to-sandbox',
+  getTask(
+    'js_quick_bundle',
+    `${PATHS.react}dist/index.js`,
+    `${PATHS.sandbox}src/js/indigo`
+  )
+);
 
 gulp.task('sandbox-react', gulp.series(
   'sandbox-react-transpile',
   'sandbox-react-bundle'
 ));
 
-
-
-gulp.task('copy-indigo-sass-to-sandbox', function() {
-  return gulp
-    .src(`${PATHS.css}dist/indigo.css`)
-    .pipe(gulp.dest(`${PATHS.sandbox}src/css`));
-})
-
-
-
-gulp.task('copy-indigo-react-to-sandbox', function() {
-  return gulp
-    .src(`${PATHS.react}dist/index.js`)
-    .pipe(gulp.dest(`${PATHS.sandbox}src/js/indigo`));
-})
-
-
-
-gulp.task('sandbox-sass', function() {
-  return gulp
-    .src(`${PATHS.sandbox}src/css/index.css`)
-    .pipe(cssimport())
-    .pipe(cssnano())
-    .pipe(gulp.dest(`${PATHS.sandbox}dist/css`));
-});
-
-
-
-gulp.task('build-sandbox-react', gulp.series(
-  // rebuild and copy indigo
-  'indigo-react',
-  'indigo-sass',
-  'copy-indigo-react-to-sandbox',
-  'copy-indigo-sass-to-sandbox',
-  // build sandbox
-  'sandbox-html-copy',
-  'sandbox-react',
-  'sandbox-sass',
-));
-
-
+// gulp.task('sandbox-css', function() {
+//   return gulp
+//     .src(`${PATHS.sandbox}src/css/index.css`)
+//     .pipe(cssimport())
+//     .pipe(cssnano())
+//     .pipe(gulp.dest(`${PATHS.sandbox}dist/css`));
+// });
 
 gulp.task('watch-sandbox-react', function () {
-  gulp.watch(`${PATHS.sandbox}src/js/**/*.js`, gulp.parallel('sandbox-react'))
+  gulp.watch(`${PATHS.sandbox}src/js/**/*.js`, gulp.series('sandbox-react'))
 });
-
-
 
 gulp.task('watch-sandbox-sass', function () {
-  gulp.watch(`${PATHS.sandbox}src/css/**/*.scss`, gulp.parallel('sandbox-sass'))
+  gulp.watch(`${PATHS.sandbox}src/css/**/*.scss`, gulp.series('sandbox-sass'))
+});
+
+gulp.task('sandbox-webserver', function() {
+  gulp.src('./sandbox/dist/')
+    .pipe(server({
+      livereload: true,
+      open: true,
+      port: 3000,
+      defaultFile: 'index.html'
+    }));
 });
 
 
+gulp.task('sandbox',
+  gulp.series(
+    gulp.series(
+      'sandbox-react',
+      // 'sandbox-css',
 
-gulp.task('watch-sandbox',
-  gulp.parallel(
-    'watch-sandbox-react',
-    'watch-sandbox-sass'
+      'indigo-react',
+      'indigo-sass',
+
+      'copy-indigo-react-to-sandbox',
+      'copy-indigo-css-to-sandbox',
+  ),
+    gulp.parallel(
+      'watch-indigo-react',
+      'watch-indigo-sass',
+      'watch-sandbox-react',
+      // 'watch-sandbox-scss',
+
+      'sandbox-webserver'
+    )
+  )
+)
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+// Run/build indigo spec site
+
+
+gulp.task(
+  'site-react-transpile',
+  getTask(
+    'js_sucrase',
+    `${PATHS.site}src/**/*.js`,
+    `${PATHS.site}dist`
   )
 );
 
-
-
-gulp.task('watch-sandbox-dev',
-  gulp.parallel(
-    'watch-indigo-react',
-    'watch-indigo-sass',
-    'watch-sandbox-react',
-    'watch-sandbox-sass'
+gulp.task(
+  'site-react-bundle',
+  getTask(
+    'js_quick_bundle',
+    `${PATHS.site}dist/js/index.js`,
+    `${PATHS.site}dist/js`
   )
 );
+
+gulp.task(
+  'copy-site-html',
+  getTask(
+    'js_quick_bundle',
+    `${PATHS.site}src/index.html`,
+    `${PATHS.site}dist`
+  )
+);
+
+gulp.task(
+  'copy-site-assets',
+  getTask(
+    'js_quick_bundle',
+    `${PATHS.site}src/assets/**/*`,
+    `${PATHS.site}dist/assets`
+  )
+);
+
+gulp.task(
+  'copy-indigo-css-to-site',
+  getTask(
+    'js_quick_bundle',
+    `${PATHS.css}dist/indigo.css`,
+    `${PATHS.site}src/css`
+  )
+);
+
+gulp.task(
+  'copy-indigo-react-to-site',
+  getTask(
+    'js_quick_bundle',
+    `${PATHS.react}dist/index.js`,
+    `${PATHS.site}src/js/indigo`
+  )
+);
+
+gulp.task('site-react', gulp.series(
+  'site-react-transpile',
+  'site-react-bundle'
+));
+
+gulp.task('site-css', function() {
+  return gulp
+    .src(`${PATHS.site}src/css/index.css`)
+    .pipe(cssimport())
+    .pipe(cssnano())
+    .pipe(gulp.dest(`${PATHS.site}dist/css`));
+});
+
+gulp.task('watch-site-react', function () {
+  gulp.watch(`${PATHS.site}src/js/**/*.js`, gulp.series('site-react'))
+});
+
+gulp.task('watch-site-css', function () {
+  gulp.watch(`${PATHS.site}src/css/**/*.css`, gulp.series('site-css'))
+});
+
+gulp.task('site-webserver', function() {
+  gulp.src(`${PATHS.site}dist`)
+    .pipe(server({
+      livereload: true,
+      open: true,
+      port: 3001,
+      defaultFile: 'index.html'
+    }));
+});
+
+
+gulp.task('site',
+  gulp.series(
+    gulp.series(
+      'site-react',
+      'site-css',
+  ),
+    gulp.parallel(
+      'watch-indigo-react',
+      'watch-indigo-sass',
+      'watch-site-react',
+      'watch-site-css',
+
+      'site-webserver'
+    )
+  )
+)
+
+
+gulp.task('update-site-indigo', gulp.series(
+  'indigo-react',
+  'indigo-sass',
+  'copy-indigo-react-to-site',
+  'copy-indigo-css-to-site',
+))

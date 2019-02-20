@@ -1,3 +1,7 @@
+// Import font family styles from inter-ui.css and source-code-pro.css
+@import '../fonts/inter-ui/inter-ui';
+@import '../fonts/source-code-pro/source-code-pro';
+
 
 // Font Family Shorthand
 // .head           { font-family: 'Work Sans', sans-serif }
@@ -11,6 +15,13 @@
 // of line for a single-column page… the 66-character line (counting both letters
 // and spaces) is widely regarded as ideal. For multiple-column work, a better
 // average is 40-50 characters.”
+//
+// TODO : Need breakpoints here
+// TODO : Need to separate body from body small
+.measure-narrow { max-width: 80rem;  }
+.measure        { max-width: 120rem; }
+.measure-wide   { max-width: 136rem; }
+
 .measure-narrow { max-width: 80rem;  }
 .measure        { max-width: 120rem; }
 .measure-wide   { max-width: 136rem; }
@@ -22,7 +33,7 @@ body {
 h1, .h1 {
   font-size: 6rem;
   line-height: 8rem;
-  
+
 }
 
 

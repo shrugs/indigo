@@ -3,40 +3,48 @@
 *******************************************************************************/
 
 // Vertical Align
-.t-top          { vertical-align: top }
-.t-middle       { vertical-align: middle }
-.t-bottom       { vertical-align: bottom }
-.t-baseline     { vertical-align: baseline; }
-.t-sub          { vertical-align: sub; }
-.t-super        { vertical-align: super; }
-.t-text-bottom  { vertical-align: text-bottom; }
-.t-text-top     { vertical-align: text-top; }
+.t-top                  { vertical-align: top }
+.t-middle               { vertical-align: middle }
+.t-bottom               { vertical-align: bottom }
+.t-baseline             { vertical-align: baseline; }
+.t-sub                  { vertical-align: sub; }
+.t-super                { vertical-align: super; }
+.t-text-bottom          { vertical-align: text-bottom; }
+.t-text-top             { vertical-align: text-top; }
 
-@each $breakpoint, $bp-value in $breakpoints {
-  @media only screen and (min-width:$bp-value) {
-    .t-top-#{$breakpoint}          { vertical-align: top }
-    .t-middle-#{$breakpoint}       { vertical-align: middle }
-    .t-bottom-#{$breakpoint}       { vertical-align: bottom }
-    .t-baseline-#{$breakpoint}     { vertical-align: baseline; }
-    .t-sub-#{$breakpoint}          { vertical-align: sub; }
-    .t-super-#{$breakpoint}        { vertical-align: super; }
-    .t-text-bottom-#{$breakpoint}  { vertical-align: text-bottom; }
-    .t-text-top-#{$breakpoint}     { vertical-align: text-top; }
+@each $bp in $breakpoints {
+
+  $suffix: get($bp, 'suffix');
+  $rule: get($bp, 'rule');
+
+  @media #{$rule} {
+    .t-top-#{$suffix}          { vertical-align: top }
+    .t-middle-#{$suffix}       { vertical-align: middle }
+    .t-bottom-#{$suffix}       { vertical-align: bottom }
+    .t-baseline-#{$suffix}     { vertical-align: baseline; }
+    .t-sub-#{$suffix}          { vertical-align: sub; }
+    .t-super-#{$suffix}        { vertical-align: super; }
+    .t-text-bottom-#{$suffix}  { vertical-align: text-bottom; }
+    .t-text-top-#{$suffix}     { vertical-align: text-top; }
   }
 }
 
 // Text Align (Horizontal Alignment)
-.t-left         { text-align: left }
-.t-center       { text-align: center }
-.t-justified    { text-align: justify }
-.t-right        { text-align: right }
+.t-left                 { text-align: left }
+.t-center               { text-align: center }
+.t-justified            { text-align: justify }
+.t-right                { text-align: right }
 
-@each $breakpoint, $bp-value in $breakpoints {
-  @media only screen and (min-width:$bp-value) {
-    .t-left-#{$breakpoint}          { text-align: left }
-    .t-center-#{$breakpoint}        { text-align: center }
-    .t-justified-#{$breakpoint}     { text-align: justify }
-    .t-right-#{$breakpoint}         { text-align: right }
+@each $bp in $breakpoints {
+
+  $suffix: get($bp, 'suffix');
+  $rule: get($bp, 'rule');
+
+  @media #{$rule} {
+    .t-left-#{$suffix}          { text-align: left }
+    .t-center-#{$suffix}        { text-align: center }
+    .t-justified-#{$suffix}     { text-align: justify }
+    .t-right-#{$suffix}         { text-align: right }
   }
 }
 
@@ -50,6 +58,17 @@
 .t700, .bold            { font-weight: 700 }
 .t800, .extrabold       { font-weight: 800 }
 .t900, .black           { font-weight: 900 }
+
+// Font size
+.t8                     { font-size: 8rem }
+.t7                     { font-size: 7rem }
+.t6                     { font-size: 6rem }
+.t5                     { font-size: 5rem }
+.t4                     { font-size: 4rem }
+.t35                    { font-size: 3.5rem }
+.t3                     { font-size: 3rem }
+.t2                     { font-size: 2rem }
+.t1                     { font-size: 1rem }
 
 // text-decoration, text-transform, and text-style
 .underline              { text-decoration:  underline }
@@ -68,12 +87,18 @@
                           text-overflow: ellipsis;
                         }
 
-@each $breakpoint, $bp-value in $breakpoints {
-  @media only screen and (min-width:$bp-value) {
-    .ws-normal-#{$breakpoint}      { white-space: normal; }
-    .nowrap-#{$breakpoint}         { white-space: nowrap; }
-    .pre-#{$breakpoint}            { white-space: pre; }
-    .truncate-#{$breakpoint}       { white-space: nowrap;
+
+
+@each $bp in $breakpoints {
+
+  $suffix: get($bp, 'suffix');
+  $rule: get($bp, 'rule');
+
+  @media #{$rule} {
+    .ws-normal-#{$suffix}      { white-space: normal; }
+    .nowrap-#{$suffix}         { white-space: nowrap; }
+    .pre-#{$suffix}            { white-space: pre; }
+    .truncate-#{$suffix}       { white-space: nowrap;
                                     overflow: hidden;
                                     text-overflow: ellipsis;
                                   }

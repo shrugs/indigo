@@ -45,44 +45,46 @@
 .content-stretch  { align-content: stretch; }
 
 
-@each $breakpoint, $bp-value in $breakpoints {
-  @media only screen and (min-width:$bp-value) {
+@each $bp in $breakpoints {
 
-    .flex-#{$breakpoint}             { display: flex }
-    .flex-row-#{$breakpoint}         { display: flex; flex-direction: row; }
-    .flex-row-r-#{$breakpoint}       { display: flex; flex-direction: row-reverse; }
-    .flex-col-#{$breakpoint}         { display: flex; flex-direction: column; }
-    .flex-col-r-#{$breakpoint}       { display: flex; flex-direction: column-reverse; }
+  $suffix: get($bp, 'suffix');
+  $rule: get($bp, 'rule');
 
-    .flex-wrap-#{$breakpoint}        { flex-wrap: wrap; }
+  @media #{$rule} {
+    .flex-#{$suffix}             { display: flex }
+    .flex-row-#{$suffix}         { display: flex; flex-direction: row; }
+    .flex-row-r-#{$suffix}       { display: flex; flex-direction: row-reverse; }
+    .flex-col-#{$suffix}         { display: flex; flex-direction: column; }
+    .flex-col-r-#{$suffix}       { display: flex; flex-direction: column-reverse; }
 
-    .align-start-#{$breakpoint}      { align-items: flex-start; }
-    .align-end-#{$breakpoint}        { align-items: flex-end; }
-    .align-center-#{$breakpoint}     { align-items: center; }
-    .align-baseline-#{$breakpoint}   { align-items: baseline; }
-    .align-stretch-#{$breakpoint}    { align-items: stretch; }
+    .flex-wrap-#{$suffix}        { flex-wrap: wrap; }
 
-    .justify-start-#{$breakpoint}    { justify-content: flex-start; }
-    .justify-end-#{$breakpoint}      { justify-content: flex-end; }
-    .justify-center-#{$breakpoint}   { justify-content: center; }
-    .justify-between-#{$breakpoint}  { justify-content: space-between; }
-    .justify-around-#{$breakpoint}   { justify-content: space-around; }
+    .align-start-#{$suffix}      { align-items: flex-start; }
+    .align-end-#{$suffix}        { align-items: flex-end; }
+    .align-center-#{$suffix}     { align-items: center; }
+    .align-baseline-#{$suffix}   { align-items: baseline; }
+    .align-stretch-#{$suffix}    { align-items: stretch; }
 
-    .flex-center-#{$breakpoint}      { justify-content: center; align-items: center }
+    .justify-start-#{$suffix}    { justify-content: flex-start; }
+    .justify-end-#{$suffix}      { justify-content: flex-end; }
+    .justify-center-#{$suffix}   { justify-content: center; }
+    .justify-between-#{$suffix}  { justify-content: space-between; }
+    .justify-around-#{$suffix}   { justify-content: space-around; }
+
+    .flex-center-#{$suffix}      { justify-content: center; align-items: center }
 
     // Additional Flexbox
-    .self-start-#{$breakpoint}       { align-self: flex-start; }
-    .self-end-#{$breakpoint}         { align-self: flex-end; }
-    .self-center-#{$breakpoint}      { align-self: center; }
-    .self-baseline-#{$breakpoint}    { align-self: baseline; }
-    .self-stretch-#{$breakpoint}     { align-self: stretch; }
+    .self-start-#{$suffix}       { align-self: flex-start; }
+    .self-end-#{$suffix}         { align-self: flex-end; }
+    .self-center-#{$suffix}      { align-self: center; }
+    .self-baseline-#{$suffix}    { align-self: baseline; }
+    .self-stretch-#{$suffix}     { align-self: stretch; }
 
-    .content-start-#{$breakpoint}    { align-content: flex-start; }
-    .content-end-#{$breakpoint}      { align-content: flex-end; }
-    .content-center-#{$breakpoint}   { align-content: center; }
-    .content-between-#{$breakpoint}  { align-content: space-between; }
-    .content-around-#{$breakpoint}   { align-content: space-around; }
-    .content-stretch-#{$breakpoint}  { align-content: stretch; }
-
+    .content-start-#{$suffix}    { align-content: flex-start; }
+    .content-end-#{$suffix}      { align-content: flex-end; }
+    .content-center-#{$suffix}   { align-content: center; }
+    .content-between-#{$suffix}  { align-content: space-between; }
+    .content-around-#{$suffix}   { align-content: space-around; }
+    .content-stretch-#{$suffix}  { align-content: stretch; }
   }
 }

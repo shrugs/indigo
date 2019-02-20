@@ -4,15 +4,20 @@
 
 // MAYBE: view widths added in the future
 // MAYBE: max widths added in the future
+// WE NEED MIN HEIGHTS
 
 .w-full {
   width: 100%;
 }
 
 // Responsive Spacing
-@each $breakpoint, $bp-value in $breakpoints {
-  @media only screen and (min-width:$bp-value) {
-    .w-full-#{$breakpoint} { width: 100%; }
+@each $bp in $breakpoints {
+
+  $suffix: get($bp, 'suffix');
+  $rule: get($bp, 'rule');
+
+  @media #{$rule} {
+    .w-full-#{$suffix} { width: 100%; }
   }
 };
 
@@ -28,12 +33,45 @@
   .s#{$name}                       { width: #{$dim}rem; height: #{$dim}rem; }
 
   // Responsive Spacing
-  @each $breakpoint, $bp-value in $breakpoints {
-    @media only screen and (min-width:$bp-value) {
-      .w#{$name}-#{$breakpoint}    { width: #{$dim}rem; }
-      .h#{$name}-#{$breakpoint}    { height: #{$dim}rem; }
-      .s#{$name}-#{$breakpoint}    { width: #{$dim}rem; height: #{$dim}rem; }
+  @each $bp in $breakpoints {
+
+    $suffix: get($bp, 'suffix');
+    $rule: get($bp, 'rule');
+
+    @media #{$rule} {
+      .w#{$name}-#{$suffix}    { width: #{$dim}rem; }
+      .h#{$name}-#{$suffix}    { height: #{$dim}rem; }
+      .s#{$name}-#{$suffix}    { width: #{$dim}rem; height: #{$dim}rem; }
     }
   };
+};
 
+
+// Row Heights
+@each $k, $v in $row-scale {
+  .rh-auto                       { height: auto }
+  .rh#{$k}                       { height: #{$v}rem; }
+
+  // Responsive row heights
+  @each $bp in $breakpoints {
+
+    $suffix: get($bp, 'suffix');
+    $rule: get($bp, 'rule');
+
+    @media #{$rule} {
+      .rh#{$k}-#{$suffix}    { height: #{$v}rem; }
+    }
+  };
+};
+
+
+
+@each $bp in $breakpoints {
+
+  $suffix: get($bp, 'suffix');
+  $rule: get($bp, 'rule');
+
+  @media #{$rule} {
+    .rh-auto-#{$suffix}    { height: auto }
+  }
 };

@@ -27,6 +27,17 @@ $rng-xl: (
   mod: 8
 );
 
+$row-scale: (
+  1: 4,
+  2: 8,
+  3: 16,
+  4: 32,
+  5: 64,
+  6: 128,
+  7: 192,
+  8: 256,
+);
+
 // Make a list with each dimension in the scale
 $scale: (0.5);
 

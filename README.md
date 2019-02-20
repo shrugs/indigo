@@ -15,6 +15,8 @@ When working on Indigo, it is often necessary to see your changes in the context
 
 ### Standard Commands
 
+WIP
+
 | Command                    | Description                                                                      |
 |----------------------------|----------------------------------------------------------------------------------|
 | `start`                    | Watches `*.js` and `*.scss` in `./sandbox` and all of `./indigo` for changes and builds everything|
@@ -25,14 +27,14 @@ When working on Indigo, it is often necessary to see your changes in the context
 
 ### Other Commands
 
-| Command                    | Description                                                                      |
-|----------------------------|----------------------------------------------------------------------------------|
-| `build:indigo-css`           | Builds system and utilities SCSS into one CSS file                               |
-| `watch:indigo-css`           | Watches for changes in `./indigo/css`, runs `build:indigo-css`                       |
-| `build:indigo-system-css`    | Builds only `./indigo/css/system.scss` to `system.css`                               |
-| `build:indigo-utilities-css` | Builds only `./indigo/css/utilities.scss` to `utilities.css`                         |
-| `build:indigo-all-css`       | Builds `indigo.css`, `system.css` and `utilities.css`                                  |
-| `watch:indigo-all`           | Watches for changes in `./indigo/css`, runs `build:indigo-all-css`                   |
+| Command                      | Description                                                                      |
+|------------------------------|----------------------------------------------------------------------------------|
+| `build:indigo-sass`          | Builds system and utilities SCSS into one CSS file                               |
+| `watch:indigo-sass`          | Watches for changes in `./indigo/css`, runs `build:indigo-sass`                       |
+| `build:indigo-system-sass`   | Builds only `./indigo/css/system.scss` to `system.css`                               |
+| `build:indigo-utilities-sass`| Builds only `./indigo/css/utilities.scss` to `utilities.css`                         |
+| `build:indigo-all-sass`      | Builds `indigo.css`, `system.css` and `utilities.css`                                  |
+| `watch:indigo-all`           | Watches for changes in `./indigo/css`, runs `build:indigo-all-sass`                   |
 | `build:indigo-react`         | Builds indigo react components                                                   |
 | `watch:indigo-react`         | Watches for changes in `./indigo/react`, runs `build:indigo-react`                   |
 | `build:sandbox-react`        | Builds the sandbox and runs `build:indigo`                                         |
@@ -56,7 +58,7 @@ Coming soon
 
 `./indigo/react` indigo-react React components and bundle
 
-`./indigo/html` not sure yet, pending Jimmy
+`./indigo/html` indigo stuff for plain HTML, technical stuff pending Jimmy
 
 `./indigo/site` indigo's reference website
 

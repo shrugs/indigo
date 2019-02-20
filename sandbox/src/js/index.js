@@ -6,8 +6,12 @@ class WelcomePage extends Component {
   render() {
     console.log(indigo)
     return (
-      <div>
-        <h1>Indigo Sandbox test h1.</h1>
+      <div className='ph8 slug-4'>
+        <div className={'b1 s16 b-black r0'} />
+        <div className={'b1 s16 b-black r1'} />
+        <div className={'b1 s16 b-black r2'} />
+        <div className={'b1 s16 b-black r4'} />
+
       </div>
     )
   }

@@ -3,6 +3,7 @@
 *******************************************************************************/
 
 @each $dim in $scale {
+
   // remove . from '0.5' etc
   $name: str-replace(#{$dim}, '.');
 
@@ -14,16 +15,46 @@
   .pv#{$name}                      {padding-top: #{$dim}rem; padding-bottom: #{$dim}rem;}
   .ph#{$name}                      {padding-left: #{$dim}rem; padding-right: #{$dim}rem;}
 
-  // Responsive Padding
-  @each $breakpoint, $bp-value in $breakpoints {
-    @media only screen and (min-width:$bp-value) {
-      .p#{$name}-#{$breakpoint}    {padding: #{$dim}rem;}
-      .pt#{$name}-#{$breakpoint}   {padding-top: #{$dim}rem;}
-      .pb#{$name}-#{$breakpoint}   {padding-bottom: #{$dim}rem;}
-      .pl#{$name}-#{$breakpoint}   {padding-left: #{$dim}rem;}
-      .pr#{$name}-#{$breakpoint}   {padding-right: #{$dim}rem;}
-      .pv#{$name}-#{$breakpoint}   {padding-top: #{$dim}rem; padding-bottom: #{$dim}rem;}
-      .ph#{$name}-#{$breakpoint}   {padding-left: #{$dim}rem; padding-right: #{$dim}rem;}
+  // Responsive padding
+  @each $bp in $breakpoints {
+
+    $suffix: get($bp, 'suffix');
+    $rule: get($bp, 'rule');
+
+    @media #{$rule} {
+      .p#{$name}-#{$suffix}       {padding: #{$dim}rem;}
+      .pt#{$name}-#{$suffix}      {padding-top: #{$dim}rem;}
+      .pb#{$name}-#{$suffix}      {padding-bottom: #{$dim}rem;}
+      .pl#{$name}-#{$suffix}      {padding-left: #{$dim}rem;}
+      .pr#{$name}-#{$suffix}      {padding-right: #{$dim}rem;}
+      .pv#{$name}-#{$suffix}      {padding-top: #{$dim}rem; padding-bottom: #{$dim}rem;}
+      .ph#{$name}-#{$suffix}      {padding-left: #{$dim}rem; padding-right: #{$dim}rem;}
     }
   }
 };
+
+
+// padding auto
+.p-auto                           { padding: auto }
+.pt-auto                          { padding-top: auto }
+.pb-auto                          { padding-bottom: auto }
+.pr-auto                          { padding-right: auto }
+.pl-auto                          { padding-left: auto }
+.ph-auto                          { padding-left: auto; padding-right: auto }
+.pv-auto                          { padding-top: auto; padding-bottom: auto }
+
+@each $bp in $breakpoints {
+
+  $suffix: get($bp, 'suffix');
+  $rule: get($bp, 'rule');
+
+  @media #{$rule} {
+    .p-auto-#{$suffix}        { padding: auto }
+    .pt-auto-#{$suffix}       { padding-top: auto }
+    .pb-auto-#{$suffix}       { padding-bottom: auto }
+    .pr-auto-#{$suffix}       { padding-right: auto }
+    .pl-auto-#{$suffix}       { padding-left: auto }
+    .ph-auto-#{$suffix}       { padding-left: auto; padding-right: auto }
+    .pv-auto-#{$suffix}       { padding-top: auto; padding-bottom: auto }
+  }
+}
