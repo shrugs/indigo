@@ -74,5 +74,17 @@
     "rollup-plugin-root-import": "^0.2.3",
     "sucrase": "^3.8.0",
     "uglifycss": "0.0.29"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "prettier": {
+    "overrides": [
+      {
+        "files": "./indigo/css/src/**/*.scss"
+      }
+    ]
   }
 }
