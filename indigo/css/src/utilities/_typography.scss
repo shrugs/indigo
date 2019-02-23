@@ -1,39 +1,39 @@
-.h1-large,
+.H1L,
 .t1 {
   font-size: 16rem;
   line-height: 20rem;
   font-weight: 700;
 }
 
-.h1,
+.H1,
 .t2 {
   font-size: 12rem;
   line-height: 16rem;
   font-weight: 700;
 }
 
-.h2,
+.H2,
 .t3 {
   font-size: 8rem;
   line-height: 12rem;
   font-weight: 700;
 }
 
-.h3,
+.H3,
 .t4 {
   font-size: 6rem;
   line-height: 12rem;
   font-weight: 700;
 }
 
-.h4,
+.H4,
 .t5 {
   font-size: 5rem;
   line-height: 6rem;
   font-weight: 700;
 }
 
-.p,
+.P,
 .t6 {
   font-size: 4rem;
   line-height: 6rem;
@@ -81,37 +81,37 @@
   $rule: get($bp, "rule");
 
   @media #{$rule} {
-    .h1-large-#{$suffix},
+    .H1L-#{$suffix},
     .t1-#{$suffix} {
       font-size: 16rem;
       line-height: 20rem;
     }
 
-    .h1-#{$suffix},
+    .H1#{$suffix},
     .t2-#{$suffix} {
       font-size: 12rem;
       line-height: 16rem;
     }
 
-    .h2-#{$suffix},
+    .H2#{$suffix},
     .t3-#{$suffix} {
       font-size: 8rem;
       line-height: 12rem;
     }
 
-    .h3-#{$suffix},
+    .H3#{$suffix},
     .t4-#{$suffix} {
       font-size: 6rem;
       line-height: 12rem;
     }
 
-    .h4-#{$suffix},
+    .H4#{$suffix},
     .t5-#{$suffix} {
       font-size: 5rem;
       line-height: 6rem;
     }
 
-    .p-#{$suffix},
+    .P#{$suffix},
     .t6-#{$suffix} {
       font-size: 4rem;
       line-height: 6rem;

@@ -3,28 +3,30 @@ import { BH, Link } from "../components/Components";
 
 const Splash = () => {
   return (
-    <div className="grid-splash bg-blue h-auto vh90-lg white ph8 ph32-lg pb8 pb0-ns bb1 b-blue-90">
+    <div className="grid-2x3 grid-6x1-lg grid-3x2-md bg-blue h-auto vh100-ns white ph8 pb8 pb0-ns">
       <div>
         <BH>Indigo</BH>
         <Link>Introduction</Link>
-        <Link>Approach</Link>
+        <Link>Principles</Link>
         <Link>Visual Language</Link>
-        <Link>Elements</Link>
+      </div>
+      <div>
+        <BH>Utilities</BH>
         <Link>Typescale</Link>
         <Link>Color</Link>
         <Link>Layout</Link>
+        <Link>Size Scales</Link>
+      </div>
+      <div>
+        <BH>Components</BH>
+        <Link>React</Link>
+        <Link>HTML</Link>
       </div>
       <div>
         <BH>Updates</BH>
         <Link>↗ Blog</Link>
         <Link>↗ Twitter</Link>
         <Link>↗ Tlon</Link>
-      </div>
-      <div>
-        <BH>Reference</BH>
-        <Link>Utilities</Link>
-        <Link>React</Link>
-        <Link>HTML</Link>
       </div>
       <div>
         <BH>Downloads</BH>
