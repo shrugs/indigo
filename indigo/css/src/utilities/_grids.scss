@@ -1,0 +1,114 @@
+/*******************************************************************************
+  Grid and Layout
+*******************************************************************************/
+$g-max: 80rem;
+$g-min: 36rem;
+
+.grid-6x1 {
+  display: grid;
+  grid-template-columns: repeat(6, [col-start] minmax($g-min, $g-max));
+  // grid-template-rows: repeat(1, [col-start] 1fr);
+  grid-gap: 16px;
+}
+
+.grid-3x2 {
+  display: grid;
+  grid-template-columns: repeat(3, [col-start] minmax($g-min, $g-max));
+  // grid-template-rows: repeat(2, [row-start] 1fr);
+  grid-gap: 16px;
+}
+
+.grid-2x3 {
+  display: grid;
+  grid-template-columns: repeat(2, [col-start] minmax($g-min, $g-max));
+  // grid-template-rows: repeat(3, [row-start] 1fr);
+  grid-gap: 16px;
+}
+
+.grid-1x6 {
+  display: grid;
+  grid-template-columns: repeat(1, [col-start] minmax($g-min, $g-max));
+  // grid-template-rows: repeat(6, [row-start] 1fr);
+  grid-gap: 16px;
+}
+
+@each $bp in $breakpoints {
+  $suffix: get($bp, "suffix");
+  $rule: get($bp, "rule");
+
+  @media #{$rule} {
+    .grid-6x1-#{$suffix} {
+      display: grid;
+      grid-template-columns: repeat(6, [col-start] minmax($g-min, $g-max));
+      grid-template-rows: repeat(1, [col-start] auto);
+      grid-gap: 16px;
+    }
+
+    .grid-3x2-#{$suffix} {
+      display: grid;
+      grid-template-columns: repeat(3, [col-start] minmax($g-min, $g-max));
+      grid-template-rows: repeat(2, [row-start] auto);
+      grid-gap: 16px;
+    }
+
+    .grid-2x3-#{$suffix} {
+      display: grid;
+      grid-template-columns: repeat(2, [col-start] minmax($g-min, $g-max));
+      grid-template-rows: repeat(3, [row-start] auto);
+      grid-gap: 16px;
+    }
+
+    .grid-1x6-#{$suffix} {
+      display: grid;
+      grid-template-columns: repeat(1, [col-start] minmax($g-min, $g-max));
+      grid-template-rows: repeat(6, [row-start] auto);
+      grid-gap: 16px;
+    }
+  }
+}
+
+// Percentage-of-grid-based col widths
+// @each $name, $w in $semantic-cols {
+//
+//   .#{$name} { width: #{$w} };
+//
+//   @each $breakpoint, $bp-value in $breakpoints {
+//     @media only screen and (min-width:$bp-value) {
+//       .#{$name}-#{$breakpoint} { width: #{$w} };
+//     }
+//   };
+// };
+//
+//
+//
+// // Percentage-of-12 col widths
+// @each $name, $w in $percentage-cols {
+//
+//   .#{$name}-12 { width: #{$w} };
+//
+//   @each $breakpoint, $bp-value in $breakpoints {
+//     @media only screen and (min-width:$bp-value) {
+//       .#{$name}-12-#{$breakpoint} { width: #{$w} };
+//     }
+//   };
+// };
+
+// Gutter and Slug spacing
+// @each $d in (0, 1, 2, 4, 8, 16) {
+//   .slug#{$d} > *:not(:last-child)  { margin-bottom:  #{$d}rem; }
+//   .gut#{$d} > *:not(:last-child)   { margin-right:   #{$d}rem; }
+//
+//   @each $breakpoint, $bp-value in $breakpoints {
+//     @media only screen and (min-width:$bp-value) {
+//
+//       .slug#{$d}-#{$breakpoint} > *:not(:last-child) {
+//         margin-bottom: #{$d}rem;
+//       }
+//
+//       .gut#{$d}-#{$breakpoint} > *:not(:last-child) {
+//         margin-right: #{$d}rem;
+//       }
+//
+//     }
+//   };
+// }

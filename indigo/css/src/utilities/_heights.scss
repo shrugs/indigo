@@ -52,20 +52,20 @@
   }
 }
 
-@each $k, $v in $row-scale {
-  .h-#{$k} {
-    height: #{$v}rem;
-  }
-
-  // Responsive row heights
-  @each $bp in $breakpoints {
-    $suffix: get($bp, "suffix");
-    $rule: get($bp, "rule");
-
-    @media #{$rule} {
-      .h-#{$k}-#{$suffix} {
-        height: #{$v}rem;
-      }
-    }
-  }
-}
+// @each $k, $v in $row-scale {
+//   .SH#{$k} {
+//     height: #{$v}rem;
+//   }
+//
+//   // Responsive row heights
+//   @each $bp in $breakpoints {
+//     $suffix: get($bp, "suffix");
+//     $rule: get($bp, "rule");
+//
+//     @media #{$rule} {
+//       .SH#{$k}-#{$suffix} {
+//         height: #{$v}rem;
+//       }
+//     }
+//   }
+// }

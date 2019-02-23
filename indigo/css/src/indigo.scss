@@ -2,7 +2,7 @@
 @import "./lib/breakpoints";
 @import "./lib/color";
 @import "./lib/spacing";
-@import "./lib/grid";
+@import "./lib/cols";
 @import "./lib/func";
 
 // Reset
@@ -22,13 +22,15 @@
 @import "./utilities/border-style";
 @import "./utilities/border-width";
 @import "./utilities/color";
+@import "./utilities/cols";
 @import "./utilities/display";
+@import "./utilities/debug";
 @import "./utilities/flexbox";
 @import "./utilities/font-family";
 @import "./utilities/font-size";
 @import "./utilities/font-style";
 @import "./utilities/font-weight";
-@import "./utilities/grid";
+@import "./utilities/grids";
 @import "./utilities/heights";
 @import "./utilities/hover";
 @import "./utilities/iconography";
