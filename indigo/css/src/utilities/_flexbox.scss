@@ -30,40 +30,51 @@
 
 // align-items
 .align-start {
+  display: flex;
   align-items: flex-start;
 }
 .align-end {
+  display: flex;
   align-items: flex-end;
 }
 .align-center {
+  display: flex;
   align-items: center;
 }
 .align-baseline {
+  display: flex;
   align-items: baseline;
 }
 .align-stretch {
+  display: flex;
   align-items: stretch;
 }
 
 // justify-content
 .justify-start {
+  display: flex;
   justify-content: flex-start;
 }
 .justify-end {
+  display: flex;
   justify-content: flex-end;
 }
 .justify-center {
+  display: flex;
   justify-content: center;
 }
 .justify-between {
+  display: flex;
   justify-content: space-between;
 }
 .justify-around {
+  display: flex;
   justify-content: space-around;
 }
 
 // vertical / horizontal centering helper
 .flex-center {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
