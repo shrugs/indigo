@@ -12,6 +12,8 @@ var rename = require("gulp-rename");
 var cssfont64 = require("gulp-cssfont64");
 var shell = require("gulp-shell");
 var server = require("gulp-server-livereload");
+var base64 = require("gulp-base64");
+var concat = require("gulp-concat");
 
 // Rollup plugins
 var resolve = require("rollup-plugin-node-resolve");
@@ -36,6 +38,8 @@ const plugins = {
   cssfont64: cssfont64,
   shell: shell,
   server: server,
+  base64: base64,
+  concat: concat,
   // rollup
   rollup: rollup,
   resolve: resolve,
@@ -89,11 +93,20 @@ gulp.task(
 );
 
 // base64 encode fonts in /fonts into CSS files in /fonts64
+// gulp.task(
+//   "sass-base64-fonts",
+//   getTask(
+//     "cssfont64",
+//     `${PATHS.css}src/fonts/**/*.{ttf,woff,woff2,otf}`,
+//     `${PATHS.css}src/fonts64`
+//   )
+// );
+
 gulp.task(
   "sass-base64-fonts",
   getTask(
-    "cssfont64",
-    `${PATHS.css}src/fonts/**/*.{ttf,woff,woff2,otf}`,
+    "base64font",
+    `${PATHS.css}src/fonts/**/*.scss`,
     `${PATHS.css}src/fonts64`
   )
 );
