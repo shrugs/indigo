@@ -9,6 +9,8 @@ Indigo is Tlon's design language, and a set of web stack implementation tools.
 3. `$ npm install`
 4. `$ npm run start` This will run the sandbox and listen to all Indigo/sandbox changes.
 
+Note: the sandbox is currently broken. (March 12 2019)
+
 ## Usage
 
 When working on Indigo, it is often necessary to see your changes in the context of an app or webpage for visual validation, QC or rapid iteration. Indigo offers ./sandbox to perform such tasks.
