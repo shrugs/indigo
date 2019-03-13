@@ -59,7 +59,7 @@ var PATHS = {
   css: "./indigo/css/",
   html: "./indigo/html/",
   react: "./indigo/react/",
-  site: "./indigo/site/",
+  site: "./site/",
   sandbox: "./sandbox/"
 };
 
@@ -92,22 +92,13 @@ gulp.task(
   getTask("sass_header", `${PATHS.css}dist/indigo.css`, `${PATHS.css}dist`)
 );
 
-// base64 encode fonts in /fonts into CSS files in /fonts64
-// gulp.task(
-//   "sass-base64-fonts",
-//   getTask(
-//     "cssfont64",
-//     `${PATHS.css}src/fonts/**/*.{ttf,woff,woff2,otf}`,
-//     `${PATHS.css}src/fonts64`
-//   )
-// );
-
+// inserts base64 encoded font strings into the url() filed of @font-face, emits a .scss file
 gulp.task(
   "sass-base64-fonts",
   getTask(
     "base64font",
-    `${PATHS.css}src/fonts/**/*.scss`,
-    `${PATHS.css}src/fonts64`
+    `${PATHS.css}src/fonts/source/**/*.scss`,
+    `${PATHS.css}src/fonts/base64`
   )
 );
 
@@ -151,60 +142,60 @@ gulp.task("watch-indigo-react", function() {
 ////////////////////////////////////////////////////////////////////////////////
 // Run/build indigo sandbox
 
-gulp.task(
-  "sandbox-react-transpile",
-  getTask("js_sucrase", `${PATHS.sandbox}src/**/*.js`, `${PATHS.sandbox}dist`)
-);
-
-gulp.task(
-  "sandbox-react-bundle",
-  getTask(
-    "js_quick_bundle",
-    `${PATHS.sandbox}dist/js/index.js`,
-    `${PATHS.sandbox}dist/js`
-  )
-);
-
-gulp.task(
-  "copy-sandbox-html",
-  getTask(
-    "js_quick_bundle",
-    `${PATHS.sandbox}src/index.html`,
-    `${PATHS.sandbox}dist`
-  )
-);
-
-gulp.task(
-  "copy-sandbox-assets",
-  getTask(
-    "js_quick_bundle",
-    `${PATHS.sandbox}src/assets/**/*`,
-    `${PATHS.sandbox}dist/assets`
-  )
-);
-
-gulp.task(
-  "copy-indigo-css-to-sandbox",
-  getTask(
-    "js_quick_bundle",
-    `${PATHS.css}dist/indigo.css`,
-    `${PATHS.sandbox}src/css`
-  )
-);
-
-gulp.task(
-  "copy-indigo-react-to-sandbox",
-  getTask(
-    "js_quick_bundle",
-    `${PATHS.react}dist/index.js`,
-    `${PATHS.sandbox}src/js/indigo`
-  )
-);
-
-gulp.task(
-  "sandbox-react",
-  gulp.series("sandbox-react-transpile", "sandbox-react-bundle")
-);
+// gulp.task(
+//   "sandbox-react-transpile",
+//   getTask("js_sucrase", `${PATHS.sandbox}src/**/*.js`, `${PATHS.sandbox}dist`)
+// );
+//
+// gulp.task(
+//   "sandbox-react-bundle",
+//   getTask(
+//     "js_quick_bundle",
+//     `${PATHS.sandbox}dist/js/index.js`,
+//     `${PATHS.sandbox}dist/js`
+//   )
+// );
+//
+// gulp.task(
+//   "copy-sandbox-html",
+//   getTask(
+//     "js_quick_bundle",
+//     `${PATHS.sandbox}src/index.html`,
+//     `${PATHS.sandbox}dist`
+//   )
+// );
+//
+// gulp.task(
+//   "copy-sandbox-assets",
+//   getTask(
+//     "js_quick_bundle",
+//     `${PATHS.sandbox}src/assets/**/*`,
+//     `${PATHS.sandbox}dist/assets`
+//   )
+// );
+//
+// gulp.task(
+//   "copy-indigo-css-to-sandbox",
+//   getTask(
+//     "js_quick_bundle",
+//     `${PATHS.css}dist/indigo.css`,
+//     `${PATHS.sandbox}src/css`
+//   )
+// );
+//
+// gulp.task(
+//   "copy-indigo-react-to-sandbox",
+//   getTask(
+//     "js_quick_bundle",
+//     `${PATHS.react}dist/index.js`,
+//     `${PATHS.sandbox}src/js/indigo`
+//   )
+// );
+//
+// gulp.task(
+//   "sandbox-react",
+//   gulp.series("sandbox-react-transpile", "sandbox-react-bundle")
+// );
 
 // gulp.task('sandbox-css', function() {
 //   return gulp
@@ -214,48 +205,48 @@ gulp.task(
 //     .pipe(gulp.dest(`${PATHS.sandbox}dist/css`));
 // });
 
-gulp.task("watch-sandbox-react", function() {
-  gulp.watch(`${PATHS.sandbox}src/js/**/*.js`, gulp.series("sandbox-react"));
-});
+// gulp.task("watch-sandbox-react", function() {
+//   gulp.watch(`${PATHS.sandbox}src/js/**/*.js`, gulp.series("sandbox-react"));
+// });
+//
+// gulp.task("watch-sandbox-sass", function() {
+//   gulp.watch(`${PATHS.sandbox}src/css/**/*.scss`, gulp.series("sandbox-sass"));
+// });
 
-gulp.task("watch-sandbox-sass", function() {
-  gulp.watch(`${PATHS.sandbox}src/css/**/*.scss`, gulp.series("sandbox-sass"));
-});
+// gulp.task("sandbox-webserver", function() {
+//   gulp.src("./sandbox/dist/").pipe(
+//     server({
+//       livereload: true,
+//       open: true,
+//       port: 3000,
+//       defaultFile: "index.html"
+//     })
+//   );
+// });
 
-gulp.task("sandbox-webserver", function() {
-  gulp.src("./sandbox/dist/").pipe(
-    server({
-      livereload: true,
-      open: true,
-      port: 3000,
-      defaultFile: "index.html"
-    })
-  );
-});
-
-gulp.task(
-  "sandbox",
-  gulp.series(
-    gulp.series(
-      "sandbox-react",
-      // 'sandbox-css',
-
-      "indigo-react",
-      "indigo-sass",
-
-      "copy-indigo-react-to-sandbox",
-      "copy-indigo-css-to-sandbox"
-    ),
-    gulp.parallel(
-      "watch-indigo-react",
-      "watch-indigo-sass",
-      "watch-sandbox-react",
-      // 'watch-sandbox-scss',
-
-      "sandbox-webserver"
-    )
-  )
-);
+// gulp.task(
+//   "sandbox",
+//   gulp.series(
+//     gulp.series(
+//       "sandbox-react",
+//       // 'sandbox-css',
+//
+//       "indigo-react",
+//       "indigo-sass",
+//
+//       "copy-indigo-react-to-sandbox",
+//       "copy-indigo-css-to-sandbox"
+//     ),
+//     gulp.parallel(
+//       "watch-indigo-react",
+//       "watch-indigo-sass",
+//       "watch-sandbox-react",
+//       // 'watch-sandbox-scss',
+//
+//       "sandbox-webserver"
+//     )
+//   )
+// );
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
@@ -282,29 +273,17 @@ gulp.task(
 
 gulp.task(
   "copy-site-assets",
-  getTask(
-    "js_quick_bundle",
-    `${PATHS.site}src/assets/**/*`,
-    `${PATHS.site}dist/assets`
-  )
+  getTask("copy", `${PATHS.site}src/assets/**/*.*`, `${PATHS.site}dist/assets`)
 );
 
 gulp.task(
   "copy-indigo-css-to-site",
-  getTask(
-    "js_quick_bundle",
-    `${PATHS.css}dist/indigo.css`,
-    `${PATHS.site}src/css`
-  )
+  getTask("copy", `${PATHS.css}dist/indigo.css`, `${PATHS.site}src/css`)
 );
 
 gulp.task(
   "copy-indigo-react-to-site",
-  getTask(
-    "js_quick_bundle",
-    `${PATHS.react}dist/index.js`,
-    `${PATHS.site}src/js/indigo`
-  )
+  getTask("copy", `${PATHS.react}dist/index.js`, `${PATHS.site}src/js/indigo`)
 );
 
 gulp.task(
@@ -328,6 +307,10 @@ gulp.task("watch-site-css", function() {
   gulp.watch(`${PATHS.site}src/css/**/*.css`, gulp.series("site-css"));
 });
 
+gulp.task("watch-site-assets", function() {
+  gulp.watch(`${PATHS.site}src/assets/**/*.*`, gulp.series("copy-site-assets"));
+});
+
 gulp.task("site-webserver", function() {
   gulp.src(`${PATHS.site}dist`).pipe(
     server({
@@ -342,12 +325,13 @@ gulp.task("site-webserver", function() {
 gulp.task(
   "site",
   gulp.series(
-    gulp.series("site-react", "site-css"),
+    gulp.series("site-react", "site-css", "copy-site-assets"),
     gulp.parallel(
-      "watch-indigo-react",
-      "watch-indigo-sass",
+      // "watch-indigo-react",
+      // "watch-indigo-sass",
       "watch-site-react",
       "watch-site-css",
+      "watch-site-assets",
       "site-webserver"
     )
   )
