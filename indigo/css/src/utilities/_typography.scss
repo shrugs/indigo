@@ -22,7 +22,7 @@
 .H3,
 .t4 {
   font-size: 6rem;
-  line-height: 12rem;
+  line-height: 8rem;
   font-weight: 700;
 }
 
@@ -35,13 +35,20 @@
 
 .P,
 .t6 {
+  font-size: 5rem;
+  line-height: 8rem;
+  font-weight: 400;
+}
+
+.Ps, /* small paragraph */
+.t7 {
   font-size: 4rem;
   line-height: 6rem;
   font-weight: 400;
 }
 
 .label,
-.t7,
+.t8,
 .caption {
   font-size: 3rem;
   line-height: 6rem;
@@ -89,25 +96,25 @@
 
     .H1#{$suffix},
     .t2-#{$suffix} {
-      font-size: 12rem;
-      line-height: 16rem;
-    }
-
-    .H2#{$suffix},
-    .t3-#{$suffix} {
       font-size: 8rem;
       line-height: 12rem;
     }
 
+    .H2#{$suffix},
+    .t3-#{$suffix} {
+      font-size: 6rem;
+      line-height: 8rem;
+    }
+
     .H3#{$suffix},
     .t4-#{$suffix} {
-      font-size: 6rem;
-      line-height: 12rem;
+      font-size: 5rem;
+      line-height: 6rem;
     }
 
     .H4#{$suffix},
     .t5-#{$suffix} {
-      font-size: 5rem;
+      font-size: 4rem;
       line-height: 6rem;
     }
 
@@ -146,4 +153,54 @@
       max-width: 136rem;
     }
   }
+}
+
+.markdown[class=".H1"],
+.markdown[class=".t2"] {
+  padding: 12rem 0;
+}
+
+.markdown[class=".H2"],
+.markdown[class=".t3"] {
+  padding: 8rem 0;
+}
+
+.markdown[class=".H3"],
+.markdown[class=".t4"] {
+  padding: 6rem 0;
+}
+
+.markdown[class=".H4"],
+.markdown[class=".t5"] {
+  padding: 5rem 0;
+}
+
+.markdown[class=".P"],
+.markdown[class=".t6"] {
+  padding: 8rem 0;
+}
+
+/*
+.markdown[class=".H1"] + .markdown[class=".H2"],
+.markdown[class=".t2"] + .markdown[class=".t3"] {
+  padding-top: 0;
+}
+
+.markdown[class=".H2"] + .markdown[class=".H3"],
+.markdown[class=".t3"] + .markdown[class=".t4"] {
+  padding-top: 0;
+}
+
+.markdown[class=".H2"] + .markdown[class=".H3"],
+.markdown[class=".t3"] + .markdown[class=".t4"] {
+  padding-top: 0;
+} */
+
+.markdown[class=".H1"] + .markdown[class=".H2"],
+.markdown[class=".t2"] + .markdown[class=".t3"],
+.markdown[class=".H2"] + .markdown[class=".H3"],
+.markdown[class=".t3"] + .markdown[class=".t4"],
+.markdown[class=".H2"] + .markdown[class=".H3"],
+.markdown[class=".t3"] + .markdown[class=".t4"] {
+  padding-top: 0;
 }
