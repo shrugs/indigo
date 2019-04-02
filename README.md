@@ -10,9 +10,9 @@ Download [indigo.css](https://raw.githubusercontent.com/urbit/indigo/master/indi
 
 ### Developing
 
-This repo contains the source for Indigo CSS, Indigo React Components, the documentation site and a sandbox development environment.
+This repo contains the source for Indigo SASS/CSS, Indigo React Components, the documentation site and a sandbox development environment.
 
-If you need to see the results of your changes, use the sandbox to display them while editing the source of the CSS or JS.
+If you need to see the results of your changes, use the sandbox to display them while editing the source of the SASS/CSS or JS.
 
 #### First Steps
 
@@ -20,7 +20,7 @@ If you need to see the results of your changes, use the sandbox to display them 
 2. `$ cd Indigo`
 3. `$ npm install`
 
-#### Indigo CSS
+#### Indigo SASS/CSS
 
 | Command                | Description                                          |
 | ---------------------- | ---------------------------------------------------- |
