@@ -1,33 +1,49 @@
 # Indigo
 
-Indigo is Tlon's design language, and a set of web stack implementation tools.
+Indigo is [Tlon's](tlon.io) design language. We created it to increase the consistency of our designs, duplicate less work and keep things simple.
 
 ## Getting Started
 
-1. `$ git clone git@github.com:urbit/Indigo.git`
+### Using
+
+Download [indigo.css](https://raw.githubusercontent.com/urbit/indigo/master/indigo/css/dist/indigo.css).
+
+### Developing
+
+This repo contains the source for Indigo CSS, Indigo React Components, the documentation site and a sandbox development environment.
+
+If you need to see the results of your changes, use the sandbox to display them while editing the source of the CSS or JS.
+
+#### First Steps
+
+1. `$ git clone git@github.com:urbit/indigo.git`
 2. `$ cd Indigo`
 3. `$ npm install`
-4. `$ npm run start` This will run the sandbox and listen to all Indigo/sandbox changes.
+
+#### Indigo CSS
+
+| Command                | Description                                          |
+| ---------------------- | ---------------------------------------------------- |
+| gulp indigo-sass       | builds indigo.css                                    |
+| gulp watch-indigo-sass | watches ./indigo/css for changes and rebuilds source |
+
+#### Indigo React Components
+
+| Command                 | Description                                            |
+| ----------------------- | ------------------------------------------------------ |
+| gulp indigo-react       | builds indigo react js bundle                          |
+| gulp watch-indigo-react | watches ./indigo/react for changes and rebuilds source |
+
+#### Indigo Documentation Site
+
+| Command                 | Description                                                      |
+| ----------------------- | ---------------------------------------------------------------- |
+| gulp site               | builds indigo documentation site, and watches ./site for changes |
+| gulp update-site-indigo | rebuilds indigo css and react, then copies it to ./site/src      |
+
+#### Indigo Sandbox
 
 Note: the sandbox is currently broken. (March 12 2019)
-
-## Usage
-
-When working on Indigo, it is often necessary to see your changes in the context of an app or webpage for visual validation, QC or rapid iteration. Indigo offers ./sandbox to perform such tasks.
-
-### Standard Commands
-
-| Command                 | Description                                                                      |
-| ----------------------- | -------------------------------------------------------------------------------- |
-| gulp indigo-sass        | builds indigo.css                                                                |
-| gulp indigo-react       | bundles indigo react components                                                  |
-| gulp sandbox            | builds the sandbox and watches indigo/css, indigo/react and /sandbox for changes |
-| gulp site               | builds the site, and watches indigo/site for changes                             |
-| gulp update-site-indigo | rebuild indigo/css and indigo/react and updates them in /indigo/site             |
-
-## Deployment
-
-Coming soon
 
 ## Project Structure
 
@@ -43,7 +59,7 @@ Coming soon
 
 `./indigo/html` indigo stuff for plain HTML, technical stuff pending Jimmy
 
-`./indigo/site` indigo's reference website
+`./site` indigo's reference website
 
 `./sandbox` QA/Validation/Development sandbox. Indigo builds are automatically copied into this dir
 
