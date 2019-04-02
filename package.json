@@ -4,24 +4,7 @@
   "description": "tlon's design language",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:indigo-sass": "gulp indigo-sass",
-    "watch:indigo-sass": "gulp watch-indigo-sass",
-    "build:indigo-system-sass": "gulp indigo-system-sass",
-    "build:indigo-utilities-sass": "gulp indigo-utilities-sass",
-    "build:indigo-all-sass": "gulp indigo-all-sass",
-    "watch:indigo-all": "gulp watch-indigo-all",
-    "build:indigo-react": "gulp indigo-react",
-    "watch:indigo-react": "gulp watch-indigo-react",
-    "build:sandbox-react": "gulp build-sandbox-react",
-    "watch:sandbox": "gulp watch-sandbox",
-    "watch:sandbox-dev": "gulp watch-sandbox-dev",
-    "build:indigo": "gulp indigo-build-all",
-    "start": "npm-run-all watch:sandbox-dev",
-    "start:sass": "npm run watch:indigo-sass",
-    "start:react": "npm run watch:indigo-react",
-    "start:sandbox": "npm run watch:sandbox",
-    "start:sandbox-dev": "npm run sandbox-dev"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
