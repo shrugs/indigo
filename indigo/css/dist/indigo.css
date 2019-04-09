@@ -1249,13 +1249,13 @@ template {
   outline: 1px solid #e80174 !important;
 }
 .debug figure {
-  outline: 1px solid #f0b !important;
+  outline: 1px solid #ff00bb !important;
 }
 .debug figcaption {
   outline: 1px solid #bf0032 !important;
 }
 .debug table {
-  outline: 1px solid #0c9 !important;
+  outline: 1px solid #00cc99 !important;
 }
 .debug caption {
   outline: 1px solid #37ffc4 !important;
@@ -1357,7 +1357,7 @@ template {
   outline: 1px solid #98daca !important;
 }
 .debug object {
-  outline: 1px solid #0c9 !important;
+  outline: 1px solid #00cc99 !important;
 }
 .debug param {
   outline: 1px solid #37ffc4 !important;
@@ -9008,33 +9008,6 @@ template {
 }
 .o100 {
   opacity: 1;
-}
-.o90 {
-  opacity: 0.9;
-}
-.o80 {
-  opacity: 0.8;
-}
-.o70 {
-  opacity: 0.7;
-}
-.o60 {
-  opacity: 0.6;
-}
-.o50 {
-  opacity: 0.5;
-}
-.o40 {
-  opacity: 0.4;
-}
-.o30 {
-  opacity: 0.3;
-}
-.o20 {
-  opacity: 0.2;
-}
-.o10 {
-  opacity: 0.1;
 }
 .o0 {
   opacity: 0;
