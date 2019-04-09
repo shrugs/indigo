@@ -268,7 +268,7 @@ gulp.task(
 
 gulp.task(
   "copy-site-html",
-  getTask("js_quick_bundle", `${PATHS.site}src/index.html`, `${PATHS.site}dist`)
+  getTask("copy", `${PATHS.site}src/index.html`, `${PATHS.site}dist`)
 );
 
 gulp.task(
@@ -325,7 +325,7 @@ gulp.task("site-webserver", function() {
 gulp.task(
   "site",
   gulp.series(
-    gulp.series("site-react", "site-css", "copy-site-assets"),
+    gulp.series("site-react", "site-css", "copy-site-assets", "copy-site-html"),
     gulp.parallel(
       // "watch-indigo-react",
       // "watch-indigo-sass",
