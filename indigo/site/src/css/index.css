@@ -1,26 +1,30 @@
-@import 'indigo.css';
+@import "indigo.css";
 
-.frame-center-wide {
-  /* max-width: 1184px; */
-  margin: 0 auto;
-  padding: 0 auto;
+html {
+  overflow: overlay;
 }
 
-.row {
-  max-width: 1184px;
+::-webkit-scrollbar {
+  width: 16px;
 }
 
-.grid {
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 10px 10px rgba(0, 0, 0, 0.5);
+  border: 4px solid transparent;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  box-shadow: inset 0 0 10px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* .grid-auto {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 168px));
+  grid-template-columns: repeat(auto-fill, minmax(140px, 160px));
+  grid-template-rows: auto;
   grid-gap: 32px;
-}
-
-.sh10 {
-
-}
-
-/* .rh-auto { height: auto };
-.rh6 { height: 128rem }
-.rh7 { height: 192rem }
-.rh8 { height: 256rem } */
+} */
