@@ -6,13 +6,13 @@ const Splash = () => {
     <div className="grid-2x3 grid-6x1-lg grid-3x2-md bg-blue h-auto vh100-ns white ph8 pb8 pb0-ns">
       <div>
         <BH>Indigo</BH>
-        <Link>Introduction</Link>
+        <Link href="#intro">Introduction</Link>
         <Link>Principles</Link>
         <Link>Visual Language</Link>
       </div>
       <div>
         <BH>Utilities</BH>
-        <Link>Typescale</Link>
+        <Link href="#typescale">Typescale</Link>
         <Link>Color</Link>
         <Link>Layout</Link>
         <Link>Size Scales</Link>
