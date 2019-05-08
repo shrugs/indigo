@@ -14,6 +14,7 @@ const Splash = () => {
         <BH>Utilities</BH>
         <Link href="#typescale">Typescale</Link>
         <Link href="#color">Color</Link>
+        <Link href="#spacing">Spacing</Link>
         <Link>Layout</Link>
         <Link>Size Scales</Link>
       </div>
