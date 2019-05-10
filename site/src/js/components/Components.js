@@ -7,7 +7,7 @@ const BH = props => {
 
 const Link = props => {
   return (
-    <a href={props.href} className="block P mb2 pointer">
+    <a href={props.href} className="block P mb2 pointer white">
       {props.children}
     </a>
   );
