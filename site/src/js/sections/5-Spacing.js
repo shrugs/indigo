@@ -63,35 +63,35 @@ const Spacing = () => {
 
         <div className="H2 mb4">Padding</div>
         <div className="H3 mb4">Padding All</div>
-        <div className="mb1">
-          <span className="p0 bg-green white P">p0</span>
+        <div className="mb4">
+          <span className="inline-block p0 bg-green white P">p0</span>
         </div>
-        <div className="mb1">
-          <span className="p1 bg-green white P">p1</span>
+        <div className="mb4">
+          <div className="inline-block p1 bg-green white P">p1</div>
         </div>
-        <div className="mb1">
-          <span className="p2 bg-green white P">p2</span>
+        <div className="mb4">
+          <div className="inline-block p2 bg-green white P">p2</div>
         </div>
-        <div className="mb1">
-          <span className="p3 bg-green white P">p3</span>
+        <div className="mb4">
+          <div className="inline-block p3 bg-green white P">p3</div>
         </div>
-        <div className="mb1">
-          <span className="p4 bg-green white P">p4</span>
+        <div className="mb4">
+          <div className="inline-block p4 bg-green white P">p4</div>
         </div>
-        <div className="mb1">
-          <span className="p5 bg-green white P">p6</span>
+        <div className="mb4">
+          <div className="inline-block p5 bg-green white P">p6</div>
         </div>
-        <div className="mb1">
-          <span className="p7 bg-green white P">p7</span>
+        <div className="mb4">
+          <div className="inline-block p7 bg-green white P">p7</div>
         </div>
-        <div className="mb1">
-          <span className="p8 bg-green white P">p8</span>
+        <div className="mb4">
+          <div className="inline-block p8 bg-green white P">p8</div>
         </div>
-        <div className="mb1">
-          <span className="p9 bg-green white P">p9</span>
+        <div className="mb4">
+          <div className="inline-block p9 bg-green white P">p9</div>
         </div>
-        <div className="mb1">
-          <span className="p10 bg-green white P">p10</span>
+        <div className="mb4">
+          <div className="inline-block p10 bg-green white P">p10</div>
         </div>
       </div>
     </div>
