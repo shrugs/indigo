@@ -93,6 +93,37 @@ const Spacing = () => {
         <div className="mb4">
           <div className="inline-block p10 bg-green white P">p10</div>
         </div>
+        <div className="H3 mb4">Padding Horizontal</div>
+        <div className="mb4">
+          <span className="inline-block ph0 bg-green white P">p0</span>
+        </div>
+        <div className="mb4">
+          <div className="inline-block ph1 bg-green white P">p1</div>
+        </div>
+        <div className="mb4">
+          <div className="inline-block ph2 bg-green white P">p2</div>
+        </div>
+        <div className="mb4">
+          <div className="inline-block ph3 bg-green white P">p3</div>
+        </div>
+        <div className="mb4">
+          <div className="inline-block ph4 bg-green white P">p4</div>
+        </div>
+        <div className="mb4">
+          <div className="inline-block ph5 bg-green white P">p6</div>
+        </div>
+        <div className="mb4">
+          <div className="inline-block ph7 bg-green white P">p7</div>
+        </div>
+        <div className="mb4">
+          <div className="inline-block ph8 bg-green white P">p8</div>
+        </div>
+        <div className="mb4">
+          <div className="inline-block ph9 bg-green white P">p9</div>
+        </div>
+        <div className="mb4">
+          <div className="inline-block ph10 bg-green white P">p10</div>
+        </div>
       </div>
     </div>
   );
