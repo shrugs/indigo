@@ -184,7 +184,7 @@ template {
 .H3,
 .t4 {
   font-size: 6rem;
-  line-height: 12rem;
+  line-height: 8rem;
   font-weight: 700;
 }
 .H4,
@@ -195,12 +195,18 @@ template {
 }
 .P,
 .t6 {
+  font-size: 5rem;
+  line-height: 8rem;
+  font-weight: 400;
+}
+.Ps,
+.t7 {
   font-size: 4rem;
   line-height: 6rem;
   font-weight: 400;
 }
 .label,
-.t7,
+.t8,
 .caption {
   font-size: 3rem;
   line-height: 6rem;
@@ -233,22 +239,22 @@ template {
   }
   .H1ns,
   .t2-ns {
-    font-size: 12rem;
-    line-height: 16rem;
-  }
-  .H2ns,
-  .t3-ns {
     font-size: 8rem;
     line-height: 12rem;
   }
+  .H2ns,
+  .t3-ns {
+    font-size: 6rem;
+    line-height: 8rem;
+  }
   .H3ns,
   .t4-ns {
-    font-size: 6rem;
-    line-height: 12rem;
+    font-size: 5rem;
+    line-height: 6rem;
   }
   .H4ns,
   .t5-ns {
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 6rem;
   }
   .Pns,
@@ -290,22 +296,22 @@ template {
   }
   .H1md,
   .t2-md {
-    font-size: 12rem;
-    line-height: 16rem;
-  }
-  .H2md,
-  .t3-md {
     font-size: 8rem;
     line-height: 12rem;
   }
+  .H2md,
+  .t3-md {
+    font-size: 6rem;
+    line-height: 8rem;
+  }
   .H3md,
   .t4-md {
-    font-size: 6rem;
-    line-height: 12rem;
+    font-size: 5rem;
+    line-height: 6rem;
   }
   .H4md,
   .t5-md {
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 6rem;
   }
   .Pmd,
@@ -347,22 +353,22 @@ template {
   }
   .H1lg,
   .t2-lg {
-    font-size: 12rem;
-    line-height: 16rem;
-  }
-  .H2lg,
-  .t3-lg {
     font-size: 8rem;
     line-height: 12rem;
   }
+  .H2lg,
+  .t3-lg {
+    font-size: 6rem;
+    line-height: 8rem;
+  }
   .H3lg,
   .t4-lg {
-    font-size: 6rem;
-    line-height: 12rem;
+    font-size: 5rem;
+    line-height: 6rem;
   }
   .H4lg,
   .t5-lg {
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 6rem;
   }
   .Plg,
@@ -395,6 +401,34 @@ template {
   .measure-wide-lg {
     max-width: 136rem;
   }
+}
+.markdown[class=".H1"],
+.markdown[class=".t2"] {
+  padding: 12rem 0;
+}
+.markdown[class=".H2"],
+.markdown[class=".t3"] {
+  padding: 8rem 0;
+}
+.markdown[class=".H3"],
+.markdown[class=".t4"] {
+  padding: 6rem 0;
+}
+.markdown[class=".H4"],
+.markdown[class=".t5"] {
+  padding: 5rem 0;
+}
+.markdown[class=".P"],
+.markdown[class=".t6"] {
+  padding: 8rem 0;
+}
+.markdown[class=".H1"] + .markdown[class=".H2"],
+.markdown[class=".t2"] + .markdown[class=".t3"],
+.markdown[class=".H2"] + .markdown[class=".H3"],
+.markdown[class=".t3"] + .markdown[class=".t4"],
+.markdown[class=".H2"] + .markdown[class=".H3"],
+.markdown[class=".t3"] + .markdown[class=".t4"] {
+  padding-top: 0;
 }
 .r0 {
   border-radius: 0px;
@@ -1249,13 +1283,13 @@ template {
   outline: 1px solid #e80174 !important;
 }
 .debug figure {
-  outline: 1px solid #f0b !important;
+  outline: 1px solid #ff00bb !important;
 }
 .debug figcaption {
   outline: 1px solid #bf0032 !important;
 }
 .debug table {
-  outline: 1px solid #0c9 !important;
+  outline: 1px solid #00cc99 !important;
 }
 .debug caption {
   outline: 1px solid #37ffc4 !important;
@@ -1357,7 +1391,7 @@ template {
   outline: 1px solid #98daca !important;
 }
 .debug object {
-  outline: 1px solid #0c9 !important;
+  outline: 1px solid #00cc99 !important;
 }
 .debug param {
   outline: 1px solid #37ffc4 !important;
@@ -1490,36 +1524,47 @@ template {
   flex-wrap: wrap;
 }
 .align-start {
+  display: flex;
   align-items: flex-start;
 }
 .align-end {
+  display: flex;
   align-items: flex-end;
 }
 .align-center {
+  display: flex;
   align-items: center;
 }
 .align-baseline {
+  display: flex;
   align-items: baseline;
 }
 .align-stretch {
+  display: flex;
   align-items: stretch;
 }
 .justify-start {
+  display: flex;
   justify-content: flex-start;
 }
 .justify-end {
+  display: flex;
   justify-content: flex-end;
 }
 .justify-center {
+  display: flex;
   justify-content: center;
 }
 .justify-between {
+  display: flex;
   justify-content: space-between;
 }
 .justify-around {
+  display: flex;
   justify-content: space-around;
 }
 .flex-center {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -1961,39 +2006,39 @@ template {
 .fs-normal {
   font-style: normal;
 }
-.100,
+.text-100,
 .ultralight {
   font-weight: 100;
 }
-.200,
+.text-200,
 .thin {
   font-weight: 200;
 }
-.300,
+.text-300,
 .light {
   font-weight: 300;
 }
-.400,
+.text-400,
 .regular {
   font-weight: 400;
 }
-.500,
+.text-500,
 .medium {
   font-weight: 500;
 }
-.600,
+.text-600,
 .semibold {
   font-weight: 600;
 }
-.700,
+.text-700,
 .bold {
   font-weight: 700;
 }
-.800,
+.text-800,
 .extrabold {
   font-weight: 800;
 }
-.900,
+.text-900,
 .black {
   font-weight: 900;
 }
@@ -9008,33 +9053,6 @@ template {
 }
 .o100 {
   opacity: 1;
-}
-.o90 {
-  opacity: 0.9;
-}
-.o80 {
-  opacity: 0.8;
-}
-.o70 {
-  opacity: 0.7;
-}
-.o60 {
-  opacity: 0.6;
-}
-.o50 {
-  opacity: 0.5;
-}
-.o40 {
-  opacity: 0.4;
-}
-.o30 {
-  opacity: 0.3;
-}
-.o20 {
-  opacity: 0.2;
-}
-.o10 {
-  opacity: 0.1;
 }
 .o0 {
   opacity: 0;
