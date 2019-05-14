@@ -9,11 +9,8 @@ var cssnano = require("gulp-cssnano");
 var header = require("gulp-header");
 var gzip = require("gulp-gzip");
 var rename = require("gulp-rename");
-var cssfont64 = require("gulp-cssfont64");
-var shell = require("gulp-shell");
 var server = require("gulp-server-livereload");
-var base64 = require("gulp-base64");
-var concat = require("gulp-concat");
+// var base64 = require("gulp-base64");
 
 // Rollup plugins
 var resolve = require("rollup-plugin-node-resolve");
@@ -35,11 +32,8 @@ const plugins = {
   header: header,
   gzip: gzip,
   rename: rename,
-  cssfont64: cssfont64,
-  shell: shell,
   server: server,
-  base64: base64,
-  concat: concat,
+  // base64: base64,
   // rollup
   rollup: rollup,
   resolve: resolve,
@@ -93,14 +87,14 @@ gulp.task(
 );
 
 // inserts base64 encoded font strings into the url() filed of @font-face, emits a .scss file
-gulp.task(
-  "sass-base64-fonts",
-  getTask(
-    "base64font",
-    `${PATHS.css}src/fonts/source/**/*.scss`,
-    `${PATHS.css}src/fonts/base64`
-  )
-);
+// gulp.task(
+//   "sass-base64-fonts",
+//   getTask(
+//     "base64font",
+//     `${PATHS.css}src/fonts/source/**/*.scss`,
+//     `${PATHS.css}src/fonts/base64`
+//   )
+// );
 
 gulp.task(
   "indigo-sass",
