@@ -24,11 +24,7 @@
   "homepage": "https://github.com/urbit/Indigo#readme",
   "dependencies": {
     "classnames": "^2.2.6",
-    "gulp-base64": "^0.1.3",
     "gulp-better-rollup": "^4.0.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-cssfont64": "0.0.1",
-    "gulp-inline-fonts": "^1.2.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^4.3.1"
