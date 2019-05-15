@@ -1,0 +1,38 @@
+.f1-large {
+  font-size: 16rem;
+}
+.f1 {
+  font-size: 12rem;
+}
+.f2 {
+  font-size: 8rem;
+}
+.f3 {
+  font-size: 6rem;
+}
+.f4 {
+  font-size: 5rem;
+}
+
+@each $bp in $breakpoints {
+  $suffix: get($bp, "suffix");
+  $rule: get($bp, "rule");
+
+  @media #{$rule} {
+    .f1-large#{$suffix} {
+      font-size: 16rem;
+    }
+    .f1#{$suffix} {
+      font-size: 12rem;
+    }
+    .f2#{$suffix} {
+      font-size: 8rem;
+    }
+    .f3#{$suffix} {
+      font-size: 6rem;
+    }
+    .f4#{$suffix} {
+      font-size: 5rem;
+    }
+  }
+}

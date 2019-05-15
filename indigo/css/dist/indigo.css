@@ -1646,40 +1646,39 @@ template {
 .fs-normal {
   font-style: normal;
 }
-.100,
+.text-100,
 .ultralight {
   font-weight: 100;
 }
-.200,
+.text-200,
 .thin {
   font-weight: 200;
 }
-.300,
+.text-300,
 .light {
   font-weight: 300;
 }
-.400,
+.text-400,
 .regular {
   font-weight: 400;
 }
-.500,
+.text-500,
 .medium {
   font-weight: 500;
 }
-.600,
+.text-600,
 .semibold {
   font-weight: 600;
 }
-.700,
+.text-700,
 .bold {
   font-weight: 700;
 }
-.800,
+.text-800,
 .extrabold {
   font-weight: 800;
 }
-.900,
-.black {
+.text-900 {
   font-weight: 900;
 }
 .grid-6x1 {
