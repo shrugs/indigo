@@ -1,0 +1,48 @@
+// type variables should live here
+$fs1l: 16rem;
+$fs1: 12rem;
+$fs2: 8rem;
+$fs3: 6rem;
+$fs4: 5rem;
+
+$fw1: 400;
+$fw2: 600;
+
+.fs1l {
+  font-size: $fs1l;
+}
+.fs1 {
+  font-size: $fs1;
+}
+.fs2 {
+  font-size: $fs2;
+}
+.fs3 {
+  font-size: $fs3;
+}
+.fs4 {
+  font-size: $fs4;
+}
+
+@each $bp in $breakpoints {
+  $suffix: get($bp, "suffix");
+  $rule: get($bp, "rule");
+
+  @media #{$rule} {
+    .f1-large#{$suffix} {
+      font-size: $fs1l;
+    }
+    .f1#{$suffix} {
+      font-size: $fs1;
+    }
+    .f2#{$suffix} {
+      font-size: $fs2;
+    }
+    .f3#{$suffix} {
+      font-size: $fs3;
+    }
+    .f4#{$suffix} {
+      font-size: $fs4;
+    }
+  }
+}

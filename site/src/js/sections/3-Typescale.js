@@ -6,92 +6,92 @@ const Typescale = () => {
     <div className="ph8 ph32-lg pb8 pb0-ns bb1 pt16">
       <div>
         <H id="typescale">Typescale</H>
-        <div className="P mb8 measure">
+        <div className="p mb8 measure">
           इस्लाम ने कहा, ‘हम इनहेलर के जरिये चिटोसन के नैनोपार्टिकल की मदद से
           दवा को सांस के रास्ते सीधे फेफड़े तक पहुंचाने की दिशा में कार्य कर रहे
           हैं।’ चिटोसन एक प्राकृतिक पॉलीमर है, जो अपने आप विघटित हो जाता है।
           इसके साथ दवाओं को आसानी से जोड़ा जा
         </div>
-        <div className="H2">Headers</div>
+        <div className="f2">Headers</div>
         <div className="flex-row mb4 align-end">
           <div className="flex-col self-center w30 mr4">
             <div className="caption">H1 Large</div>
-            <div className="caption mono gray-50">.H1L, .t1</div>
+            <div className="caption mono gray-50">.f1l</div>
           </div>
-          <div className="H1L">Hello World</div>
+          <div className="f1l">Hello World</div>
         </div>
 
         <div className="flex-row mb4 align-end">
           <div className="flex-col self-center w30 mr4">
             <div className="caption">H1</div>
-            <div className="caption mono gray-50">.H1, .t2</div>
+            <div className="caption mono gray-50">.f1</div>
           </div>
-          <div className="H1">Hello World</div>
+          <div className="f1">Hello World</div>
         </div>
 
         <div className="flex-row mb4 align-end">
           <div className="flex-col self-center w30 mr4">
             <div className="caption">H1 Mono</div>
-            <div className="caption mono gray-50">.H1, .t2, .mono</div>
+            <div className="caption mono gray-50">.f1 .mono</div>
           </div>
-          <div className="H1 mono">Hello World</div>
+          <div className="f1 mono">Hello World</div>
         </div>
 
         <div className="flex-row mb4 align-end">
           <div className="flex-col self-center w30 mr4">
             <div className="caption">H2</div>
-            <div className="caption mono gray-50">.H2, .t3</div>
+            <div className="caption mono gray-50">.f2</div>
           </div>
-          <div className="H2">Hello World</div>
+          <div className="f2">Hello World</div>
         </div>
 
         <div className="flex-row mb4 align-end">
           <div className="flex-col self-center w30 mr4">
             <div className="caption">H2 Mono</div>
-            <div className="caption mono gray-50">.H2, .t3, .mono</div>
+            <div className="caption mono gray-50">.f2</div>
           </div>
-          <div className="H2 mono">Hello World</div>
+          <div className="f2 mono">Hello World</div>
         </div>
 
         <div className="flex-row mb4 align-end">
           <div className="flex-col self-center w30 mr4">
             <div className="caption">H3</div>
-            <div className="caption mono gray-50">.H3, .t4</div>
+            <div className="caption mono gray-50">.f3, .t4</div>
           </div>
-          <div className="H3">Hello World</div>
+          <div className="f3">Hello World</div>
         </div>
 
         <div className="flex-row mb4 align-end">
           <div className="flex-col self-center w30 mr4">
             <div className="caption">H3 Mono</div>
-            <div className="caption mono gray-50">.H3, .t4, .mono</div>
+            <div className="caption mono gray-50">.f3, .t4, .mono</div>
           </div>
-          <div className="H3 mono">Hello World</div>
+          <div className="f3 mono">Hello World</div>
         </div>
 
         <div className="flex-row mb4 align-end">
           <div className="flex-col self-center w30 mr4">
             <div className="caption">H4</div>
-            <div className="caption mono gray-50">.H4, .t5</div>
+            <div className="caption mono gray-50">.f4</div>
           </div>
-          <div className="H4">Hello World</div>
+          <div className="f4">Hello World</div>
         </div>
 
         <div className="flex-row mb4 align-end">
           <div className="flex-col self-center w30 mr4">
             <div className="caption">H4 Mono</div>
-            <div className="caption mono gray-50">.H4, .t5, .mono</div>
+            <div className="caption mono gray-50">.f4</div>
           </div>
-          <div className="H4 mono">Hello World</div>
+          <div className="f4 mono">Hello World</div>
         </div>
 
-        <div className="H2 mb4 pt16">Body Text</div>
+        <div className="f2 mb4 pt16">Body Text</div>
         <div className="flex-row mb4">
           <div className="flex-col self-start w30 mr4">
-            <div className="caption">Paragraph</div>
-            <div className="caption mono gray-50">.P, .t6</div>
+            <div className="caption">Paragraph Large</div>
+            <div className="caption mono gray-50">.pl</div>
           </div>
-          <div className="P gray-80 measure-wide mb4">
+          <div className="pl gray-80 measure-wide mb4">
             I underwent, during the summer that I became fourteen, a prolonged
             religious crisis. I use “religious” in the common, and arbitrary,
             sense, meaning that I then discovered God, His saints and angels,
@@ -109,10 +109,10 @@ const Typescale = () => {
         </div>
         <div className="flex-row mb4">
           <div className="flex-col self-start w30 mr4">
-            <div className="caption">Small Paragraph</div>
-            <div className="caption mono gray-50">.Ps, .t7</div>
+            <div className="caption">Paragraph</div>
+            <div className="caption mono gray-50">.p</div>
           </div>
-          <div className="Ps measure">
+          <div className="p measure">
             But now, without any warning, the whores and pimps and racketeers on
             the Avenue had become a personal menace. It had not before occurred
             to me that I could become one of them, but now I realized that we

@@ -6,7 +6,7 @@ const Color = () => {
     <div className="ph8 ph32-lg pb8 pb0-ns bb1 pt16">
       <div>
         <H id="color">Color</H>
-        <div className="P mb8 measure">
+        <div className="p mb8 measure">
           इस्लाम ने कहा, ‘हम इनहेलर के जरिये चिटोसन के नैनोपार्टिकल की मदद से
           दवा को सांस के रास्ते सीधे फेफड़े तक पहुंचाने की दिशा में कार्य कर रहे
           हैं।’ चिटोसन एक प्राकृतिक पॉलीमर है, जो अपने आप विघटित हो जाता है।

@@ -163,46 +163,39 @@ template {
 * {
   -webkit-font-smoothing: antialiased;
 }
-.H1L,
-.t1 {
+.f1l {
   font-size: 16rem;
   line-height: 20rem;
   font-weight: 700;
 }
-.H1,
-.t2 {
+.f1 {
   font-size: 12rem;
   line-height: 16rem;
   font-weight: 700;
 }
-.H2,
-.t3 {
+.f2 {
   font-size: 8rem;
   line-height: 12rem;
   font-weight: 700;
 }
-.H3,
-.t4 {
+.f3 {
   font-size: 6rem;
   line-height: 8rem;
   font-weight: 700;
 }
-.H4,
-.t5 {
+.f4 {
   font-size: 5rem;
   line-height: 6rem;
   font-weight: 700;
 }
-.P,
-.t6 {
-  font-size: 5rem;
-  line-height: 8rem;
-  font-weight: 400;
-}
-.Ps,
-.t7 {
+.p {
   font-size: 4rem;
   line-height: 6rem;
+  font-weight: 400;
+}
+.pl {
+  font-size: 5rem;
+  line-height: 8rem;
   font-weight: 400;
 }
 .label,
@@ -218,7 +211,7 @@ template {
   text-overflow: ellipsis;
 }
 .indent {
-  text-indent: 1em;
+  text-indent: 2em;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -401,10 +394,6 @@ template {
   .measure-wide-lg {
     max-width: 136rem;
   }
-}
-.markdown[class=".H1"],
-.markdown[class=".t2"] {
-  padding: 12rem 0;
 }
 .markdown[class=".H2"],
 .markdown[class=".t3"] {
@@ -1605,39 +1594,6 @@ template {
 }
 .mono {
   font-family: "Source Code Pro", "Roboto mono", "Courier New", monospace;
-}
-.fs8 {
-  font-size: 8rem;
-}
-.fs7 {
-  font-size: 7rem;
-}
-.fs6 {
-  font-size: 6rem;
-}
-.fs5 {
-  font-size: 5rem;
-}
-.fs45 {
-  font-size: 4.5rem;
-}
-.fs4 {
-  font-size: 4rem;
-}
-.fs35 {
-  font-size: 3.5rem;
-}
-.fs3 {
-  font-size: 3rem;
-}
-.fs25 {
-  font-size: 2.5rem;
-}
-.fs2 {
-  font-size: 2rem;
-}
-.fs1 {
-  font-size: 1rem;
 }
 .italic,
 .i {
