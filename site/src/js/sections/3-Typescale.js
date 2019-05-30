@@ -16,7 +16,7 @@ const Typescale = () => {
         <div className="flex-row mb4 align-end">
           <div className="flex-col self-center w30 mr4">
             <div className="caption">H1 Large</div>
-            <div className="caption mono gray-50">.f1l</div>
+            <div className="caption mono gray-50">.f1l, .t1</div>
           </div>
           <div className="f1l">Hello World</div>
         </div>
@@ -24,7 +24,7 @@ const Typescale = () => {
         <div className="flex-row mb4 align-end">
           <div className="flex-col self-center w30 mr4">
             <div className="caption">H1</div>
-            <div className="caption mono gray-50">.f1</div>
+            <div className="caption mono gray-50">.f1, .t2</div>
           </div>
           <div className="f1">Hello World</div>
         </div>
@@ -32,7 +32,7 @@ const Typescale = () => {
         <div className="flex-row mb4 align-end">
           <div className="flex-col self-center w30 mr4">
             <div className="caption">H1 Mono</div>
-            <div className="caption mono gray-50">.f1 .mono</div>
+            <div className="caption mono gray-50">.f1 .</div>
           </div>
           <div className="f1 mono">Hello World</div>
         </div>
@@ -128,6 +128,11 @@ const Typescale = () => {
             heat, their odor, and the inflection of their voices. Like the
             strangers on the Avenue, they became, in the twinkling of an eye,
             unutterably different and fantastically present.
+          </div>
+          <div className="markdown container ml8">
+            <article className="content">
+              <h1>Installing Urbit</h1>
+            </article>
           </div>
         </div>
       </div>

@@ -7,10 +7,10 @@ const Spacing = () => {
       <div>
         <H id="spacing">Spacing</H>
         <div className="p measure mb8">
-          इस्लाम ने कहा, ‘हम इनहेलर के जरिये चिटोसन के नैनोपार्टिकल की मदद से
-          दवा को सांस के रास्ते सीधे फेफड़े तक पहुंचाने की दिशा में कार्य कर रहे
-          हैं।’ चिटोसन एक प्राकृतिक पॉलीमर है, जो अपने आप विघटित हो जाता है।
-          इसके साथ दवाओं को आसानी से जोड़ा जा
+          I think it's cool to be able to look back and see that. Compared to
+          making music and releasing it on a record, DJing a party is inherently
+          ephemeral. The medium requires the context of the space and time to be
+          relevant as an artform.
         </div>
         <div className="f2 mb4">Grids</div>
         <div className="p">

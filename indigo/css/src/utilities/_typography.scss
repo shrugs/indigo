@@ -1,42 +1,42 @@
 .f1l {
-  font-size: 16rem;
+  font-size: $fs1l;
   line-height: 20rem;
   font-weight: 700;
 }
 
 .f1 {
-  font-size: 12rem;
+  font-size: $fs1;
   line-height: 16rem;
   font-weight: 700;
 }
 
 .f2 {
-  font-size: 8rem;
+  font-size: $fs2;
   line-height: 12rem;
   font-weight: 700;
 }
 
 .f3 {
-  font-size: 6rem;
+  font-size: $fs3;
   line-height: 8rem;
   font-weight: 700;
 }
 
 .f4 {
-  font-size: 5rem;
+  font-size: $fs4;
   line-height: 6rem;
   font-weight: 700;
 }
 
 .p {
-  font-size: 4rem;
+  font-size: $fs5;
   line-height: 6rem;
   font-weight: 400;
 }
 
 .pl /* small paragraph */
  {
-  font-size: 5rem;
+  font-size: $fs4;
   line-height: 8rem;
   font-weight: 400;
 }
@@ -44,7 +44,7 @@
 .label,
 .t8,
 .caption {
-  font-size: 3rem;
+  font-size: $fs6;
   line-height: 6rem;
   font-weight: 400;
 }
@@ -150,7 +150,11 @@
 }
 
 .markdown {
-  & h1 {
+  h1 {
+    font-size: $fs1;
+    line-height: 16rem;
+    font-weight: bold;
+    padding: 48px 0;
   }
 }
 
@@ -173,22 +177,6 @@
 .markdown[class=".t6"] {
   padding: 8rem 0;
 }
-
-/*
-.markdown[class=".H1"] + .markdown[class=".H2"],
-.markdown[class=".t2"] + .markdown[class=".t3"] {
-  padding-top: 0;
-}
-
-.markdown[class=".H2"] + .markdown[class=".H3"],
-.markdown[class=".t3"] + .markdown[class=".t4"] {
-  padding-top: 0;
-}
-
-.markdown[class=".H2"] + .markdown[class=".H3"],
-.markdown[class=".t3"] + .markdown[class=".t4"] {
-  padding-top: 0;
-} */
 
 .markdown[class=".H1"] + .markdown[class=".H2"],
 .markdown[class=".t2"] + .markdown[class=".t3"],

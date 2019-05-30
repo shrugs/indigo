@@ -7,10 +7,10 @@ const Color = () => {
       <div>
         <H id="color">Color</H>
         <div className="p mb8 measure">
-          इस्लाम ने कहा, ‘हम इनहेलर के जरिये चिटोसन के नैनोपार्टिकल की मदद से
-          दवा को सांस के रास्ते सीधे फेफड़े तक पहुंचाने की दिशा में कार्य कर रहे
-          हैं।’ चिटोसन एक प्राकृतिक पॉलीमर है, जो अपने आप विघटित हो जाता है।
-          इसके साथ दवाओं को आसानी से जोड़ा जा
+          I'm often in the situation where I can't come up with the artist name
+          or the track name—I just know that it had blue cover art and that I
+          played it in Leeds last weekend. Because I have the history of all my
+          gigs archived, I can go back and find it through those playlists.
         </div>
         <div className="flex-row vh20">
           <div className="w40 bg-black white caption p2">

@@ -13,7 +13,57 @@
   * Bugs: https://github.com/urbit/Indigo/issues
   * License: MIT
   *******************************************************************************/
-/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+@media only screen and (min-width: 550px) {
+  .f1-largens {
+    font-size: 16rem;
+  }
+  .f1ns {
+    font-size: 12rem;
+  }
+  .f2ns {
+    font-size: 8rem;
+  }
+  .f3ns {
+    font-size: 6rem;
+  }
+  .f4ns {
+    font-size: 5rem;
+  }
+}
+@media only screen and (min-width: 750px) and (max-width: 960px) {
+  .f1-largemd {
+    font-size: 16rem;
+  }
+  .f1md {
+    font-size: 12rem;
+  }
+  .f2md {
+    font-size: 8rem;
+  }
+  .f3md {
+    font-size: 6rem;
+  }
+  .f4md {
+    font-size: 5rem;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .f1-largelg {
+    font-size: 16rem;
+  }
+  .f1lg {
+    font-size: 12rem;
+  }
+  .f2lg {
+    font-size: 8rem;
+  }
+  .f3lg {
+    font-size: 6rem;
+  }
+  .f4lg {
+    font-size: 5rem;
+  }
+} /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -394,6 +444,12 @@ template {
   .measure-wide-lg {
     max-width: 136rem;
   }
+}
+.markdown h1 {
+  font-size: 12rem;
+  line-height: 16rem;
+  font-weight: bold;
+  padding: 48px 0;
 }
 .markdown[class=".H2"],
 .markdown[class=".t3"] {
@@ -1594,6 +1650,27 @@ template {
 }
 .mono {
   font-family: "Source Code Pro", "Roboto mono", "Courier New", monospace;
+}
+.fs1l {
+  font-size: 16rem;
+}
+.fs1 {
+  font-size: 12rem;
+}
+.fs2 {
+  font-size: 8rem;
+}
+.fs3 {
+  font-size: 6rem;
+}
+.fs4 {
+  font-size: 5rem;
+}
+.fs5 {
+  font-size: 4rem;
+}
+.fs6 {
+  font-size: 3rem;
 }
 .italic,
 .i {
