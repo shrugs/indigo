@@ -2,32 +2,29 @@
   Padding
 *******************************************************************************/
 
-@each $dim in $scale {
-  // remove . from '0.5' etc
-  $name: str-replace(#{$dim}, ".");
-
-  .p#{$name} {
-    padding: #{$dim}rem;
+@each $i, $dim in $scale {
+  .p#{$i} {
+    padding: #{$dim};
   }
-  .pt#{$name} {
-    padding-top: #{$dim}rem;
+  .pt#{$i} {
+    padding-top: #{$dim};
   }
-  .pb#{$name} {
-    padding-bottom: #{$dim}rem;
+  .pb#{$i} {
+    padding-bottom: #{$dim};
   }
-  .pl#{$name} {
-    padding-left: #{$dim}rem;
+  .pl#{$i} {
+    padding-left: #{$dim};
   }
-  .pr#{$name} {
-    padding-right: #{$dim}rem;
+  .pr#{$i} {
+    padding-right: #{$dim};
   }
-  .pv#{$name} {
-    padding-top: #{$dim}rem;
-    padding-bottom: #{$dim}rem;
+  .pv#{$i} {
+    padding-top: #{$dim};
+    padding-bottom: #{$dim};
   }
-  .ph#{$name} {
-    padding-left: #{$dim}rem;
-    padding-right: #{$dim}rem;
+  .ph#{$i} {
+    padding-left: #{$dim};
+    padding-right: #{$dim};
   }
 
   // Responsive padding
@@ -36,85 +33,85 @@
     $rule: get($bp, "rule");
 
     @media #{$rule} {
-      .p#{$name}-#{$suffix} {
-        padding: #{$dim}rem;
+      .p#{$i}-#{$suffix} {
+        padding: #{$dim};
       }
-      .pt#{$name}-#{$suffix} {
-        padding-top: #{$dim}rem;
+      .pt#{$i}-#{$suffix} {
+        padding-top: #{$dim};
       }
-      .pb#{$name}-#{$suffix} {
-        padding-bottom: #{$dim}rem;
+      .pb#{$i}-#{$suffix} {
+        padding-bottom: #{$dim};
       }
-      .pl#{$name}-#{$suffix} {
-        padding-left: #{$dim}rem;
+      .pl#{$i}-#{$suffix} {
+        padding-left: #{$dim};
       }
-      .pr#{$name}-#{$suffix} {
-        padding-right: #{$dim}rem;
+      .pr#{$i}-#{$suffix} {
+        padding-right: #{$dim};
       }
-      .pv#{$name}-#{$suffix} {
-        padding-top: #{$dim}rem;
-        padding-bottom: #{$dim}rem;
+      .pv#{$i}-#{$suffix} {
+        padding-top: #{$dim};
+        padding-bottom: #{$dim};
       }
-      .ph#{$name}-#{$suffix} {
-        padding-left: #{$dim}rem;
-        padding-right: #{$dim}rem;
+      .ph#{$i}-#{$suffix} {
+        padding-left: #{$dim};
+        padding-right: #{$dim};
       }
     }
   }
 }
 
 // padding auto
-.p-auto {
-  padding: auto;
-}
-.pt-auto {
-  padding-top: auto;
-}
-.pb-auto {
-  padding-bottom: auto;
-}
-.pr-auto {
-  padding-right: auto;
-}
-.pl-auto {
-  padding-left: auto;
-}
-.ph-auto {
-  padding-left: auto;
-  padding-right: auto;
-}
-.pv-auto {
-  padding-top: auto;
-  padding-bottom: auto;
-}
-
-@each $bp in $breakpoints {
-  $suffix: get($bp, "suffix");
-  $rule: get($bp, "rule");
-
-  @media #{$rule} {
-    .p-auto-#{$suffix} {
-      padding: auto;
-    }
-    .pt-auto-#{$suffix} {
-      padding-top: auto;
-    }
-    .pb-auto-#{$suffix} {
-      padding-bottom: auto;
-    }
-    .pr-auto-#{$suffix} {
-      padding-right: auto;
-    }
-    .pl-auto-#{$suffix} {
-      padding-left: auto;
-    }
-    .ph-auto-#{$suffix} {
-      padding-left: auto;
-      padding-right: auto;
-    }
-    .pv-auto-#{$suffix} {
-      padding-top: auto;
-      padding-bottom: auto;
-    }
-  }
-}
+// .p-auto {
+//   padding: auto;
+// }
+// .pt-auto {
+//   padding-top: auto;
+// }
+// .pb-auto {
+//   padding-bottom: auto;
+// }
+// .pr-auto {
+//   padding-right: auto;
+// }
+// .pl-auto {
+//   padding-left: auto;
+// }
+// .ph-auto {
+//   padding-left: auto;
+//   padding-right: auto;
+// }
+// .pv-auto {
+//   padding-top: auto;
+//   padding-bottom: auto;
+// }
+//
+// @each $bp in $breakpoints {
+//   $suffix: get($bp, "suffix");
+//   $rule: get($bp, "rule");
+//
+//   @media #{$rule} {
+//     .p-auto-#{$suffix} {
+//       padding: auto;
+//     }
+//     .pt-auto-#{$suffix} {
+//       padding-top: auto;
+//     }
+//     .pb-auto-#{$suffix} {
+//       padding-bottom: auto;
+//     }
+//     .pr-auto-#{$suffix} {
+//       padding-right: auto;
+//     }
+//     .pl-auto-#{$suffix} {
+//       padding-left: auto;
+//     }
+//     .ph-auto-#{$suffix} {
+//       padding-left: auto;
+//       padding-right: auto;
+//     }
+//     .pv-auto-#{$suffix} {
+//       padding-top: auto;
+//       padding-bottom: auto;
+//     }
+//   }
+// }

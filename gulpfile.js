@@ -101,6 +101,8 @@ gulp.task(
   gulp.series("sass-compressed", "sass-header", "sass-gzip")
 );
 
+gulp.task("indigo-sass-inspect", gulp.series("sass-plain"));
+
 gulp.task("watch-indigo-sass", function() {
   gulp.watch(`${PATHS.css}/**/*.scss`, gulp.series("indigo-sass"));
 });

@@ -2,32 +2,29 @@
   Margin
 *******************************************************************************/
 
-@each $dim in $scale {
-  // remove . from '0.5' etc
-  $name: str-replace(#{$dim}, ".");
-
-  .m#{$name} {
-    margin: #{$dim}rem;
+@each $i, $dim in $scale {
+  .m#{$i} {
+    margin: #{$dim};
   }
-  .mt#{$name} {
-    margin-top: #{$dim}rem;
+  .mt#{$i} {
+    margin-top: #{$dim};
   }
-  .mb#{$name} {
-    margin-bottom: #{$dim}rem;
+  .mb#{$i} {
+    margin-bottom: #{$dim};
   }
-  .ml#{$name} {
-    margin-left: #{$dim}rem;
+  .ml#{$i} {
+    margin-left: #{$dim};
   }
-  .mr#{$name} {
-    margin-right: #{$dim}rem;
+  .mr#{$i} {
+    margin-right: #{$dim};
   }
-  .mv#{$name} {
-    margin-top: #{$dim}rem;
-    margin-bottom: #{$dim}rem;
+  .mv#{$i} {
+    margin-top: #{$dim};
+    margin-bottom: #{$dim};
   }
-  .mh#{$name} {
-    margin-left: #{$dim}rem;
-    margin-right: #{$dim}rem;
+  .mh#{$i} {
+    margin-left: #{$dim};
+    margin-right: #{$dim};
   }
 
   // Responsive Margin
@@ -36,85 +33,85 @@
     $rule: get($bp, "rule");
 
     @media #{$rule} {
-      .m#{$name}-#{$suffix} {
-        margin: #{$dim}rem;
+      .m#{$i}-#{$suffix} {
+        margin: #{$dim};
       }
-      .mt#{$name}-#{$suffix} {
-        margin-top: #{$dim}rem;
+      .mt#{$i}-#{$suffix} {
+        margin-top: #{$dim};
       }
-      .mb#{$name}-#{$suffix} {
-        margin-bottom: #{$dim}rem;
+      .mb#{$i}-#{$suffix} {
+        margin-bottom: #{$dim};
       }
-      .ml#{$name}-#{$suffix} {
-        margin-left: #{$dim}rem;
+      .ml#{$i}-#{$suffix} {
+        margin-left: #{$dim};
       }
-      .mr#{$name}-#{$suffix} {
-        margin-right: #{$dim}rem;
+      .mr#{$i}-#{$suffix} {
+        margin-right: #{$dim};
       }
-      .mv#{$name}-#{$suffix} {
-        margin-top: #{$dim}rem;
-        margin-bottom: #{$dim}rem;
+      .mv#{$i}-#{$suffix} {
+        margin-top: #{$dim};
+        margin-bottom: #{$dim};
       }
-      .mh#{$name}-#{$suffix} {
-        margin-left: #{$dim}rem;
-        margin-right: #{$dim}rem;
+      .mh#{$i}-#{$suffix} {
+        margin-left: #{$dim};
+        margin-right: #{$dim};
       }
     }
   }
 }
 
 // margin auto
-.m-auto {
-  margin: auto;
-}
-.mt-auto {
-  margin-top: auto;
-}
-.mb-auto {
-  margin-bottom: auto;
-}
-.mr-auto {
-  margin-right: auto;
-}
-.ml-auto {
-  margin-left: auto;
-}
-.mh-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-.mv-auto {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-@each $bp in $breakpoints {
-  $suffix: get($bp, "suffix");
-  $rule: get($bp, "rule");
-
-  @media #{$rule} {
-    .m-auto-#{$suffix} {
-      margin: auto;
-    }
-    .mt-auto-#{$suffix} {
-      margin-top: auto;
-    }
-    .mb-auto-#{$suffix} {
-      margin-bottom: auto;
-    }
-    .mr-auto-#{$suffix} {
-      margin-right: auto;
-    }
-    .ml-auto-#{$suffix} {
-      margin-left: auto;
-    }
-    .mh-auto-#{$suffix} {
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .mv-auto-#{$suffix} {
-      margin-top: auto;
-      margin-bottom: auto;
-    }
-  }
-}
+// .m-auto {
+//   margin: auto;
+// }
+// .mt-auto {
+//   margin-top: auto;
+// }
+// .mb-auto {
+//   margin-bottom: auto;
+// }
+// .mr-auto {
+//   margin-right: auto;
+// }
+// .ml-auto {
+//   margin-left: auto;
+// }
+// .mh-auto {
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+// .mv-auto {
+//   margin-top: auto;
+//   margin-bottom: auto;
+// }
+//
+// @each $bp in $breakpoints {
+//   $suffix: get($bp, "suffix");
+//   $rule: get($bp, "rule");
+//
+//   @media #{$rule} {
+//     .m-auto-#{$suffix} {
+//       margin: auto;
+//     }
+//     .mt-auto-#{$suffix} {
+//       margin-top: auto;
+//     }
+//     .mb-auto-#{$suffix} {
+//       margin-bottom: auto;
+//     }
+//     .mr-auto-#{$suffix} {
+//       margin-right: auto;
+//     }
+//     .ml-auto-#{$suffix} {
+//       margin-left: auto;
+//     }
+//     .mh-auto-#{$suffix} {
+//       margin-left: auto;
+//       margin-right: auto;
+//     }
+//     .mv-auto-#{$suffix} {
+//       margin-top: auto;
+//       margin-bottom: auto;
+//     }
+//   }
+// }
