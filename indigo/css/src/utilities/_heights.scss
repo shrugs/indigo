@@ -1,7 +1,4 @@
-.h-auto {
-  height: auto;
-}
-
+// Height - viewHeight
 @each $dim in (10, 20, 30, 40, 50, 60, 70, 80, 90, 100) {
   $name: str-replace(#{$dim}, ".");
 
@@ -21,6 +18,11 @@
   }
 }
 
+// Height - auto
+.h-auto {
+  height: auto;
+}
+
 @each $bp in $breakpoints {
   $suffix: get($bp, "suffix");
   $rule: get($bp, "rule");
@@ -32,11 +34,10 @@
   }
 }
 
-@each $dim in $scale {
-  $name: str-replace(#{$dim}, ".");
-
-  .h#{$name} {
-    height: #{$dim}rem;
+// Height - scale
+@each $i, $dim in $scale {
+  .h#{$i} {
+    height: #{$dim};
   }
 
   // Responsive Spacing
@@ -45,27 +46,9 @@
     $rule: get($bp, "rule");
 
     @media #{$rule} {
-      .h#{$name}-#{$suffix} {
-        height: #{$dim}rem;
+      .h#{$i}-#{$suffix} {
+        height: #{$dim};
       }
     }
   }
 }
-
-// @each $k, $v in $row-scale {
-//   .SH#{$k} {
-//     height: #{$v}rem;
-//   }
-//
-//   // Responsive row heights
-//   @each $bp in $breakpoints {
-//     $suffix: get($bp, "suffix");
-//     $rule: get($bp, "rule");
-//
-//     @media #{$rule} {
-//       .SH#{$k}-#{$suffix} {
-//         height: #{$v}rem;
-//       }
-//     }
-//   }
-// }

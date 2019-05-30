@@ -21,11 +21,9 @@
   }
 }
 
-@each $dim in $scale {
-  $name: str-replace(#{$dim}, ".");
-
-  .w#{$name} {
-    width: #{$dim}rem;
+@each $i, $dim in $scale {
+  .w#{$i} {
+    width: #{$dim};
   }
 
   // Responsive Spacing
@@ -34,8 +32,8 @@
     $rule: get($bp, "rule");
 
     @media #{$rule} {
-      .w#{$name}-#{$suffix} {
-        width: #{$dim}rem;
+      .w#{$i}-#{$suffix} {
+        width: #{$dim};
       }
     }
   }

@@ -1,9 +1,7 @@
-@each $dim in $scale {
-  $name: str-replace(#{$dim}, ".");
-
-  .s#{$name} {
-    width: #{$dim}rem;
-    height: #{$dim}rem;
+@each $i, $dim in $scale {
+  .s#{$i} {
+    width: #{$dim};
+    height: #{$dim};
   }
 
   // Responsive Spacing
@@ -12,9 +10,9 @@
     $rule: get($bp, "rule");
 
     @media #{$rule} {
-      .s#{$name}-#{$suffix} {
-        width: #{$dim}rem;
-        height: #{$dim}rem;
+      .s#{$i}-#{$suffix} {
+        width: #{$dim};
+        height: #{$dim};
       }
     }
   }

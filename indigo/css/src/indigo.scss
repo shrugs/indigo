@@ -4,13 +4,10 @@
 @import "./lib/spacing";
 @import "./lib/cols";
 @import "./lib/func";
+@import "./lib/type";
 
 // Reset
 @import "./utilities/normalize";
-
-:root {
-  font-size: 4px;
-}
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -26,24 +23,14 @@
 @import "./utilities/display";
 @import "./utilities/debug";
 @import "./utilities/flexbox";
-@import "./utilities/font-family";
-@import "./utilities/font-size";
-@import "./utilities/font-style";
-@import "./utilities/font-weight";
 @import "./utilities/grids";
 @import "./utilities/heights";
 @import "./utilities/hover";
-@import "./utilities/iconography";
 @import "./utilities/margin";
 @import "./utilities/opacity";
 @import "./utilities/padding";
 @import "./utilities/position";
 @import "./utilities/size";
-@import "./utilities/text-align";
-@import "./utilities/text-decoration";
-@import "./utilities/text-transform";
-@import "./utilities/vertical-align";
 @import "./utilities/visibility";
-@import "./utilities/white-space";
 @import "./utilities/widths";
 @import "./utilities/z-index";

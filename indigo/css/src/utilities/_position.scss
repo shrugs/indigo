@@ -50,20 +50,19 @@
 
 // Top, Right, Bottom, Left
 @each $dim in $scale {
-  // remove the . in 0.5
-  $name: str-replace(#{$dim}, ".");
+  $name: str-replace(#{$dim}, "px");
 
   .top#{$name} {
-    top: #{$dim}rem;
+    top: #{$dim};
   }
   .right#{$name} {
-    right: #{$dim}rem;
+    right: #{$dim};
   }
   .bottom#{$name} {
-    bottom: #{$dim}rem;
+    bottom: #{$dim};
   }
   .left#{$name} {
-    left: #{$dim}rem;
+    left: #{$dim};
   }
 
   // Responsive Margin
@@ -73,16 +72,16 @@
 
     @media #{$rule} {
       .top#{$name}-#{$suffix} {
-        top: #{$dim}rem;
+        top: #{$dim};
       }
       .right#{$name}-#{$suffix} {
-        right: #{$dim}rem;
+        right: #{$dim};
       }
       .bottom#{$name}-#{$suffix} {
-        bottom: #{$dim}rem;
+        bottom: #{$dim};
       }
       .left#{$name}-#{$suffix} {
-        left: #{$dim}rem;
+        left: #{$dim};
       }
     }
   }

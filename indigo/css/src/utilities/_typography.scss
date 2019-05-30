@@ -1,58 +1,187 @@
-.H1L,
-.t1 {
-  font-size: 16rem;
-  line-height: 20rem;
-  font-weight: 700;
+.f1 {
+  font-size: $fs1;
+  line-height: $lh-short;
+  font-weight: $fw-regular;
 }
 
-.H1,
-.t2 {
-  font-size: 12rem;
-  line-height: 16rem;
-  font-weight: 700;
+.f2 {
+  font-size: $fs2;
+  line-height: $lh-regular;
+  font-weight: $fw-regular;
 }
 
-.H2,
-.t3 {
-  font-size: 8rem;
-  line-height: 12rem;
-  font-weight: 700;
+.f3 {
+  font-size: $fs3;
+  line-height: $lh-regular;
+  font-weight: $fw-regular;
 }
 
-.H3,
-.t4 {
-  font-size: 6rem;
-  line-height: 8rem;
-  font-weight: 700;
+.f4 {
+  font-size: $fs4;
+  line-height: $lh-short;
+  font-weight: $fw-regular;
 }
 
-.H4,
-.t5 {
-  font-size: 5rem;
-  line-height: 6rem;
-  font-weight: 700;
+.f5 {
+  font-size: $fs5;
+  line-height: $lh-regular;
+  font-weight: $fw-regular;
 }
 
-.P,
-.t6 {
-  font-size: 5rem;
-  line-height: 8rem;
-  font-weight: 400;
+.f6 {
+  font-size: $fs6;
+  line-height: $lh-short;
+  font-weight: $fw-regular;
 }
 
-.Ps, /* small paragraph */
-.t7 {
-  font-size: 4rem;
-  line-height: 6rem;
-  font-weight: 400;
+@each $bp in $breakpoints {
+  $suffix: get($bp, "suffix");
+  $rule: get($bp, "rule");
+  @media #{$rule} {
+    .f1-#{$suffix} {
+      font-size: $fs1;
+      line-height: $lh-short;
+      font-weight: $fw-regular;
+    }
+
+    .f2-#{$suffix} {
+      font-size: $fs2;
+      line-height: $lh-regular;
+      font-weight: $fw-regular;
+    }
+
+    .f3-#{$suffix} {
+      font-size: $fs3;
+      line-height: $lh-regular;
+      font-weight: $fw-regular;
+    }
+
+    .f4-#{$suffix} {
+      font-size: $fs4;
+      line-height: $lh-short;
+      font-weight: $fw-regular;
+    }
+
+    .f5-#{$suffix} {
+      font-size: $fs5;
+      line-height: $lh-regular;
+      font-weight: $fw-regular;
+    }
+
+    .f6-#{$suffix} {
+      font-size: $fs6;
+      line-height: $lh-short;
+      font-weight: $fw-regular;
+    }
+  }
 }
 
-.label,
-.t8,
-.caption {
-  font-size: 3rem;
-  line-height: 6rem;
-  font-weight: 400;
+// Line height
+.lh-short {
+  line-height: $lh-short;
+}
+
+.lh-regular {
+  line-height: $lh-regular;
+}
+
+.lh-tall {
+  line-height: $lh-tall;
+}
+
+@each $bp in $breakpoints {
+  $suffix: get($bp, "suffix");
+  $rule: get($bp, "rule");
+  @media #{$rule} {
+    .lh-short-#{$suffix} {
+      line-height: $lh-short;
+    }
+
+    .lh-regular-#{$suffix} {
+      line-height: $lh-regular;
+    }
+
+    .lh-tall-#{$suffix} {
+      line-height: $lh-tall;
+    }
+  }
+}
+
+// Font weight
+.fw-thin {
+  font-weight: $fw-thin;
+}
+
+.fw-regular {
+  font-weight: $fw-regular;
+}
+
+.fw-bold {
+  font-weight: $fw-bold;
+}
+
+@each $bp in $breakpoints {
+  $suffix: get($bp, "suffix");
+  $rule: get($bp, "rule");
+  @media #{$rule} {
+    .fw-thin-#{$suffix} {
+      font-weight: $fw-thin;
+    }
+
+    .fw-regular-#{$suffix} {
+      font-weight: $fw-regular;
+    }
+
+    .fw-bold-#{$suffix} {
+      font-weight: $fw-bold;
+    }
+  }
+}
+
+// Markdown
+.md {
+  h1 {
+    font-size: $fs1;
+    line-height: $lh-short;
+    font-weight: $fw-regular;
+    margin: $s8 0;
+  }
+  h2 {
+    font-size: $fs2;
+    line-height: $lh-regular;
+    font-weight: $fw-regular;
+    margin: $s7 0;
+  }
+  h3 {
+    font-size: $fs3;
+    line-height: $lh-regular;
+    font-weight: $fw-regular;
+    margin: $s6 0;
+  }
+  h4 {
+    font-size: $fs4;
+    line-height: $lh-short;
+    font-weight: $fw-regular;
+    margin: $s5 0;
+  }
+  h5 {
+    font-size: $fs5;
+    line-height: $lh-regular;
+    font-weight: $fw-bold;
+    margin: $s7 0;
+  }
+  p {
+    font-size: $fs5;
+    line-height: $lh-regular;
+    font-weight: $fw-regular;
+    margin: $s7 0;
+  }
+  caption {
+    font-size: $fs6;
+    line-height: $lh-short;
+    font-weight: $fw-regular;
+    margin: $s4 0;
+  }
 }
 
 .truncate {
@@ -60,11 +189,29 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-// This indent is looking to subtle. You can see the visual representation in the Introduction
+
 .indent {
-  text-indent: 1em;
+  text-indent: 2em;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+@each $bp in $breakpoints {
+  $suffix: get($bp, "suffix");
+  $rule: get($bp, "rule");
+  @media #{$rule} {
+    .truncate-#{$suffix} {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .indent-#{$suffix} {
+      text-indent: 2em;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
 }
 
 // Measure
@@ -86,63 +233,7 @@
 @each $bp in $breakpoints {
   $suffix: get($bp, "suffix");
   $rule: get($bp, "rule");
-
   @media #{$rule} {
-    .H1L-#{$suffix},
-    .t1-#{$suffix} {
-      font-size: 16rem;
-      line-height: 20rem;
-    }
-
-    .H1#{$suffix},
-    .t2-#{$suffix} {
-      font-size: 8rem;
-      line-height: 12rem;
-    }
-
-    .H2#{$suffix},
-    .t3-#{$suffix} {
-      font-size: 6rem;
-      line-height: 8rem;
-    }
-
-    .H3#{$suffix},
-    .t4-#{$suffix} {
-      font-size: 5rem;
-      line-height: 6rem;
-    }
-
-    .H4#{$suffix},
-    .t5-#{$suffix} {
-      font-size: 4rem;
-      line-height: 6rem;
-    }
-
-    .P#{$suffix},
-    .t6-#{$suffix} {
-      font-size: 4rem;
-      line-height: 6rem;
-    }
-
-    .label-#{$suffix},
-    .t7-#{$suffix},
-    .caption-#{$suffix} {
-      font-size: 3rem;
-      line-height: 6rem;
-    }
-
-    .truncate-#{$suffix} {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .indent-#{$suffix} {
-      text-indent: 1em;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
     .measure-narrow-#{$suffix} {
       max-width: 80rem;
     }
@@ -155,52 +246,174 @@
   }
 }
 
-.markdown[class=".H1"],
-.markdown[class=".t2"] {
-  padding: 12rem 0;
+.sans,
+.inter {
+  font-family: "Inter UI", sans-serif;
 }
 
-.markdown[class=".H2"],
-.markdown[class=".t3"] {
-  padding: 8rem 0;
+.sys {
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji";
 }
 
-.markdown[class=".H3"],
-.markdown[class=".t4"] {
-  padding: 6rem 0;
+.mono {
+  font-family: "Source Code Pro", "Roboto mono", "Courier New", monospace;
 }
 
-.markdown[class=".H4"],
-.markdown[class=".t5"] {
-  padding: 5rem 0;
+.italic,
+.i {
+  font-style: italic;
 }
 
-.markdown[class=".P"],
-.markdown[class=".t6"] {
-  padding: 8rem 0;
+.fs-normal {
+  font-style: normal;
 }
 
-/*
-.markdown[class=".H1"] + .markdown[class=".H2"],
-.markdown[class=".t2"] + .markdown[class=".t3"] {
-  padding-top: 0;
+.t-left {
+  text-align: left;
+}
+.t-center {
+  text-align: center;
+}
+.t-justified {
+  text-align: justify;
+}
+.t-right {
+  text-align: right;
 }
 
-.markdown[class=".H2"] + .markdown[class=".H3"],
-.markdown[class=".t3"] + .markdown[class=".t4"] {
-  padding-top: 0;
+@each $bp in $breakpoints {
+  $suffix: get($bp, "suffix");
+  $rule: get($bp, "rule");
+
+  @media #{$rule} {
+    .t-left-#{$suffix} {
+      text-align: left;
+    }
+    .t-center-#{$suffix} {
+      text-align: center;
+    }
+    .t-justified-#{$suffix} {
+      text-align: justify;
+    }
+    .t-right-#{$suffix} {
+      text-align: right;
+    }
+  }
 }
 
-.markdown[class=".H2"] + .markdown[class=".H3"],
-.markdown[class=".t3"] + .markdown[class=".t4"] {
-  padding-top: 0;
-} */
+.underline {
+  text-decoration: underline;
+}
 
-.markdown[class=".H1"] + .markdown[class=".H2"],
-.markdown[class=".t2"] + .markdown[class=".t3"],
-.markdown[class=".H2"] + .markdown[class=".H3"],
-.markdown[class=".t3"] + .markdown[class=".t4"],
-.markdown[class=".H2"] + .markdown[class=".H3"],
-.markdown[class=".t3"] + .markdown[class=".t4"] {
-  padding-top: 0;
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+// .ttc,
+// .capitalize {
+//   text-transform: capitalize;
+// }
+//
+// .ttl,
+// .lowercase {
+//   text-transform: lowercase;
+// }
+//
+// .ttu,
+// .uppercase {
+//   text-transform: uppercase;
+// }
+//
+// .ttn {
+//   text-transform: none;
+// }
+
+// Vertical Align
+// .t-top {
+//   vertical-align: top;
+// }
+// .t-middle {
+//   vertical-align: middle;
+// }
+// .t-bottom {
+//   vertical-align: bottom;
+// }
+// .t-baseline {
+//   vertical-align: baseline;
+// }
+// .t-sub {
+//   vertical-align: sub;
+// }
+// .t-super {
+//   vertical-align: super;
+// }
+// .t-text-bottom {
+//   vertical-align: text-bottom;
+// }
+// .t-text-top {
+//   vertical-align: text-top;
+// }
+//
+// @each $bp in $breakpoints {
+//   $suffix: get($bp, "suffix");
+//   $rule: get($bp, "rule");
+//
+//   @media #{$rule} {
+//     .t-top-#{$suffix} {
+//       vertical-align: top;
+//     }
+//     .t-middle-#{$suffix} {
+//       vertical-align: middle;
+//     }
+//     .t-bottom-#{$suffix} {
+//       vertical-align: bottom;
+//     }
+//     .t-baseline-#{$suffix} {
+//       vertical-align: baseline;
+//     }
+//     .t-sub-#{$suffix} {
+//       vertical-align: sub;
+//     }
+//     .t-super-#{$suffix} {
+//       vertical-align: super;
+//     }
+//     .t-text-bottom-#{$suffix} {
+//       vertical-align: text-bottom;
+//     }
+//     .t-text-top-#{$suffix} {
+//       vertical-align: text-top;
+//     }
+//   }
+// }
+
+.ws-normal {
+  white-space: normal;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.pre {
+  white-space: pre;
+}
+
+@each $bp in $breakpoints {
+  $suffix: get($bp, "suffix");
+  $rule: get($bp, "rule");
+
+  @media #{$rule} {
+    .ws-normal-#{$suffix} {
+      white-space: normal;
+    }
+    .nowrap-#{$suffix} {
+      white-space: nowrap;
+    }
+    .pre-#{$suffix} {
+      white-space: pre;
+    }
+  }
 }

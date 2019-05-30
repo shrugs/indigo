@@ -2,12 +2,12 @@ import React, { Component } from "react";
 
 // Banner Heading
 const BH = props => {
-  return <div className="H3-ns H4 mv6 mv10-ns">{props.children}</div>;
+  return <div className="f3-ns f4 mv6 mv10-ns">{props.children}</div>;
 };
 
 const Link = props => {
   return (
-    <a href={props.href} className="block P mb2 pointer">
+    <a href={props.href} className="block p mb2 pointer white">
       {props.children}
     </a>
   );
@@ -16,7 +16,7 @@ const Link = props => {
 const H = props => {
   return (
     <div id={props.id} className={""}>
-      <h1 className={"t2"}>
+      <h1 className={"f2"}>
         {
           // <a className={"gray30 no-underline"} href={props.id}>
           //   #{" "}
