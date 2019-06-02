@@ -221,13 +221,13 @@
 // average is 40-50 characters.”
 
 .measure-narrow {
-  max-width: 80rem;
+  max-width: 20rem;
 }
 .measure {
-  max-width: 120rem;
+  max-width: 30rem;
 }
 .measure-wide {
-  max-width: 136rem;
+  max-width: 34rem;
 }
 
 @each $bp in $breakpoints {

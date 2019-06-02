@@ -49,19 +49,19 @@
 }
 
 // Top, Right, Bottom, Left
-@each $dim in $scale {
+@each $i, $dim in $scale {
   $name: str-replace(#{$dim}, "px");
 
-  .top#{$name} {
+  .top#{$i} {
     top: #{$dim};
   }
-  .right#{$name} {
+  .right#{$i} {
     right: #{$dim};
   }
-  .bottom#{$name} {
+  .bottom#{$i} {
     bottom: #{$dim};
   }
-  .left#{$name} {
+  .left#{$i} {
     left: #{$dim};
   }
 

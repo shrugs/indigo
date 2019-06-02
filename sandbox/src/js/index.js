@@ -1,20 +1,19 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import indigo from './indigo/index.js';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import indigo from "./indigo/index.js";
 
-class WelcomePage extends Component {
+const seq = n => Array.from(Array(n), (_, i) => i);
+
+class Main extends Component {
   render() {
-    console.log(indigo)
     return (
-      <div className='ph8 slug-4'>
-        <div className={'b1 s16 b-black r0'} />
-        <div className={'b1 s16 b-black r1'} />
-        <div className={'b1 s16 b-black r2'} />
-        <div className={'b1 s16 b-black r4'} />
-
+      <div className="debug grid-2 ph4">
+        {seq(12).map(i => {
+          return <div className={""}>{i + 1}</div>;
+        })}
       </div>
-    )
+    );
   }
 }
 
-ReactDOM.render(<WelcomePage />, document.querySelectorAll("#root")[0]);
+ReactDOM.render(<Main />, document.querySelectorAll("#root")[0]);

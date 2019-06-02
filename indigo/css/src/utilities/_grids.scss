@@ -1,33 +1,75 @@
 /*******************************************************************************
   Grid and Layout
 *******************************************************************************/
-$g-max: 80rem;
-$g-min: 36rem;
+$col-max: 20rem; // 20 * 16 = 320px
+$col-min: 34rem; // 34 * 16 = 544px
+
+// .grid-12 {
+//   display: grid;
+//   grid-template-columns: repeat(12, [col-start] minmax($col-min, $col-max));
+//   // grid-template-rows: repeat(1, [col-start] 1fr);
+//   grid-gap: 16px;
+// }
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, [col-start] 1fr);
+  // grid-template-rows: repeat(1, [col-start] 1fr);
+  grid-gap: 16px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, [col-start] 1fr);
+  // grid-template-rows: repeat(1, [col-start] 1fr);
+  grid-gap: 16px;
+}
+
+.grid-6 {
+  display: grid;
+  grid-template-columns: repeat(6, [col-start] 1fr);
+  // grid-template-rows: repeat(1, [col-start] 1fr);
+  grid-gap: 16px;
+}
+
+.grid-8 {
+  display: grid;
+  grid-template-columns: repeat(8, [col-start] 1fr);
+  // grid-template-rows: repeat(1, [col-start] 1fr);
+  grid-gap: 16px;
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  // grid-template-rows: repeat(1, [col-start] 1fr);
+  grid-gap: 16px;
+}
 
 .grid-6x1 {
   display: grid;
-  grid-template-columns: repeat(6, [col-start] minmax($g-min, $g-max));
+  grid-template-columns: repeat(6, [col-start] minmax($col-min, $col-max));
   // grid-template-rows: repeat(1, [col-start] 1fr);
   grid-gap: 16px;
 }
 
 .grid-3x2 {
   display: grid;
-  grid-template-columns: repeat(3, [col-start] minmax($g-min, $g-max));
+  grid-template-columns: repeat(3, [col-start] minmax($col-min, $col-max));
   // grid-template-rows: repeat(2, [row-start] 1fr);
   grid-gap: 16px;
 }
 
 .grid-2x3 {
   display: grid;
-  grid-template-columns: repeat(2, [col-start] minmax($g-min, $g-max));
+  grid-template-columns: repeat(2, [col-start] minmax($col-min, $col-max));
   // grid-template-rows: repeat(3, [row-start] 1fr);
   grid-gap: 16px;
 }
 
 .grid-1x6 {
   display: grid;
-  grid-template-columns: repeat(1, [col-start] minmax($g-min, $g-max));
+  grid-template-columns: repeat(1, [col-start] minmax($col-min, $col-max));
   // grid-template-rows: repeat(6, [row-start] 1fr);
   grid-gap: 16px;
 }
@@ -39,28 +81,28 @@ $g-min: 36rem;
   @media #{$rule} {
     .grid-6x1-#{$suffix} {
       display: grid;
-      grid-template-columns: repeat(6, [col-start] minmax($g-min, $g-max));
+      grid-template-columns: repeat(6, [col-start] minmax($col-min, $col-max));
       grid-template-rows: repeat(1, [col-start] auto);
       grid-gap: 16px;
     }
 
     .grid-3x2-#{$suffix} {
       display: grid;
-      grid-template-columns: repeat(3, [col-start] minmax($g-min, $g-max));
+      grid-template-columns: repeat(3, [col-start] minmax($col-min, $col-max));
       grid-template-rows: repeat(2, [row-start] auto);
       grid-gap: 16px;
     }
 
     .grid-2x3-#{$suffix} {
       display: grid;
-      grid-template-columns: repeat(2, [col-start] minmax($g-min, $g-max));
+      grid-template-columns: repeat(2, [col-start] minmax($col-min, $col-max));
       grid-template-rows: repeat(3, [row-start] auto);
       grid-gap: 16px;
     }
 
     .grid-1x6-#{$suffix} {
       display: grid;
-      grid-template-columns: repeat(1, [col-start] minmax($g-min, $g-max));
+      grid-template-columns: repeat(1, [col-start] minmax($col-min, $col-max));
       grid-template-rows: repeat(6, [row-start] auto);
       grid-gap: 16px;
     }
