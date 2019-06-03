@@ -10,9 +10,14 @@ Download [indigo.css](https://raw.githubusercontent.com/urbit/indigo/master/indi
 
 ### Developing
 
-This repo contains the source for Indigo SASS/CSS, Indigo React Components, the documentation site and a sandbox development environment.
+This repo contains the source for
 
-If you need to see the results of your changes, use the sandbox to display them while editing the source of the SASS/CSS or JS.
+- Indigo SASS/CSS
+- Indigo React Components
+- the documentation site
+- a sandbox development environment.
+
+If you need to see the results of your changes, use the sandbox by running `gulp sandbox` to display an HTML page while editing the source of the SASS/CSS or JS.
 
 #### First Steps
 
@@ -22,28 +27,30 @@ If you need to see the results of your changes, use the sandbox to display them 
 
 #### Indigo SASS/CSS
 
-| Command                | Description                                          |
-| ---------------------- | ---------------------------------------------------- |
-| gulp indigo-sass       | builds indigo.css                                    |
-| gulp watch-indigo-sass | watches ./indigo/css for changes and rebuilds source |
+| Command         | Description                                          |
+| --------------- | ---------------------------------------------------- |
+| gulp sass       | builds indigo.css                                    |
+| gulp watch-sass | watches ./indigo/css for changes and rebuilds source |
 
 #### Indigo React Components
 
-| Command                 | Description                                            |
-| ----------------------- | ------------------------------------------------------ |
-| gulp indigo-react       | builds indigo react js bundle                          |
-| gulp watch-indigo-react | watches ./indigo/react for changes and rebuilds source |
+| Command          | Description                                            |
+| ---------------- | ------------------------------------------------------ |
+| gulp react       | builds indigo react js bundle                          |
+| gulp watch-react | watches ./indigo/react for changes and rebuilds source |
 
 #### Indigo Documentation Site
 
-| Command                 | Description                                                      |
-| ----------------------- | ---------------------------------------------------------------- |
-| gulp site               | builds indigo documentation site, and watches ./site for changes |
-| gulp update-site-indigo | rebuilds indigo css and react, then copies it to ./site/src      |
+| Command                 | Description                                                                        |
+| ----------------------- | ---------------------------------------------------------------------------------- |
+| gulp site               | builds indigo documentation site, runs a dev server and watches ./site for changes |
+| gulp update-site-indigo | rebuilds indigo css and react, then copies it to ./site/src                        |
 
 #### Indigo Sandbox
 
-Note: the sandbox is currently broken. (March 12 2019)
+| Command      | Description                                                                                                                                                                                  |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| gulp sandbox | builds indigo documentation site, runs a dev server and watches ./indigo and ./sandbox for changes. Note that indigo will rebuild and be copied into the ./sandbox when this command is run. |
 
 ## Project Structure
 
@@ -77,4 +84,4 @@ We love and welcome constructive feedback.
 
 Much of the build tooling is based on our own [Kamaji](https://github.com/urbit/kamaji) boilerplate
 
-The atomic CSS utilities borrow heavily from [Tachyons](https://tachyons.io)
+Our atomic CSS utilities borrow heavily from [Tachyons](https://tachyons.io)

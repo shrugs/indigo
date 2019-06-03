@@ -1,3 +1,23 @@
+* {
+  font-family: "Inter";
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $fw-bold;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+}
+
 .f1 {
   font-size: $fs1;
   line-height: $lh-short;
@@ -182,6 +202,10 @@
     font-weight: $fw-regular;
     margin: $s4 0;
   }
+  code {
+    font-family: Source Code Pro;
+    background-color: $gray-10;
+  }
 }
 
 .truncate {
@@ -235,13 +259,13 @@
   $rule: get($bp, "rule");
   @media #{$rule} {
     .measure-narrow-#{$suffix} {
-      max-width: 80rem;
+      max-width: 20rem;
     }
     .measure-#{$suffix} {
-      max-width: 120rem;
+      max-width: 30rem;
     }
     .measure-wide-#{$suffix} {
-      max-width: 136rem;
+      max-width: 34rem;
     }
   }
 }

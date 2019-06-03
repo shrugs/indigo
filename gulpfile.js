@@ -96,7 +96,7 @@ gulp.task(
 //   )
 // );
 
-gulp.task("sass", gulp.series("sass-compressed", "sass-header", "sass-gzip"));
+gulp.task("sass", gulp.series("sass-plain", "sass-header", "sass-gzip"));
 
 gulp.task("watch-sass", function() {
   gulp.watch(`${PATHS.css}src/**/*.scss`, gulp.series("sass"));
@@ -319,7 +319,16 @@ gulp.task(
 gulp.task("watch-external-sass", function() {
   gulp.watch(
     `${PATHS.css}src/**/*.scss`,
-    gulp.series("sass", "copy-external-css-to-sandbox")
+    gulp.series(
+      "sass",
+      gulp.series(
+        "sandbox-pull-indigo",
+        "sandbox-react",
+        "sandbox-css",
+        "copy-sandbox-assets",
+        "copy-sandbox-html"
+      )
+    )
   );
 });
 
