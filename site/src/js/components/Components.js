@@ -9,7 +9,7 @@ const Link = props => {
   return (
     <a
       href={props.href}
-      className={`table f5 pointer ${props.className} white`}
+      className={`table f5 pointer ${props.className} black`}
     >
       {props.children}
     </a>

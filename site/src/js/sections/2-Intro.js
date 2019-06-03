@@ -3,7 +3,7 @@ import { BH, Link, H } from "../components/Components";
 
 const Intro = () => {
   return (
-    <div className="flex justify-center bb1">
+    <div className="flex justify-center">
       <div className="grid12 ph4 ph8-ns pt9 pb10">
         <div className="c1-7">
           <h1 className="mb8 fw-bold c1-13" id="intro">

@@ -3,7 +3,7 @@ import { BH, Link, H } from "../components/Components";
 
 const Principles = () => {
   return (
-    <div className="flex justify-center bb1">
+    <div className="flex justify-center ">
       <div className="grid12 ph8 ph32-lg pt4 pb9">
         <h1 className="mv8 fw-bold c1-13" id="intro">
           Principles
