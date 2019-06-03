@@ -16,38 +16,46 @@ h6 {
 
 a {
   color: black;
+  text-decoration: none;
 }
 
+h1,
 .f1 {
   font-size: $fs1;
   line-height: $lh-short;
   font-weight: $fw-regular;
 }
 
+h2,
 .f2 {
   font-size: $fs2;
   line-height: $lh-regular;
   font-weight: $fw-regular;
 }
 
+h3,
 .f3 {
   font-size: $fs3;
   line-height: $lh-regular;
   font-weight: $fw-regular;
 }
 
+h4,
 .f4 {
   font-size: $fs4;
   line-height: $lh-short;
   font-weight: $fw-regular;
 }
 
+h5,
+p,
 .f5 {
   font-size: $fs5;
   line-height: $lh-regular;
   font-weight: $fw-regular;
 }
 
+caption,
 .f6 {
   font-size: $fs6;
   line-height: $lh-short;

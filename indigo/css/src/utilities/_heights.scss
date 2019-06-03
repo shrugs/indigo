@@ -1,22 +1,22 @@
 // Height - viewHeight
-@each $dim in (10, 20, 30, 40, 50, 60, 70, 80, 90, 100) {
-  $name: str-replace(#{$dim}, ".");
-
-  .vh#{$name} {
-    height: #{$dim}vh;
-  }
-
-  @each $bp in $breakpoints {
-    $suffix: get($bp, "suffix");
-    $rule: get($bp, "rule");
-
-    @media #{$rule} {
-      .vh#{$name}-#{$suffix} {
-        height: #{$dim}vh;
-      }
-    }
-  }
-}
+// @each $dim in (10, 20, 30, 40, 50, 60, 70, 80, 90, 100) {
+//   $name: str-replace(#{$dim}, ".");
+//
+//   .vh#{$name} {
+//     height: #{$dim}vh;
+//   }
+//
+//   @each $bp in $breakpoints {
+//     $suffix: get($bp, "suffix");
+//     $rule: get($bp, "rule");
+//
+//     @media #{$rule} {
+//       .vh#{$name}-#{$suffix} {
+//         height: #{$dim}vh;
+//       }
+//     }
+//   }
+// }
 
 // Height - auto
 .h-auto {
@@ -39,7 +39,9 @@
   .h#{$i} {
     height: #{$dim};
   }
+}
 
+@each $i, $dim in $scale {
   // Responsive Spacing
   @each $bp in $breakpoints {
     $suffix: get($bp, "suffix");

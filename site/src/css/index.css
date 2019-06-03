@@ -22,6 +22,19 @@ html {
   box-shadow: inset 0 0 10px 10px rgba(0, 0, 0, 0.7);
 }
 
+.mw100vw {
+  /* width: 100%; */
+  max-width: 100vw;
+}
+
+.mw1024 {
+  max-width: 1024px;
+}
+
+.grid12 {
+  width: 100%;
+  max-width: 1024px;
+}
 /* .grid-auto {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 160px));

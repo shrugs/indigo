@@ -218,7 +218,8 @@ gulp.task(
     "react",
     "sass",
     "copy-external-react-to-site",
-    "copy-external-css-to-site"
+    "copy-external-css-to-site",
+    gulp.series("site-react", "site-css", "copy-site-assets", "copy-site-html")
   )
 );
 

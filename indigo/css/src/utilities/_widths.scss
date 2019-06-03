@@ -5,27 +5,29 @@
 // MAYBE: view widths added in the future
 // MAYBE: max widths added in the future
 
-.w-full {
-  width: 100%;
-}
+// .w-full {
+//   width: 100%;
+// }
 
 // Responsive Spacing
-@each $bp in $breakpoints {
-  $suffix: get($bp, "suffix");
-  $rule: get($bp, "rule");
-
-  @media #{$rule} {
-    .w-full-#{$suffix} {
-      width: 100%;
-    }
-  }
-}
+// @each $bp in $breakpoints {
+//   $suffix: get($bp, "suffix");
+//   $rule: get($bp, "rule");
+//
+//   @media #{$rule} {
+//     .w-full-#{$suffix} {
+//       width: 100%;
+//     }
+//   }
+// }
 
 @each $i, $dim in $scale {
   .w#{$i} {
     width: #{$dim};
   }
+}
 
+@each $i, $dim in $scale {
   // Responsive Spacing
   @each $bp in $breakpoints {
     $suffix: get($bp, "suffix");

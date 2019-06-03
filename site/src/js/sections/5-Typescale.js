@@ -3,16 +3,16 @@ import { BH, Link, H } from "../components/Components";
 
 const Typescale = () => {
   return (
-    <div className="ph8 ph32-lg pb8 pb0-ns bb1 pt16">
+    <div className="grid12 ph8 ph32-lg bb1 pt4 pb9">
       <div>
-        <H id="typescale">Typescale</H>
-        <div className="p mb8 measure">
-          इस्लाम ने कहा, ‘हम इनहेलर के जरिये चिटोसन के नैनोपार्टिकल की मदद से
-          दवा को सांस के रास्ते सीधे फेफड़े तक पहुंचाने की दिशा में कार्य कर रहे
-          हैं।’ चिटोसन एक प्राकृतिक पॉलीमर है, जो अपने आप विघटित हो जाता है।
-          इसके साथ दवाओं को आसानी से जोड़ा जा
-        </div>
-        <div className="f2">Headers</div>
+        <h1 className="mv6 fw-bold c1-13" id="intro">
+          Typescale
+        </h1>
+        <p className="p mb8 measure c1-13">
+          We needed a simple, proportional typescale that didn't have a lot of
+          attitude. We want to stand out for what we do, not how we look.
+        </p>
+        <h2 className="fw-bold">Headers</h2>
         <div className="flex-row mb4 align-end">
           <div className="flex-col self-center w30 mr4">
             <div className="caption">H1 Large</div>

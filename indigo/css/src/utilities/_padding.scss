@@ -26,8 +26,10 @@
     padding-left: #{$dim};
     padding-right: #{$dim};
   }
+}
 
-  // Responsive padding
+// Responsive padding
+@each $i, $dim in $scale {
   @each $bp in $breakpoints {
     $suffix: get($bp, "suffix");
     $rule: get($bp, "rule");

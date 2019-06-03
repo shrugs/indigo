@@ -7,7 +7,10 @@ const BH = props => {
 
 const Link = props => {
   return (
-    <a href={props.href} className="block p mb2 pointer white">
+    <a
+      href={props.href}
+      className={`table f5 pointer ${props.className} white`}
+    >
       {props.children}
     </a>
   );
