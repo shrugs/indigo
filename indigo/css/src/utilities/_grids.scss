@@ -8,7 +8,7 @@ $col-min: 34rem; // 34 * 16 = 544px
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
   grid-auto-rows: auto;
-  gap: 16px;
+  column-gap: 32px;
   // width: 100%;
 }
 
@@ -20,8 +20,85 @@ $col-min: 34rem; // 34 * 16 = 544px
   width: 100%;
 }
 
+$gaps: (1, 2, 4, 8, 12, 16, 24, 32);
 $cols: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
 $rows: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
+$frs: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+
+.full {
+  grid-area: auto / 1 / auto / 13;
+}
+
+.half-1 {
+  grid-area: auto / 1 / auto / 7;
+}
+
+.half-2 {
+  grid-area: auto / 7 / auto / 13;
+}
+
+.fourth-1 {
+  grid-area: auto / 1 / auto / 4;
+}
+
+.fourth-2 {
+  grid-area: auto / 4 / auto / 7;
+}
+
+.fourth-3 {
+  grid-area: auto / 7 / auto / 10;
+}
+
+.fourth-4 {
+  grid-area: auto / 10 / auto / 13;
+}
+
+@each $bp in $breakpoints {
+  $suffix: get($bp, "suffix");
+  $rule: get($bp, "rule");
+
+  @media #{$rule} {
+    .full-#{$suffix} {
+      grid-area: auto / 1 / auto / 13;
+    }
+
+    .half-1-#{$suffix} {
+      grid-area: auto / 1 / auto / 7;
+    }
+
+    .half-2-#{$suffix} {
+      grid-area: auto / 7 / auto / 13;
+    }
+
+    .fourth-1-#{$suffix} {
+      grid-area: auto / 1 / auto / 4;
+    }
+
+    .fourth-2-#{$suffix} {
+      grid-area: auto / 4 / auto / 7;
+    }
+
+    .fourth-3-#{$suffix} {
+      grid-area: auto / 7 / auto / 10;
+    }
+
+    .fourth-4-#{$suffix} {
+      grid-area: auto / 10 / auto / 13;
+    }
+  }
+}
+
+@each $g in $gaps {
+  .gap#{$g} {
+    width: #{$g}px;
+  }
+}
+
+@each $fr in $frs {
+  .fr#{$fr} {
+    width: #{$fr}fr;
+  }
+}
 
 @each $from in $cols {
   @each $to in $cols {
@@ -34,17 +111,17 @@ $rows: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
   }
 }
 
-.mw1 {
-  max-width: 640px;
-}
-
-.mw2 {
-  max-width: 800px;
-}
-
-.mw3 {
-  max-width: 1024px;
-}
+// .mw1 {
+//   max-width: 640px;
+// }
+//
+// .mw2 {
+//   max-width: 800px;
+// }
+//
+// .mw3 {
+//   max-width: 1024px;
+// }
 
 @each $bp in $breakpoints {
   $suffix: get($bp, "suffix");

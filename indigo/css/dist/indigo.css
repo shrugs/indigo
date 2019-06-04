@@ -12,7 +12,7 @@
   * git+https://github.com/urbit/Indigo.git
   * Bugs: https://github.com/urbit/Indigo/issues
   * License: MIT
-  * Timestamp: Sun Jun 02 2019 21:39:41 GMT-0700 (PDT)
+  * Timestamp: Tue Jun 04 2019 13:18:05 GMT-0700 (PDT)
   *******************************************************************************/
 /**********************
 Color variables
@@ -381,7 +381,7 @@ a {
 h1,
 .f1 {
   font-size: 3rem;
-  line-height: 1.3333;
+  line-height: 1.33333;
   font-weight: 400;
 }
 
@@ -402,7 +402,7 @@ h3,
 h4,
 .f4 {
   font-size: 1.25rem;
-  line-height: 1.3333;
+  line-height: 1.33333;
   font-weight: 400;
 }
 
@@ -417,14 +417,14 @@ p,
 caption,
 .f6 {
   font-size: 0.75rem;
-  line-height: 1.3333;
+  line-height: 1.33333;
   font-weight: 400;
 }
 
 @media only screen and (min-width: 550px) {
   .f1-ns {
     font-size: 3rem;
-    line-height: 1.3333;
+    line-height: 1.33333;
     font-weight: 400;
   }
   .f2-ns {
@@ -439,7 +439,7 @@ caption,
   }
   .f4-ns {
     font-size: 1.25rem;
-    line-height: 1.3333;
+    line-height: 1.33333;
     font-weight: 400;
   }
   .f5-ns {
@@ -449,7 +449,7 @@ caption,
   }
   .f6-ns {
     font-size: 0.75rem;
-    line-height: 1.3333;
+    line-height: 1.33333;
     font-weight: 400;
   }
 }
@@ -457,7 +457,7 @@ caption,
 @media only screen and (min-width: 750px) and (max-width: 960px) {
   .f1-md {
     font-size: 3rem;
-    line-height: 1.3333;
+    line-height: 1.33333;
     font-weight: 400;
   }
   .f2-md {
@@ -472,7 +472,7 @@ caption,
   }
   .f4-md {
     font-size: 1.25rem;
-    line-height: 1.3333;
+    line-height: 1.33333;
     font-weight: 400;
   }
   .f5-md {
@@ -482,7 +482,7 @@ caption,
   }
   .f6-md {
     font-size: 0.75rem;
-    line-height: 1.3333;
+    line-height: 1.33333;
     font-weight: 400;
   }
 }
@@ -490,7 +490,7 @@ caption,
 @media only screen and (min-width: 960px) {
   .f1-lg {
     font-size: 3rem;
-    line-height: 1.3333;
+    line-height: 1.33333;
     font-weight: 400;
   }
   .f2-lg {
@@ -505,7 +505,7 @@ caption,
   }
   .f4-lg {
     font-size: 1.25rem;
-    line-height: 1.3333;
+    line-height: 1.33333;
     font-weight: 400;
   }
   .f5-lg {
@@ -515,13 +515,13 @@ caption,
   }
   .f6-lg {
     font-size: 0.75rem;
-    line-height: 1.3333;
+    line-height: 1.33333;
     font-weight: 400;
   }
 }
 
 .lh-short {
-  line-height: 1.3333;
+  line-height: 1.33333;
 }
 
 .lh-regular {
@@ -529,42 +529,42 @@ caption,
 }
 
 .lh-tall {
-  line-height: 1.6666;
+  line-height: 1.66667;
 }
 
 @media only screen and (min-width: 550px) {
   .lh-short-ns {
-    line-height: 1.3333;
+    line-height: 1.33333;
   }
   .lh-regular-ns {
     line-height: 1.5;
   }
   .lh-tall-ns {
-    line-height: 1.6666;
+    line-height: 1.66667;
   }
 }
 
 @media only screen and (min-width: 750px) and (max-width: 960px) {
   .lh-short-md {
-    line-height: 1.3333;
+    line-height: 1.33333;
   }
   .lh-regular-md {
     line-height: 1.5;
   }
   .lh-tall-md {
-    line-height: 1.6666;
+    line-height: 1.66667;
   }
 }
 
 @media only screen and (min-width: 960px) {
   .lh-short-lg {
-    line-height: 1.3333;
+    line-height: 1.33333;
   }
   .lh-regular-lg {
     line-height: 1.5;
   }
   .lh-tall-lg {
-    line-height: 1.6666;
+    line-height: 1.66667;
   }
 }
 
@@ -618,29 +618,29 @@ caption,
 
 .md h1 {
   font-size: 3rem;
-  line-height: 1.3333;
-  font-weight: 400;
+  line-height: 1.33333;
+  font-weight: 600;
   margin: 48px 0;
 }
 
 .md h2 {
   font-size: 2rem;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 600;
   margin: 32px 0;
 }
 
 .md h3 {
   font-size: 1.5rem;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 600;
   margin: 24px 0;
 }
 
 .md h4 {
   font-size: 1.25rem;
-  line-height: 1.3333;
-  font-weight: 400;
+  line-height: 1.33333;
+  font-weight: 600;
   margin: 20px 0;
 }
 
@@ -660,7 +660,7 @@ caption,
 
 .md caption {
   font-size: 0.75rem;
-  line-height: 1.3333;
+  line-height: 1.33333;
   font-weight: 400;
   margin: 16px 0;
 }
@@ -668,6 +668,12 @@ caption,
 .md code {
   font-family: Source Code Pro;
   background-color: #e6e6e6;
+  padding: 4px;
+  border-radius: 1px;
+}
+
+.md a {
+  text-decoration: underline;
 }
 
 .truncate {
@@ -1094,55 +1100,67 @@ caption,
   border-left-width: 0px;
 }
 
-.b-blue-dark {
-  border-color: #190d8d;
+.b-blue4 {
+  border-color: #190d7b;
 }
 
-.b-blue {
+.b-blue3 {
   border-color: #4330fc;
 }
 
-.b-blue-medium {
-  border-color: #6184ff;
+.b-blue2 {
+  border-color: #b0c7ff;
 }
 
-.b-blue-light {
+.b-blue1 {
   border-color: #ecf6ff;
 }
 
-.b-red-dark {
+.b-red4 {
   border-color: #c10d30;
 }
 
-.b-red {
+.b-red3 {
   border-color: #ee5432;
 }
 
-.b-red-light {
+.b-red2 {
+  border-color: #ffa073;
+}
+
+.b-red1 {
   border-color: #f9d6ce;
 }
 
-.b-green-dark {
+.b-green4 {
   border-color: #286e55;
 }
 
-.b-green {
+.b-green3 {
   border-color: #2aa779;
 }
 
-.b-green-medium {
+.b-green2 {
   border-color: #2ed196;
 }
 
-.b-yellow-dark {
+.b-green1 {
+  border-color: #bdebcc;
+}
+
+.b-yellow4 {
   border-color: #ee892b;
 }
 
-.b-yellow {
+.b-yellow3 {
   border-color: #fcc440;
 }
 
-.b-yellow-light {
+.b-yellow2 {
+  border-color: #ffd972;
+}
+
+.b-yellow1 {
   border-color: #ffefc5;
 }
 
@@ -1150,27 +1168,27 @@ caption,
   border-color: #000000;
 }
 
-.b-gray-80 {
+.b-gray6 {
   border-color: #333333;
 }
 
-.b-gray-70 {
+.b-gray5 {
   border-color: #4d4d4d;
 }
 
-.b-gray-50 {
+.b-gray4 {
   border-color: #7f7f7f;
 }
 
-.b-gray-30 {
+.b-gray3 {
   border-color: #b1b2b3;
 }
 
-.b-gray-10 {
+.b-gray2 {
   border-color: #e6e6e6;
 }
 
-.b-gray-02 {
+.b-gray1 {
   border-color: #f9f9f9;
 }
 
@@ -1178,55 +1196,67 @@ caption,
   border-color: #ffffff;
 }
 
-.bg-blue-dark {
-  background-color: #190d8d;
+.bg-blue4 {
+  background-color: #190d7b;
 }
 
-.bg-blue {
+.bg-blue3 {
   background-color: #4330fc;
 }
 
-.bg-blue-medium {
-  background-color: #6184ff;
+.bg-blue2 {
+  background-color: #b0c7ff;
 }
 
-.bg-blue-light {
+.bg-blue1 {
   background-color: #ecf6ff;
 }
 
-.bg-red-dark {
+.bg-red4 {
   background-color: #c10d30;
 }
 
-.bg-red {
+.bg-red3 {
   background-color: #ee5432;
 }
 
-.bg-red-light {
+.bg-red2 {
+  background-color: #ffa073;
+}
+
+.bg-red1 {
   background-color: #f9d6ce;
 }
 
-.bg-green-dark {
+.bg-green4 {
   background-color: #286e55;
 }
 
-.bg-green {
+.bg-green3 {
   background-color: #2aa779;
 }
 
-.bg-green-medium {
+.bg-green2 {
   background-color: #2ed196;
 }
 
-.bg-yellow-dark {
+.bg-green1 {
+  background-color: #bdebcc;
+}
+
+.bg-yellow4 {
   background-color: #ee892b;
 }
 
-.bg-yellow {
+.bg-yellow3 {
   background-color: #fcc440;
 }
 
-.bg-yellow-light {
+.bg-yellow2 {
+  background-color: #ffd972;
+}
+
+.bg-yellow1 {
   background-color: #ffefc5;
 }
 
@@ -1234,27 +1264,27 @@ caption,
   background-color: #000000;
 }
 
-.bg-gray-80 {
+.bg-gray6 {
   background-color: #333333;
 }
 
-.bg-gray-70 {
+.bg-gray5 {
   background-color: #4d4d4d;
 }
 
-.bg-gray-50 {
+.bg-gray4 {
   background-color: #7f7f7f;
 }
 
-.bg-gray-30 {
+.bg-gray3 {
   background-color: #b1b2b3;
 }
 
-.bg-gray-10 {
+.bg-gray2 {
   background-color: #e6e6e6;
 }
 
-.bg-gray-02 {
+.bg-gray1 {
   background-color: #f9f9f9;
 }
 
@@ -1262,55 +1292,67 @@ caption,
   background-color: #ffffff;
 }
 
-.blue-dark {
-  color: #190d8d;
+.blue4 {
+  color: #190d7b;
 }
 
-.blue {
+.blue3 {
   color: #4330fc;
 }
 
-.blue-medium {
-  color: #6184ff;
+.blue2 {
+  color: #b0c7ff;
 }
 
-.blue-light {
+.blue1 {
   color: #ecf6ff;
 }
 
-.red-dark {
+.red4 {
   color: #c10d30;
 }
 
-.red {
+.red3 {
   color: #ee5432;
 }
 
-.red-light {
+.red2 {
+  color: #ffa073;
+}
+
+.red1 {
   color: #f9d6ce;
 }
 
-.green-dark {
+.green4 {
   color: #286e55;
 }
 
-.green {
+.green3 {
   color: #2aa779;
 }
 
-.green-medium {
+.green2 {
   color: #2ed196;
 }
 
-.yellow-dark {
+.green1 {
+  color: #bdebcc;
+}
+
+.yellow4 {
   color: #ee892b;
 }
 
-.yellow {
+.yellow3 {
   color: #fcc440;
 }
 
-.yellow-light {
+.yellow2 {
+  color: #ffd972;
+}
+
+.yellow1 {
   color: #ffefc5;
 }
 
@@ -1318,27 +1360,27 @@ caption,
   color: #000000;
 }
 
-.gray-80 {
+.gray6 {
   color: #333333;
 }
 
-.gray-70 {
+.gray5 {
   color: #4d4d4d;
 }
 
-.gray-50 {
+.gray4 {
   color: #7f7f7f;
 }
 
-.gray-30 {
+.gray3 {
   color: #b1b2b3;
 }
 
-.gray-10 {
+.gray2 {
   color: #e6e6e6;
 }
 
-.gray-02 {
+.gray1 {
   color: #f9f9f9;
 }
 
@@ -2390,7 +2432,7 @@ caption,
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
   grid-auto-rows: auto;
-  gap: 16px;
+  column-gap: 32px;
 }
 
 .grid8 {
@@ -2399,6 +2441,186 @@ caption,
   grid-auto-rows: auto;
   gap: 1px;
   width: 100%;
+}
+
+.full {
+  grid-area: auto / 1 / auto / 13;
+}
+
+.half-1 {
+  grid-area: auto / 1 / auto / 7;
+}
+
+.half-2 {
+  grid-area: auto / 7 / auto / 13;
+}
+
+.fourth-1 {
+  grid-area: auto / 1 / auto / 4;
+}
+
+.fourth-2 {
+  grid-area: auto / 4 / auto / 7;
+}
+
+.fourth-3 {
+  grid-area: auto / 7 / auto / 10;
+}
+
+.fourth-4 {
+  grid-area: auto / 10 / auto / 13;
+}
+
+@media only screen and (min-width: 550px) {
+  .full-ns {
+    grid-area: auto / 1 / auto / 13;
+  }
+  .half-1-ns {
+    grid-area: auto / 1 / auto / 7;
+  }
+  .half-2-ns {
+    grid-area: auto / 7 / auto / 13;
+  }
+  .fourth-1-ns {
+    grid-area: auto / 1 / auto / 4;
+  }
+  .fourth-2-ns {
+    grid-area: auto / 4 / auto / 7;
+  }
+  .fourth-3-ns {
+    grid-area: auto / 7 / auto / 10;
+  }
+  .fourth-4-ns {
+    grid-area: auto / 10 / auto / 13;
+  }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 960px) {
+  .full-md {
+    grid-area: auto / 1 / auto / 13;
+  }
+  .half-1-md {
+    grid-area: auto / 1 / auto / 7;
+  }
+  .half-2-md {
+    grid-area: auto / 7 / auto / 13;
+  }
+  .fourth-1-md {
+    grid-area: auto / 1 / auto / 4;
+  }
+  .fourth-2-md {
+    grid-area: auto / 4 / auto / 7;
+  }
+  .fourth-3-md {
+    grid-area: auto / 7 / auto / 10;
+  }
+  .fourth-4-md {
+    grid-area: auto / 10 / auto / 13;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .full-lg {
+    grid-area: auto / 1 / auto / 13;
+  }
+  .half-1-lg {
+    grid-area: auto / 1 / auto / 7;
+  }
+  .half-2-lg {
+    grid-area: auto / 7 / auto / 13;
+  }
+  .fourth-1-lg {
+    grid-area: auto / 1 / auto / 4;
+  }
+  .fourth-2-lg {
+    grid-area: auto / 4 / auto / 7;
+  }
+  .fourth-3-lg {
+    grid-area: auto / 7 / auto / 10;
+  }
+  .fourth-4-lg {
+    grid-area: auto / 10 / auto / 13;
+  }
+}
+
+.gap1 {
+  width: 1px;
+}
+
+.gap2 {
+  width: 2px;
+}
+
+.gap4 {
+  width: 4px;
+}
+
+.gap8 {
+  width: 8px;
+}
+
+.gap12 {
+  width: 12px;
+}
+
+.gap16 {
+  width: 16px;
+}
+
+.gap24 {
+  width: 24px;
+}
+
+.gap32 {
+  width: 32px;
+}
+
+.fr1 {
+  width: 1fr;
+}
+
+.fr2 {
+  width: 2fr;
+}
+
+.fr3 {
+  width: 3fr;
+}
+
+.fr4 {
+  width: 4fr;
+}
+
+.fr5 {
+  width: 5fr;
+}
+
+.fr6 {
+  width: 6fr;
+}
+
+.fr7 {
+  width: 7fr;
+}
+
+.fr8 {
+  width: 8fr;
+}
+
+.fr9 {
+  width: 9fr;
+}
+
+.fr10 {
+  width: 10fr;
+}
+
+.fr11 {
+  width: 11fr;
+}
+
+.fr12 {
+  width: 12fr;
 }
 
 .c1-2 {
@@ -2789,18 +3011,6 @@ caption,
 .c12-13 {
   grid-column-start: 12;
   grid-column-end: 13;
-}
-
-.mw1 {
-  max-width: 640px;
-}
-
-.mw2 {
-  max-width: 800px;
-}
-
-.mw3 {
-  max-width: 1024px;
 }
 
 @media only screen and (min-width: 550px) {

@@ -171,25 +171,25 @@ caption,
   h1 {
     font-size: $fs1;
     line-height: $lh-short;
-    font-weight: $fw-regular;
+    font-weight: $fw-bold;
     margin: $s8 0;
   }
   h2 {
     font-size: $fs2;
     line-height: $lh-regular;
-    font-weight: $fw-regular;
+    font-weight: $fw-bold;
     margin: $s7 0;
   }
   h3 {
     font-size: $fs3;
     line-height: $lh-regular;
-    font-weight: $fw-regular;
+    font-weight: $fw-bold;
     margin: $s6 0;
   }
   h4 {
     font-size: $fs4;
     line-height: $lh-short;
-    font-weight: $fw-regular;
+    font-weight: $fw-bold;
     margin: $s5 0;
   }
   h5 {
@@ -212,7 +212,12 @@ caption,
   }
   code {
     font-family: Source Code Pro;
-    background-color: $gray-10;
+    background-color: $gray2;
+    padding: 4px;
+    border-radius: 1px;
+  }
+  a {
+    text-decoration: underline;
   }
 }
 

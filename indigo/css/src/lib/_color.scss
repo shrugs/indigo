@@ -4,51 +4,61 @@ Color variables
 
 // Figma colors
 $black: #000000;
-$gray-80: #333333;
-$gray-70: #4d4d4d;
-$gray-50: #7f7f7f;
-$gray-30: #b1b2b3;
-$gray-10: #e6e6e6;
-$gray-02: #f9f9f9;
+$gray6: #333333;
+$gray5: #4d4d4d;
+$gray4: #7f7f7f;
+$gray3: #b1b2b3;
+$gray2: #e6e6e6;
+$gray1: #f9f9f9;
 $white: #ffffff;
-$blue-dark: #190d8d;
-$blue: #4330fc;
-$blue-medium: #6184ff;
-$blue-light: #ecf6ff;
-$red-dark: #c10d30;
-$red: #ee5432;
-$red-light: #f9d6ce;
-$green-dark: #286e55;
-$green: #2aa779;
-$green-medium: #2ed196;
-$yellow-dark: #ee892b;
-$yellow: #fcc440;
-$yellow-light: #ffefc5;
+
+$blue4: #190d7b;
+$blue3: #4330fc;
+$blue2: #b0c7ff;
+$blue1: #ecf6ff;
+
+$red4: #c10d30;
+$red3: #ee5432;
+$red2: #ffa073;
+$red1: #f9d6ce;
+
+$green4: #286e55;
+$green3: #2aa779;
+$green2: #2ed196;
+$green1: #bdebcc;
+
+$yellow4: #ee892b;
+$yellow3: #fcc440;
+$yellow2: #ffd972;
+$yellow1: #ffefc5;
 
 $colors: (
-  blue-dark: $blue-dark,
-  blue: $blue,
-  blue-medium: $blue-medium,
-  blue-light: $blue-light,
-  red-dark: $red-dark,
-  red: $red,
-  red-light: $red-light,
-  green-dark: $green-dark,
-  green: $green,
-  green-medium: $green-medium,
-  yellow-dark: $yellow-dark,
-  yellow: $yellow,
-  yellow-light: $yellow-light
+  blue4: $blue4,
+  blue3: $blue3,
+  blue2: $blue2,
+  blue1: $blue1,
+  red4: $red4,
+  red3: $red3,
+  red2: $red2,
+  red1: $red1,
+  green4: $green4,
+  green3: $green3,
+  green2: $green2,
+  green1: $green1,
+  yellow4: $yellow4,
+  yellow3: $yellow3,
+  yellow2: $yellow2,
+  yellow1: $yellow1
 );
 
 $grayscale: (
   black: $black,
-  gray-80: $gray-80,
-  gray-70: $gray-70,
-  gray-50: $gray-50,
-  gray-30: $gray-30,
-  gray-10: $gray-10,
-  gray-02: $gray-02,
+  gray6: $gray6,
+  gray5: $gray5,
+  gray4: $gray4,
+  gray3: $gray3,
+  gray2: $gray2,
+  gray1: $gray1,
   white: $white
 );
 
