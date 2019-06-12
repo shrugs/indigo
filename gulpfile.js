@@ -96,15 +96,10 @@ gulp.task(
 //   )
 // );
 
-gulp.task(
-  "indigo-sass",
-  gulp.series("sass-compressed", "sass-header", "sass-gzip")
-);
+gulp.task("sass", gulp.series("sass-plain", "sass-header", "sass-gzip"));
 
-gulp.task("indigo-sass-inspect", gulp.series("sass-plain"));
-
-gulp.task("watch-indigo-sass", function() {
-  gulp.watch(`${PATHS.css}/**/*.scss`, gulp.series("indigo-sass"));
+gulp.task("watch-sass", function() {
+  gulp.watch(`${PATHS.css}src/**/*.scss`, gulp.series("sass"));
 });
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -112,12 +107,12 @@ gulp.task("watch-indigo-sass", function() {
 // Build indigo-react
 
 gulp.task(
-  "indigo-react-transpile",
+  "react-transpile",
   getTask("js_sucrase", `${PATHS.react}src/**/*.js`, `${PATHS.react}bin/`)
 );
 
 gulp.task(
-  "indigo-react-bundle",
+  "react-bundle",
   getTask(
     "js_quick_bundle",
     `${PATHS.react}bin/index.js`,
@@ -125,136 +120,23 @@ gulp.task(
   )
 );
 
-gulp.task(
-  "indigo-react",
-  gulp.series("indigo-react-transpile", "indigo-react-bundle")
-);
+gulp.task("react", gulp.series("react-transpile", "react-bundle"));
 
-gulp.task("watch-indigo-react", function() {
-  gulp.watch(`${PATHS.react}/**/*.js`, gulp.series("indigo-react"));
+gulp.task("watch-react", function() {
+  gulp.watch(`${PATHS.react}/**/*.js`, gulp.series("react"));
 });
-
-////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-// Run/build indigo sandbox
-
-// gulp.task(
-//   "sandbox-react-transpile",
-//   getTask("js_sucrase", `${PATHS.sandbox}src/**/*.js`, `${PATHS.sandbox}dist`)
-// );
-//
-// gulp.task(
-//   "sandbox-react-bundle",
-//   getTask(
-//     "js_quick_bundle",
-//     `${PATHS.sandbox}dist/js/index.js`,
-//     `${PATHS.sandbox}dist/js`
-//   )
-// );
-//
-// gulp.task(
-//   "copy-sandbox-html",
-//   getTask(
-//     "js_quick_bundle",
-//     `${PATHS.sandbox}src/index.html`,
-//     `${PATHS.sandbox}dist`
-//   )
-// );
-//
-// gulp.task(
-//   "copy-sandbox-assets",
-//   getTask(
-//     "js_quick_bundle",
-//     `${PATHS.sandbox}src/assets/**/*`,
-//     `${PATHS.sandbox}dist/assets`
-//   )
-// );
-//
-// gulp.task(
-//   "copy-indigo-css-to-sandbox",
-//   getTask(
-//     "js_quick_bundle",
-//     `${PATHS.css}dist/indigo.css`,
-//     `${PATHS.sandbox}src/css`
-//   )
-// );
-//
-// gulp.task(
-//   "copy-indigo-react-to-sandbox",
-//   getTask(
-//     "js_quick_bundle",
-//     `${PATHS.react}dist/index.js`,
-//     `${PATHS.sandbox}src/js/indigo`
-//   )
-// );
-//
-// gulp.task(
-//   "sandbox-react",
-//   gulp.series("sandbox-react-transpile", "sandbox-react-bundle")
-// );
-
-// gulp.task('sandbox-css', function() {
-//   return gulp
-//     .src(`${PATHS.sandbox}src/css/index.css`)
-//     .pipe(cssimport())
-//     .pipe(cssnano())
-//     .pipe(gulp.dest(`${PATHS.sandbox}dist/css`));
-// });
-
-// gulp.task("watch-sandbox-react", function() {
-//   gulp.watch(`${PATHS.sandbox}src/js/**/*.js`, gulp.series("sandbox-react"));
-// });
-//
-// gulp.task("watch-sandbox-sass", function() {
-//   gulp.watch(`${PATHS.sandbox}src/css/**/*.scss`, gulp.series("sandbox-sass"));
-// });
-
-// gulp.task("sandbox-webserver", function() {
-//   gulp.src("./sandbox/dist/").pipe(
-//     server({
-//       livereload: true,
-//       open: true,
-//       port: 3000,
-//       defaultFile: "index.html"
-//     })
-//   );
-// });
-
-// gulp.task(
-//   "sandbox",
-//   gulp.series(
-//     gulp.series(
-//       "sandbox-react",
-//       // 'sandbox-css',
-//
-//       "indigo-react",
-//       "indigo-sass",
-//
-//       "copy-indigo-react-to-sandbox",
-//       "copy-indigo-css-to-sandbox"
-//     ),
-//     gulp.parallel(
-//       "watch-indigo-react",
-//       "watch-indigo-sass",
-//       "watch-sandbox-react",
-//       // 'watch-sandbox-scss',
-//
-//       "sandbox-webserver"
-//     )
-//   )
-// );
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 // Run/build indigo spec site
 
 gulp.task(
-  "site-react-transpile",
+  "site-transpile",
   getTask("js_sucrase", `${PATHS.site}src/**/*.js`, `${PATHS.site}dist`)
 );
 
 gulp.task(
-  "site-react-bundle",
+  "site-bundle",
   getTask(
     "js_quick_bundle",
     `${PATHS.site}dist/js/index.js`,
@@ -273,20 +155,18 @@ gulp.task(
 );
 
 gulp.task(
-  "copy-indigo-css-to-site",
+  "copy-external-css-to-site",
   getTask("copy", `${PATHS.css}dist/indigo.css`, `${PATHS.site}src/css`)
 );
 
 gulp.task(
-  "copy-indigo-react-to-site",
+  "copy-external-react-to-site",
   getTask("copy", `${PATHS.react}dist/index.js`, `${PATHS.site}src/js/indigo`)
 );
 
-gulp.task(
-  "site-react",
-  gulp.series("site-react-transpile", "site-react-bundle")
-);
+gulp.task("site-react", gulp.series("site-transpile", "site-bundle"));
 
+// TODO: Change to SASS
 gulp.task("site-css", function() {
   return gulp
     .src(`${PATHS.site}src/css/index.css`)
@@ -299,6 +179,7 @@ gulp.task("watch-site-react", function() {
   gulp.watch(`${PATHS.site}src/js/**/*.js`, gulp.series("site-react"));
 });
 
+// TODO: Change to SASS
 gulp.task("watch-site-css", function() {
   gulp.watch(`${PATHS.site}src/css/**/*.css`, gulp.series("site-css"));
 });
@@ -323,8 +204,6 @@ gulp.task(
   gulp.series(
     gulp.series("site-react", "site-css", "copy-site-assets", "copy-site-html"),
     gulp.parallel(
-      // "watch-indigo-react",
-      // "watch-indigo-sass",
       "watch-site-react",
       "watch-site-css",
       "watch-site-assets",
@@ -334,11 +213,147 @@ gulp.task(
 );
 
 gulp.task(
-  "update-site-indigo",
+  "site-pull-indigo",
   gulp.series(
-    "indigo-react",
-    "indigo-sass",
-    "copy-indigo-react-to-site",
-    "copy-indigo-css-to-site"
+    "react",
+    "sass",
+    "copy-external-react-to-site",
+    "copy-external-css-to-site",
+    gulp.series("site-react", "site-css", "copy-site-assets", "copy-site-html")
+  )
+);
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+// Run/build indigo sandbox
+
+gulp.task(
+  "sandbox-transpile",
+  getTask("js_sucrase", `${PATHS.sandbox}src/**/*.js`, `${PATHS.sandbox}dist`)
+);
+
+gulp.task(
+  "sandbox-bundle",
+  getTask(
+    "js_quick_bundle",
+    `${PATHS.sandbox}dist/js/index.js`,
+    `${PATHS.sandbox}dist/js`
+  )
+);
+
+gulp.task(
+  "copy-sandbox-html",
+  getTask("copy", `${PATHS.sandbox}src/index.html`, `${PATHS.sandbox}dist`)
+);
+
+gulp.task(
+  "copy-sandbox-assets",
+  getTask(
+    "copy",
+    `${PATHS.sandbox}src/assets/**/*.*`,
+    `${PATHS.sandbox}dist/assets`
+  )
+);
+
+gulp.task(
+  "copy-external-css-to-sandbox",
+  getTask("copy", `${PATHS.css}dist/indigo.css`, `${PATHS.sandbox}src/css`)
+);
+
+gulp.task(
+  "copy-external-react-to-sandbox",
+  getTask(
+    "copy",
+    `${PATHS.react}dist/index.js`,
+    `${PATHS.sandbox}src/js/indigo`
+  )
+);
+
+gulp.task("sandbox-react", gulp.series("sandbox-transpile", "sandbox-bundle"));
+
+// TODO: Change to SASS
+gulp.task("sandbox-css", function() {
+  return gulp
+    .src(`${PATHS.sandbox}src/css/index.css`)
+    .pipe(cssimport())
+    .pipe(cssnano())
+    .pipe(gulp.dest(`${PATHS.sandbox}dist/css`));
+});
+
+gulp.task("watch-sandbox-react", function() {
+  gulp.watch(`${PATHS.sandbox}src/js/**/*.js`, gulp.series("sandbox-react"));
+});
+
+// TODO: Change to SASS
+gulp.task("watch-sandbox-css", function() {
+  gulp.watch(`${PATHS.sandbox}src/css/**/*.css`, gulp.series("sandbox-css"));
+});
+
+gulp.task("watch-sandbox-assets", function() {
+  gulp.watch(
+    `${PATHS.sandbox}src/assets/**/*.*`,
+    gulp.series("copy-sandbox-assets")
+  );
+});
+
+gulp.task("sandbox-webserver", function() {
+  gulp.src(`${PATHS.sandbox}dist`).pipe(
+    server({
+      livereload: true,
+      open: true,
+      port: 3002,
+      defaultFile: "index.html"
+    })
+  );
+});
+
+gulp.task(
+  "sandbox-pull-indigo",
+  gulp.series(
+    "react",
+    "sass",
+    "copy-external-react-to-sandbox",
+    "copy-external-css-to-sandbox"
+  )
+);
+
+gulp.task("watch-external-sass", function() {
+  gulp.watch(
+    `${PATHS.css}src/**/*.scss`,
+    gulp.series(
+      "sass",
+      gulp.series(
+        "sandbox-pull-indigo",
+        "sandbox-react",
+        "sandbox-css",
+        "copy-sandbox-assets",
+        "copy-sandbox-html"
+      )
+    )
+  );
+});
+
+// gulp.task("watch-external-react", function() {
+//   gulp.watch(`${PATHS.react}src/**/*.scss`, gulp.series("react", "copy-external-react-to-sandbox"));
+// });
+
+gulp.task(
+  "sandbox",
+  gulp.series(
+    gulp.series(
+      "sandbox-pull-indigo",
+      "sandbox-react",
+      "sandbox-css",
+      "copy-sandbox-assets",
+      "copy-sandbox-html"
+    ),
+    gulp.parallel(
+      "watch-sandbox-react",
+      "watch-sandbox-css",
+      "watch-sandbox-assets",
+      "watch-external-sass",
+      // "watch-external-react",
+      "sandbox-webserver"
+    )
   )
 );

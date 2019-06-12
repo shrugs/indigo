@@ -15,6 +15,7 @@ var banner = `
   * ${pkg.repository.url}
   * Bugs: ${pkg.bugs.url}
   * License: ${pkg.license}
+  * Timestamp: ${new Date()}
   *******************************************************************************/
 `;
 

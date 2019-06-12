@@ -1,33 +1,61 @@
+* {
+  font-family: "Inter";
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $fw-bold;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+h1,
 .f1 {
   font-size: $fs1;
   line-height: $lh-short;
   font-weight: $fw-regular;
 }
 
+h2,
 .f2 {
   font-size: $fs2;
   line-height: $lh-regular;
   font-weight: $fw-regular;
 }
 
+h3,
 .f3 {
   font-size: $fs3;
   line-height: $lh-regular;
   font-weight: $fw-regular;
 }
 
+h4,
 .f4 {
   font-size: $fs4;
   line-height: $lh-short;
   font-weight: $fw-regular;
 }
 
+h5,
+p,
 .f5 {
   font-size: $fs5;
   line-height: $lh-regular;
   font-weight: $fw-regular;
 }
 
+caption,
 .f6 {
   font-size: $fs6;
   line-height: $lh-short;
@@ -143,25 +171,25 @@
   h1 {
     font-size: $fs1;
     line-height: $lh-short;
-    font-weight: $fw-regular;
+    font-weight: $fw-bold;
     margin: $s8 0;
   }
   h2 {
     font-size: $fs2;
     line-height: $lh-regular;
-    font-weight: $fw-regular;
+    font-weight: $fw-bold;
     margin: $s7 0;
   }
   h3 {
     font-size: $fs3;
     line-height: $lh-regular;
-    font-weight: $fw-regular;
+    font-weight: $fw-bold;
     margin: $s6 0;
   }
   h4 {
     font-size: $fs4;
     line-height: $lh-short;
-    font-weight: $fw-regular;
+    font-weight: $fw-bold;
     margin: $s5 0;
   }
   h5 {
@@ -181,6 +209,15 @@
     line-height: $lh-short;
     font-weight: $fw-regular;
     margin: $s4 0;
+  }
+  code {
+    font-family: Source Code Pro;
+    background-color: $gray2;
+    padding: 4px;
+    border-radius: 1px;
+  }
+  a {
+    text-decoration: underline;
   }
 }
 
@@ -221,13 +258,13 @@
 // average is 40-50 characters.”
 
 .measure-narrow {
-  max-width: 80rem;
+  max-width: 20rem;
 }
 .measure {
-  max-width: 120rem;
+  max-width: 30rem;
 }
 .measure-wide {
-  max-width: 136rem;
+  max-width: 34rem;
 }
 
 @each $bp in $breakpoints {
@@ -235,13 +272,13 @@
   $rule: get($bp, "rule");
   @media #{$rule} {
     .measure-narrow-#{$suffix} {
-      max-width: 80rem;
+      max-width: 20rem;
     }
     .measure-#{$suffix} {
-      max-width: 120rem;
+      max-width: 30rem;
     }
     .measure-wide-#{$suffix} {
-      max-width: 136rem;
+      max-width: 34rem;
     }
   }
 }
