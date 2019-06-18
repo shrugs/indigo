@@ -6,8 +6,8 @@ before_install:
 install:
   - npm install
 script:
-  - gulp indigo-sass
-  - gulp indigo-react
+  - gulp sass
+  - gulp react
   # - npm run test
 # Send coverage data to Coveralls
 # after_script: "cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js"
