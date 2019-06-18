@@ -3,7 +3,7 @@ import { BH, Link } from "../components/Components";
 
 const Splash = () => {
   return (
-    <React.Fragment>
+    <div className="full grid12 gap32">
       {
         //<div className="c1-4-ns mt6 mt0-ns c1-7">
       }
@@ -68,7 +68,7 @@ const Splash = () => {
         //   <Link>↗ CDN</Link>
         // </div>
       }
-    </React.Fragment>
+    </div>
   );
 };
 

@@ -41,10 +41,10 @@ If you need to see the results of your changes, use the sandbox by running `gulp
 
 #### Indigo Documentation Site
 
-| Command                 | Description                                                                        |
-| ----------------------- | ---------------------------------------------------------------------------------- |
-| gulp site               | builds indigo documentation site, runs a dev server and watches ./site for changes |
-| gulp update-site-indigo | rebuilds indigo css and react, then copies it to ./site/src                        |
+| Command               | Description                                                                        |
+| --------------------- | ---------------------------------------------------------------------------------- |
+| gulp site             | builds indigo documentation site, runs a dev server and watches ./site for changes |
+| gulp site-pull-indigo | rebuilds indigo css and react, then copies it to ./site/src                        |
 
 #### Indigo Sandbox
 
