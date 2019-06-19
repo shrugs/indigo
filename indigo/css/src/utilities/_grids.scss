@@ -32,6 +32,18 @@ $rows: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
   grid-area: auto / 7 / auto / 13;
 }
 
+.third-1 {
+  grid-area: auto / 1 / auto / 4;
+}
+
+.third-2 {
+  grid-area: auto / 4 / auto / 8;
+}
+
+.third-3 {
+  grid-area: auto / 8 / auto / 13;
+}
+
 .fourth-1 {
   grid-area: auto / 1 / auto / 4;
 }
@@ -63,6 +75,18 @@ $rows: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
 
     .half-2-#{$suffix} {
       grid-area: auto / 7 / auto / 13;
+    }
+
+    .third-1-#{$suffix} {
+      grid-area: auto / 1 / auto / 4;
+    }
+
+    .third-2-#{$suffix} {
+      grid-area: auto / 4 / auto / 8;
+    }
+
+    .third-3-#{$suffix} {
+      grid-area: auto / 8 / auto / 13;
     }
 
     .fourth-1-#{$suffix} {
