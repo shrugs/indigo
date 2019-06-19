@@ -32,6 +32,8 @@ $yellow3: #fcc440;
 $yellow2: #ffd972;
 $yellow1: #ffefc5;
 
+$transparent: rgba(0, 0, 0, 0);
+
 $colors: (
   blue4: $blue4,
   blue3: $blue3,
@@ -48,7 +50,8 @@ $colors: (
   yellow4: $yellow4,
   yellow3: $yellow3,
   yellow2: $yellow2,
-  yellow1: $yellow1
+  yellow1: $yellow1,
+  transparent: $transparent
 );
 
 $grayscale: (
