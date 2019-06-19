@@ -354,24 +354,24 @@ caption,
   text-decoration: none;
 }
 
-// .ttc,
-// .capitalize {
-//   text-transform: capitalize;
-// }
-//
-// .ttl,
-// .lowercase {
-//   text-transform: lowercase;
-// }
-//
-// .ttu,
-// .uppercase {
-//   text-transform: uppercase;
-// }
-//
-// .ttn {
-//   text-transform: none;
-// }
+.ttc,
+.capitalize {
+  text-transform: capitalize;
+}
+
+.ttl,
+.lowercase {
+  text-transform: lowercase;
+}
+
+.ttu,
+.uppercase {
+  text-transform: uppercase;
+}
+
+.ttn {
+  text-transform: none;
+}
 
 // Vertical Align
 // .t-top {
