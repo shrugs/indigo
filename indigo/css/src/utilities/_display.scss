@@ -12,9 +12,6 @@
 .inline-block {
   display: inline-block;
 }
-.flex {
-  display: flex;
-}
 .none {
   display: none;
 }
@@ -38,9 +35,6 @@
     }
     .inline-block-#{$suffix} {
       display: inline-block;
-    }
-    .flex-#{$suffix} {
-      display: flex;
     }
     .none-#{$suffix} {
       display: none;
