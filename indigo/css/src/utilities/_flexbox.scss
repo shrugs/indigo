@@ -80,19 +80,36 @@
 }
 
 // align-self
-.self-start {
+.align-self-start {
   align-self: flex-start;
 }
-.self-end {
+.align-self-end {
   align-self: flex-end;
 }
-.self-center {
+.align-self-center {
   align-self: center;
 }
-.self-baseline {
+.align-self-baseline {
   align-self: baseline;
 }
-.self-stretch {
+.align-self-stretch {
+  align-self: stretch;
+}
+
+// justify-self
+.justify-self-start {
+  justify-self: flex-start;
+}
+.justify-self-end {
+  justify-self: flex-end;
+}
+.justify-self-center {
+  justify-self: center;
+}
+.justify-self-baseline {
+  justify-self: baseline;
+}
+.align-self-stretch {
   align-self: stretch;
 }
 
@@ -183,20 +200,36 @@
     }
 
     // Additional Flexbox
-    .self-start-#{$suffix} {
+    .align-self-start-#{$suffix} {
       align-self: flex-start;
     }
-    .self-end-#{$suffix} {
+    .align-self-end-#{$suffix} {
       align-self: flex-end;
     }
-    .self-center-#{$suffix} {
+    .align-self-center-#{$suffix} {
       align-self: center;
     }
-    .self-baseline-#{$suffix} {
+    .align-self-baseline-#{$suffix} {
       align-self: baseline;
     }
-    .self-stretch-#{$suffix} {
+    .align-self-stretch-#{$suffix} {
       align-self: stretch;
+    }
+
+    .justify-self-start-#{$suffix} {
+      justify-self: flex-start;
+    }
+    .justify-self-end-#{$suffix} {
+      justify-self: flex-end;
+    }
+    .justify-self-center-#{$suffix} {
+      justify-self: center;
+    }
+    .justify-self-baseline-#{$suffix} {
+      justify-self: baseline;
+    }
+    .justify-self-stretch-#{$suffix} {
+      justify-self: stretch;
     }
 
     .content-start-#{$suffix} {
