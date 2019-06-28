@@ -440,6 +440,9 @@ caption,
 .pre {
   white-space: pre;
 }
+.wrap {
+  white-space: pre-wrap;
+}
 
 @each $bp in $breakpoints {
   $suffix: get($bp, "suffix");
@@ -454,6 +457,9 @@ caption,
     }
     .pre-#{$suffix} {
       white-space: pre;
+    }
+    .wrap-#{$suffix} {
+      white-space: pre-wrap;
     }
   }
 }
