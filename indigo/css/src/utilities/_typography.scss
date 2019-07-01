@@ -441,7 +441,7 @@ caption,
   white-space: pre;
 }
 .wrap {
-  word-break: break-all;
+  word-break: break-word;
 }
 
 @each $bp in $breakpoints {
@@ -459,7 +459,7 @@ caption,
       white-space: pre;
     }
     .wrap-#{$suffix} {
-      word-break: break-all;
+      word-break: break-word;
     }
   }
 }
